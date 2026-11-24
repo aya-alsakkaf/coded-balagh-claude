@@ -154,7 +154,7 @@ def day1():
         [("The microphone in the message box", 0, "The microphone types what you say. Claude does not talk back."),
          ("Voice mode: the sound-wave icon on her phone", 1, "Right. A spoken conversation, made for thinking aloud on the move."),
          ("A photo of her notes, sent later", 0, "That works for a document, not for a conversation.")]))
-    s.append(task("l1task", "l1", "t11", n=TASK_N))
+    s.append(task("l1task", "l1", "t11", n=N(do="Start the timer. Walk the room. Ask each person what they found so far.", time="15 min work. No share-out: as the next block starts, ask who found the two errors in the post.")))
 
     # Layer 1 · Artifacts
     s.append(story("abstory", "l1b", "Layer 1 · Artifacts", "Monday 23 November, 11:00",
@@ -250,7 +250,7 @@ def day1():
         [("Instructions for Claude, in Settings", 0, "That applies to every chat you start, not only the campaign."),
          ("The Project's knowledge", 1, "Right. Only chats in the Project use it."),
          ("Say it once in a chat, for memory", 0, "Memory keeps facts about you. Files belong in a Project.")]))
-    s.append(task("l3task", "l3", "t31", n=TASK_N))
+    s.append(task("l3task", "l3", "t31", n=N(do="Start the timer. Walk the room. Ask each person what they found so far.", time="8 min work. No share-out: go straight on to memory.")))
     s.append(listslide("l3mem", "l3", "Layer 3 · memory", "Memory: what Claude <span class=\"hl\">keeps between chats.</span>",
         ["<b>See it:</b> Settings › Your Claude (older layout: Settings › Memory). Every topic Claude keeps is listed there.",
          "<b>Change it:</b> open a topic to edit or delete it. Or tell Claude “remember this”.",
@@ -291,7 +291,7 @@ def day1():
     s.append(listslide("skfind", "l3b", "Layer 3 · find skills", "Search first. <span class=\"hl\">Build only what is missing.</span>",
         ["<b>Use one:</b> click + or type / in the chat, then pick the skill.", "<b>Find one:</b> the Plugins page in the sidebar (Customize on some accounts). Filter by skills.",
          "<b>Make one:</b> ask Claude to build it, or upload a .zip: Plugins page › Add (older layout: Customize › Skills › +).", "<b>Switch it on:</b> skills need Create and edit files, in Settings › Capabilities."],
-        "Skills work on every plan, Free included.",
+        "Skills work on your paid plan.",
         n=N(do="Open the Plugins page and filter by skills. Then upload the starter .zip live, so the room sees the path Task 3.2 uses.", expect="Someone spots a skill for their job.",
             more=["The sidebar item was renamed from Customize to Plugins this month. Some accounts still show the old name."], silent="name one skill you would add for an accountant.")))
     s.append(check("skchk", "l3b", "Which job makes <b>a good Skill</b>?",
@@ -327,7 +327,7 @@ def day1():
     s.append(term("l4sched", "l4", "Layer 4 · schedules", "The same job, <span class=\"hl\">on a time you set.</span>", "Scheduled task",
         "A <b>scheduled task</b> runs on its own at the time you choose, for example every Thursday at 08:00. It runs in the cloud with your connectors and the files saved to Claude, so your laptop can be off. Open Scheduled › New task, or describe the job in a chat and click Schedule.",
         "A reminder in your calendar…", "…a colleague who <b>does the job at that time</b> and leaves the result.", "Schedule only what you have run and checked by hand.",
-        n=N(do="Open Scheduled › New task on the presenting laptop and show the form. Do not save it.", expect="Questions about approvals: a scheduled task still asks before Always ask tools.", more=["A task on a laptop folder runs only while the laptop is awake and the desktop app is open (Require this computer). For a job that must run with the laptop closed, use Google Drive or files saved to Claude."],
+        n=N(do="Open Scheduled › New task on the presenting laptop and show the form. Do not save it.", expect="Questions about approvals: nobody is there to answer a scheduled task. A tool set to ask first may wait for your answer, or the task finishes without it.", more=["A task on a laptop folder runs only while the laptop is awake and the desktop app is open (Require this computer). For a job that must run with the laptop closed, use Google Drive or files saved to Claude."],
             silent="ask which weekly job they would schedule first.")))
     s.append(check("l4schk", "l4", "Fahad's weekly receipts job must run <b>even when his laptop is closed</b>. Where should it read the receipts from?",
         [("The Downloads folder on his laptop", 0, "A laptop folder works only while the laptop is awake and the desktop app is open."),

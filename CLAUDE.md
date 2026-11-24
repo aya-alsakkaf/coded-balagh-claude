@@ -35,7 +35,7 @@ Built with the CODED workshop builder on its engine. The approved handoff is `_s
 10. **Cohort:** none exists in the portal for this session; the surveys are not linked to one.
 11. **Portal:** folder "Claude in Layers · Al-Balagh Al-Mubeen (Nov 26)" (9d0ed253-6ffa-4591-aa6b-3c95f22972ec). Final survey 402362fa-61c5-43f2-9eb2-3b15ff667498 (the only survey). The intro screen, closing screen and colors stay the portal default, the same as the model surveys.
 12. **Engine on one day:** `FORM_DAY = {1: ["survey"]}`; the hub and page headers say "all 1 days" (engine wording, logged in PLUGIN-FEEDBACK.md); the final survey wording is fixed in `_source/tools/finalize_surveys.py`.
-13. **Kit additions:** the live calculator on slide 18 is kit HTML, CSS and JS (`build_deck.py`: `CALC_HTML`, `EXTRA_CSS`, `EXTRA_JS`).
+13. **Kit additions:** the live calculator on slide 19 (`abcalc`) is kit HTML, CSS and JS (`build_deck.py`: `CALC_HTML`, `EXTRA_CSS`, `EXTRA_JS`).
 14. **Slack:** the team message goes in the thread of Yousif's outline.
 15. **Opener labels:** the engine's opener names its windows "Weak prompt / Strong prompt". This client left over prompting, so the kit relabels them "Plain chat / In the Project" with CSS in `build_deck.py` (`EXTRA_CSS`). Logged in PLUGIN-FEEDBACK.md #5.
 16. **Task 2.1 accounts:** only an account Al-Balagh approved for Claude connects Gmail; everyone else uses `misbah-inbox-and-calendar.pdf`. Yousif confirms the approved accounts before Thursday.

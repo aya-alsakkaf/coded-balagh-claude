@@ -1499,7 +1499,7 @@
 "kit": [
 "Layer 3 · find skills",
 "Search first. Build only what is missing.",
-"Skills work on every plan, Free included.",
+"Skills work on your paid plan.",
 "Use one: click + or type / in the chat, then pick the skill.",
 "Find one: the Plugins page in the sidebar (Customize on some accounts). Filter by skills.",
 "Make one: ask Claude to build it, or upload a .zip: Plugins page › Add (older layout: Customize › Skills › +).",
@@ -1541,7 +1541,7 @@
 "The receipt number is the step people forget. Check it first.",
 "Open the Plugins page (Customize on some accounts), filter by skills and add one skill you would use at work.",
 "misbah-donor-thanks-skill.zip",
-"Upload the .zip (do not unzip it). Older layout: Customize › Skills › + › Create skill › Upload a skill. Plugins page: Add › Upload.",
+"Upload the .zip (do not unzip it): Plugins page, Add, then upload (older layout: Customize › Skills › + › Create skill › Upload a skill). Check that its switch is on.",
 "Start a new chat. Type / and choose donor-thank-you, then paste the test request.",
 "Check the letter: all five parts, under 120 words.",
 "Make it yours: ask Claude to change one step, then test again.",

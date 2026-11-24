@@ -142,3 +142,27 @@ The last allowed round. No Blocking finding; every other dimension at 9.0 or mor
 - Nit accepted · "all 1 days" (engine, PLUGIN-FEEDBACK #2)
 
 After the fixes: validator 0 (Task 3.1 steps shortened to fit 1440 × 810), pages 0, decks 0. Not re-audited: by the QA rule, round 5 was the last round, so the build is not shipped without Aya's decision.
+
+## Change after round 5: no MAP test (Aya, 24 Nov 2026)
+
+Aya asked to omit the MAP test. The round 6 audit started on the round 5 build was stopped. The MAP was removed (slides, links, key, portal drafts), the timing rebalanced, and one logged engine change made (CLAUDE.md decisions 8 and 18). Levels 1 to 4 after the change: validator 0, pages 0, decks 0 (66 slides), the survey QR decodes.
+
+## Round 6 · 9.80 / 10 · PASS
+
+| Dimension | Score |
+|---|---|
+| Files, links and config | 10.0 |
+| Pages | 10.0 |
+| Decks | 10.0 |
+| Interactivity | 10.0 |
+| Content coherence | 9.25 |
+| Tasks and demos | 9.5 |
+| MAP tests (no-MAP check: nothing left anywhere, portal folder holds only the final survey) | 10.0 |
+| Final survey | 10.0 |
+| Language and data safety | 10.0 |
+
+Levels 5 to 8 by a sixth fresh agent; every product fact checked against support.claude.com and claude.com/docs on 24 Nov 2026. No Blocking, no Concerning.
+- Nits fixed after the pass · `skfind` footer "Skills work on your paid plan." (the skills pages disagree on Free) · Task 3.2 step 1: Plugins page first, older layout in brackets, "Check that its switch is on" · `l1task` and `l3task` notes: no share-out minute, so the post errors are named as the next block starts · `l4sched` note: a scheduled task cannot stop to ask · CLAUDE.md decision 13: the calculator is slide 19
+- Nits accepted · Demo 4.1 player shows the receipts .zip name (the task unzips it first) · the prompt sheet badge "Watch, then try" on the two watch-only demo cards (engine label; their steps say "Watch only") · "all 1 days" (engine, PLUGIN-FEEDBACK #2)
+
+After the fixes: validator 0 (Task 3.2 still fits 1440 × 810).

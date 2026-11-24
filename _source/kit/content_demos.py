@@ -248,7 +248,7 @@ demo("d32", day=1, skill="3.2", sec=6, title="Create the donor thank-you skill w
          "control": "Test the skill on one letter and check all five parts."})
 
 demo("t32", day=1, skill="3.2", sec=6, title="Install the starter skill, test it, make it yours", tool="Claude · Skills", files=[FILE_SKILL], kind="task", hands_on=True, minutes=12, solo="on your own",
- setup=["Upload the .zip (do not unzip it). Older layout: Customize › Skills › + › Create skill › Upload a skill. Plugins page: Add › Upload.", "Start a new chat. Type / and choose donor-thank-you, then paste the test request.",
+ setup=["Upload the .zip (do not unzip it): Plugins page, Add, then upload (older layout: Customize › Skills › + › Create skill › Upload a skill). Check that its switch is on.", "Start a new chat. Type / and choose donor-thank-you, then paste the test request.",
         "Check the letter: all five parts, under 120 words.", "Make it yours: ask Claude to change one step, then test again."],
  prompts=[("Test the skill", f"Write a thank-you letter for donor {D.THANKS['donor']}: {kwd(D.THANKS['amount'])} to {D.THANKS['campaign']}, receipt {D.THANKS['receipt']}."),
           ("Change one step", "Update the donor-thank-you skill: add the delivery start date, Sunday 6 December, after the line about what the gift paid for.")],

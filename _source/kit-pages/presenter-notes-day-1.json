@@ -209,11 +209,11 @@
 "Give the hint at about 5 min.",
 "Fast finishers have an extra task on the slide."
 ],
-"time": "15 min work, then share",
+"time": "15 min work. No share-out: as the next block starts, ask who found the two errors in the post.",
 "t": "l1",
 "k": "task",
 "h": "Your turn 1.1: One chat, the web and three files (15 min, on your own)",
-"flat": "15 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: Web: today's rate with its date and a link to the source, and the KWD amount. Files: two errors in the post: delivery start: the post says “Deliveries start Thursday 3 December”, the report says Deliveries start Sunday 6 December (page 2); families: the post says “1,200 families”, the report says 1,020 families (page 1). · Give the hint at about 5 min. · Fast finishers have an extra task on the slide. · Fallback: If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF. · Say: “The PDF is the source. The screenshot is a draft. Claude reads both; you decide which one is right.”"
+"flat": "15 min work. No share-out: as the next block starts, ask who found the two errors in the post.. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: Web: today's rate with its date and a link to the source, and the KWD amount. Files: two errors in the post: delivery start: the post says “Deliveries start Thursday 3 December”, the report says Deliveries start Sunday 6 December (page 2); families: the post says “1,200 families”, the report says 1,020 families (page 1). · Give the hint at about 5 min. · Fast finishers have an extra task on the slide. · Fallback: If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF. · Say: “The PDF is the source. The screenshot is a draft. Claude reads both; you decide which one is right.”"
 },
 {
 "say": null,
@@ -523,11 +523,11 @@
 "Give the hint at about 3 min.",
 "Fast finishers have an extra task on the slide."
 ],
-"time": "8 min work, then share",
+"time": "8 min work. No share-out: go straight on to memory.",
 "t": "l3",
 "k": "task",
 "h": "Your turn 3.1: Set your instructions and build the campaign Project (8 min, on your own)",
-"flat": "8 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: A Project with instructions and two knowledge files; three captions that follow the brand guide; personal instructions saved. · Give the hint at about 3 min. · Fast finishers have an extra task on the slide. · Fallback: If Projects are slow, build the instructions in a normal chat first, then move them into the Project. · Say: “Who you are and how you like answers: your instructions. The rules for one area of work: a Project.”"
+"flat": "8 min work. No share-out: go straight on to memory.. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: A Project with instructions and two knowledge files; three captions that follow the brand guide; personal instructions saved. · Give the hint at about 3 min. · Fast finishers have an extra task on the slide. · Fallback: If Projects are slow, build the instructions in a normal chat first, then move them into the Project. · Say: “Who you are and how you like answers: your instructions. The rules for one area of work: a Project.”"
 },
 {
 "say": null,
@@ -743,7 +743,7 @@
 {
 "say": null,
 "do": "Open Scheduled › New task on the presenting laptop and show the form. Do not save it.",
-"expect": "Questions about approvals: a scheduled task still asks before Always ask tools.",
+"expect": "Questions about approvals: nobody is there to answer a scheduled task. A tool set to ask first may wait for your answer, or the task finishes without it.",
 "silent": "ask which weekly job they would schedule first.",
 "fallback": null,
 "more": [
@@ -753,7 +753,7 @@
 "t": "l4",
 "k": "term",
 "h": "The same job, on a time you set.",
-"flat": "Do: Open Scheduled › New task on the presenting laptop and show the form. Do not save it. · Expect: Questions about approvals: a scheduled task still asks before Always ask tools. · A task on a laptop folder runs only while the laptop is awake and the desktop app is open (Require this computer). For a job that must run with the laptop closed, use Google Drive or files saved to Claude. · If the room is silent: ask which weekly job they would schedule first."
+"flat": "Do: Open Scheduled › New task on the presenting laptop and show the form. Do not save it. · Expect: Questions about approvals: nobody is there to answer a scheduled task. A tool set to ask first may wait for your answer, or the task finishes without it. · A task on a laptop folder runs only while the laptop is awake and the desktop app is open (Require this computer). For a job that must run with the laptop closed, use Google Drive or files saved to Claude. · If the room is silent: ask which weekly job they would schedule first."
 },
 {
 "say": null,
