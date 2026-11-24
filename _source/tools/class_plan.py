@@ -17,7 +17,7 @@ for d, D in C.DAYS.items():
         h = v.get("hands_on")
         out.append(f"| {v['card']} | {v['title']} | {v.get('minutes', '') if h else 'demo'} | {v.get('solo', '') if h else ''} | {', '.join(v.get('files', [])) or 'none'} | {v.get('deliverable', '') if h else ''} | {' '.join(v.get('stretch', [])) if h else ''} |")
     out += ["", f"Hands-on minutes: {sum(v['minutes'] for v in CD.DEMOS.values() if v.get('hands_on') and v['day'] == d)}. No points: a one-day session.", ""]
-out += ["## MAP and survey", "", f"- Pre-MAP: {C.FORMS['pre']['when']} · {C.FORMS['pre']['url']}", f"- Post-MAP: {C.FORMS['post']['when']} · {C.FORMS['post']['url']}",
-        f"- Final survey: {C.FORMS['survey']['when']} · {C.FORMS['survey']['url']}", f"- {len(C.MAP)} questions, not graded. The answer key is in the portal description and on /staff, never here.", ""]
+out += ["## Survey", "", "- No MAP test in this session (Aya's decision, 24 Nov 2026).",
+        f"- Final survey: {C.FORMS['survey']['when']} · {C.FORMS['survey']['url']}", ""]
 open(os.path.join(os.path.dirname(SRC), "CLASS-PLAN.md"), "w", encoding="utf-8").write("\n".join(out))
 print("CLASS-PLAN.md written")

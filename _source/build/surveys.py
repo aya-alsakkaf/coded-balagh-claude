@@ -81,7 +81,7 @@ def final_payload(S):
            T("q_8", "General comments and suggestions", "ملاحظات واقتراحات عامة")]
     for i, q in enumerate(qs): q["order"] = i
     for i, s in enumerate(sections): s["order"] = i
-    desc = (f"{S.get('note', '')} End-of-program satisfaction survey for {S['program']} \"{C.TITLE}\", {wk.NDAYS} days ({C.DATES}). Taken at the end of Day {wk.LAST} after the POST MAP test, "
+    desc = (f"{S.get('note', '')} End-of-program satisfaction survey for {S['program']} \"{C.TITLE}\", {wk.NDAYS} days ({C.DATES}). Taken at the end of Day {wk.LAST}{' after the POST MAP test' if wk.HAS_MAP else ''}, "
             "about 5 minutes. The same 6-point agreement scale as other CODED programs (1 = Strongly disagree ... 6 = Strongly agree). Bilingual EN/AR.").strip()
     return {"name": f"{S['name_prefix']} {C.TITLE}: Final Satisfaction Survey", "description": desc, "audience": "teacher_student", "isAnonymous": False, "folderId": S["folder"],
             "sections": sections, "questions": qs,
@@ -89,10 +89,10 @@ def final_payload(S):
                         "clientName": S.get("client", ""), "cohortName": S.get("cohort", ""), "slug": wk.FORMS["survey"].get("slug", "")}}
 
 def check(S):
-    assert len(S["map_ar"]) == len(C.MAP), "SURVEY map_ar needs one (question, [options]) per MAP question"
+    assert len(S.get("map_ar", [])) == len(C.MAP), "SURVEY map_ar needs one (question, [options]) per MAP question"
     assert len(S["confidence_ar"]) == len(C.CONFIDENCE) == len(C.OUTCOMES), "SURVEY confidence_ar needs one line per outcome"
-    for q, (qa, oa) in zip(C.MAP, S["map_ar"]): assert len(oa) == len(q["o"]), q["q"]
-    for k in ("pre", "post", "survey"):
+    for q, (qa, oa) in zip(C.MAP, S.get("map_ar", [])): assert len(oa) == len(q["o"]), q["q"]
+    for k in (("pre", "post", "survey") if wk.HAS_MAP else ("survey",)):
         sl = wk.FORMS[k].get("slug", "")
         assert slug_ok(sl), f"FORMS[{k!r}] slug must be kebab case and at most 80 characters (the portal cuts longer slugs): {sl!r}"
 
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     check(S)
     out = sys.argv[1] if len(sys.argv) > 1 else wk.SURVEY_DIR
     os.makedirs(out, exist_ok=True)
-    for name, p in (("pre", map_payload("pre", S)), ("post", map_payload("post", S)), ("final", final_payload(S))):
+    for name, p in ((("pre", map_payload("pre", S)), ("post", map_payload("post", S))) if wk.HAS_MAP else ()) + (("final", final_payload(S)),):
         t = json.dumps(p, ensure_ascii=False, indent=1)
         assert "—" not in t, f"{name}: em dash in the survey text"
         assert not re.findall(r'"(?:en|ar)": ""', t), f"{name}: an empty label"

@@ -160,7 +160,7 @@ def static_checks():
                 hh, mm = map(int, t.split(":")); mm += m; t0 = f"{hh + mm // 60:02d}:{mm % 60:02d}"
     # survey payloads
     if opt("SURVEY"):
-        for name in ("pre", "post", "final"):
+        for name in (("pre", "post") if wk.HAS_MAP else ()) + ("final",):
             p = os.path.join(wk.SURVEY_DIR, name + ".json")
             if not os.path.exists(p): bad(f"survey payload {name}.json missing (run surveys.py)"); continue
             sl = json.load(open(p))["_update"]["slug"]

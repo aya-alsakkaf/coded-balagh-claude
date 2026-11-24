@@ -10,16 +10,6 @@
    "permanent": false
   },
   {
-   "source": "/pre",
-   "destination": "https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-pre-day-1",
-   "permanent": false
-  },
-  {
-   "source": "/post",
-   "destination": "https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-post-day-1",
-   "permanent": false
-  },
-  {
    "source": "/survey",
    "destination": "https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-final-satisfaction-survey",
    "permanent": false

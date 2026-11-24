@@ -50,8 +50,8 @@ def staff_index(recs):
     pub = ([(HUB, "Workshop home")] + [(dayp(d), f"Day {d} overview") for d in DAYS] + [(deckp(d), f"Day {d} slides (no notes)") for d in DAYS]
            + [(sheetp(d), f"Day {d} {wk.SHEET['name'].lower()}") for d in DAYS] + [(labp(d), f"Day {d} lab") for d in DAYS if d in wk.LABS] + ([(wk.practp(), "Practice questions")] if wk.PRACTICE else [])
            + [(P("cheat-sheet"), "Cheat sheet"), (cardp(), wk.CARD["name"]), (P("take-home-guide"), "Take-home guide")])
-    st = [(P("lesson-plan"), "The lesson plan: run of show, blocks, demos, tasks, files and the MAP sittings"),
-          (P("facilitator-kit"), "Before the workshop, run of show, room, failure plan, MAP links and key")]
+    st = [(P("lesson-plan"), "The lesson plan: run of show, blocks, demos, tasks, files and the " + ("MAP sittings" if wk.HAS_MAP else "survey")),
+          (P("facilitator-kit"), "Before the workshop, run of show, room, failure plan, " + ("MAP links and key" if wk.HAS_MAP else "the survey link"))]
     for d in DAYS:
         st += [(deckp(d), f"Day {d} slides with speaker notes (press N)"), (P(f"notes-day-{d}"), f"Day {d} presenter notes"), (P(f"runbook-day-{d}"), f"Day {d} demo runbook"),
                (P(f"backup-day-{d}"), f"Day {d} backup results"), (P(f"answer-key-day-{d}"), f"Day {d} answer keys")]
@@ -60,13 +60,14 @@ def staff_index(recs):
     b += '<div class="grp-lbl">Public site</div><div class="checks">' + "".join(row(f"../{p}.html", f"/{p}", t) for p, t in pub) + "</div>"
     b += '<div class="grp-lbl">Staff only (password)</div><div class="checks">' + "".join(row(f"{p}.html", f"/staff/{p}", t) for p, t in st) + row("index.html", "/staff", "This page") + "</div>"
     b += '<div class="grp-lbl">Sample files (public, fictional)</div>' + dl(ALL_FILES)
-    b += (f'<div class="grp-lbl">MAP test and survey (CODED portal)</div><div class="sec-sub">The QR codes are on the MAP slides ({map_where(recs)}), the workshop home and the day pages.</div>'
+    b += ((f'<div class="grp-lbl">MAP test and survey (CODED portal)</div><div class="sec-sub">The QR codes are on the MAP slides ({map_where(recs)}), the workshop home and the day pages.</div>' if wk.HAS_MAP else
+           '<div class="grp-lbl">Final survey (CODED portal)</div><div class="sec-sub">The QR code is on the survey slide, the workshop home and the day page.</div>')
           + qr_row() + '<div class="checks">' + "".join(row(wk.FORMS[k]["url"], wk.FORMS[k].get("slug", wk.FORMS[k]["url"]), f'{wk.FORMS[k]["name"]} · {wk.FORMS[k]["when"]}') for k in ("pre", "post", "survey") if k in wk.FORMS) + "</div>")
     b += "</section></main>\n"
     return shell("Workshop index", b)
 
 def lesson_plan(recs):
-    tabs = [(f"d{d}", f"Day {d}") for d in DAYS] + [("map", "MAP sittings"), ("files", "Files")]
+    tabs = [(f"d{d}", f"Day {d}") for d in DAYS] + [("map", "MAP sittings" if wk.HAS_MAP else "Survey"), ("files", "Files")]
     b = bar("Lesson plan", C.TITLE, tabs) + "<main>"
     b += (f'<div class="intro"><b>{e(C.TITLE)}</b> · {e(wk.ORG)} · {e(C.DATES)} · {e(C.HOURS)} · {e(C.VENUE)}. {e(opt("LESSON_INTRO", ""))} '
           f'Tools: {e(C.TOOLS)}. Habit: <b>{e(C.THRU)}</b></div>')
@@ -81,7 +82,8 @@ def lesson_plan(recs):
             inner += blocks_html([("h", f"{rng} · {nm} · minutes inside the session"), ("table", [["Time", "Min", "Block"]] + [[t, m, x] for t, m, x in segs] + [["", f"<b>{sum(m for _t, m, _x in segs)}</b>", "<b>Total</b>"]])])
         inner += blocks_html([("h", "Demos and tasks"), ("table", [["Card", "What", "Time", "Files", "Deliverable", "Finished early?"]] + trs)])
         b += sec(f"d{d}", f"Day {d} · {Dd['title']}", f"{C.DAYDATE[d]} · {C.HOURS}", "", inner)
-    b += sec("map", "MAP sittings and the final survey", "CODED portal", f"Same {len(C.MAP)} questions before and after, not graded. The key is on the facilitator kit and the last day's answer keys.",
+    b += sec("map", "MAP sittings and the final survey" if wk.HAS_MAP else "The final survey", "CODED portal",
+             f"Same {len(C.MAP)} questions before and after, not graded. The key is on the facilitator kit and the last day's answer keys." if wk.HAS_MAP else "No MAP test in this workshop.",
              blocks_html([("table", [["What", "When", "Link"]] + [[e(wk.FORMS[k]["name"]), e(wk.FORMS[k]["when"]), f'<code>{e(wk.FORMS[k]["url"])}</code>'] for k in ("pre", "post", "survey") if k in wk.FORMS])]))
     b += sec("files", "Sample files", "all fictional", e(C.SAMPLE_NOTE),
              blocks_html([("table", [["File", "Used in"]] + [[f"<code>{e(f)}</code>", ", ".join(v["card"] for v in DEMOS.values() if f in v["files"]) or "none"] for f in ALL_FILES])]))
@@ -89,7 +91,7 @@ def lesson_plan(recs):
 
 def facilitator(recs):
     F = opt("FACILITATOR", [])
-    tabs = [(sid, t) for sid, t, _c, _b in F] + [(f"ros{d}", f"Day {d} run of show") for d in DAYS] + [("map", "MAP links and key")]
+    tabs = [(sid, t) for sid, t, _c, _b in F] + [(f"ros{d}", f"Day {d} run of show") for d in DAYS] + [("map", "MAP links and key" if wk.HAS_MAP else "Survey link")]
     b = bar("Facilitator kit", C.TITLE, tabs) + "<main>"
     for sid, t, c, blocks in F: b += sec(sid, t, c, "", blocks_html(blocks))
     for d in DAYS:
@@ -98,8 +100,11 @@ def facilitator(recs):
                  f'Deck: <a href="{deckp(d)}.html">{deckp(d)}</a> · Notes: <a href="{P(f"notes-day-{d}")}.html">{P(f"notes-day-{d}")}</a> · Runbook: <a href="{P(f"runbook-day-{d}")}.html">{P(f"runbook-day-{d}")}</a>',
                  blocks_html([("table", [["Time", "Min", "Block", "What happens"]] + rows + [["", f"<b>{tot}</b>", "<b>Total</b>", ""]])]))
     mq = [["#", "Day", "Question", "Answer"]] + [[i + 1, q.get("day", ""), e(q["q"]), f"<b>{'abcd'[q['a']]}</b> · {e(q['o'][q['a']])}"] for i, q in enumerate(C.MAP)]
-    b += sec("map", "MAP links and the answer key", "CODED portal", f"QR codes: the MAP slides ({map_where(recs)}), the workshop home and the day pages. The key stays here and in the portal description.",
-             qr_row() + blocks_html([("p", f"<b>Answer key:</b> {e(opt('MAP_KEY', ''))}"), ("table", mq)]))
+    if wk.HAS_MAP:
+        b += sec("map", "MAP links and the answer key", "CODED portal", f"QR codes: the MAP slides ({map_where(recs)}), the workshop home and the day pages. The key stays here and in the portal description.",
+                 qr_row() + blocks_html([("p", f"<b>Answer key:</b> {e(opt('MAP_KEY', ''))}"), ("table", mq)]))
+    else:
+        b += sec("map", "The survey link", "CODED portal", "No MAP test in this workshop. The QR code is on the survey slide, the workshop home and the day page.", qr_row())
     return shell("Facilitator kit", b + "</main>\n")
 
 def runbook(d):
@@ -137,7 +142,7 @@ def backups(d):
 def answer_key(d, recs):
     tasks = [(k, v) for k, v in day_demos(d) if v.get("hands_on")]
     checks = [r for r in recs[d] if r["kind"] == "check"]
-    tabs = [(f"t{v['skill']}", f"Task {v['skill']}") for _k, v in tasks] + [("checks", "Quick checks")] + ([("mapkey", "MAP key")] if d == wk.LAST else [])
+    tabs = [(f"t{v['skill']}", f"Task {v['skill']}") for _k, v in tasks] + [("checks", "Quick checks")] + ([("mapkey", "MAP key")] if d == wk.LAST and wk.HAS_MAP else [])
     b = bar(f"Day {d}", "Answer keys", tabs) + '<main><div class="intro"><b>Trainer only.</b> Every task answer and every quick-check answer. Participant pages give hints, never these answers.</div>'
     for _k, v in tasks:
         inner = (f'<div class="card lab"><span class="tag">{e(v["card"])} · {v["minutes"]} min · {e(v["solo"])}' + (f' · {v["points"]} points' if v.get("points") else "") + f'</span><h3>{e(v["title"])}</h3>'
@@ -146,7 +151,7 @@ def answer_key(d, recs):
         b += sec(f"t{v['skill']}", f"Task {v['skill']}", v["deliverable"], "", inner)
     rows = [["Slide", "Question", "Answer"]] + [[r["n"], e(r["question"]), f"<b>{e(r['answer'])}</b>"] for r in checks]
     b += sec("checks", "Quick checks", f"{len(checks)} in the deck", "Each quick check shows the right answer in green after the first tap.", blocks_html([("table", rows)]))
-    if d == wk.LAST:
+    if d == wk.LAST and wk.HAS_MAP:
         mq = [["#", "Question", "Answer"]] + [[i + 1, e(q["q"]), f"<b>{'abcd'[q['a']]}</b> · {e(q['o'][q['a']])}"] for i, q in enumerate(C.MAP)]
         b += sec("mapkey", "MAP test key", "the same in the portal description", "", blocks_html([("table", mq)]))
     return shell(f"Day {d} · Answer keys", b + "</main>\n")

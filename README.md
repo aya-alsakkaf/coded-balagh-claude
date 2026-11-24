@@ -11,12 +11,12 @@ Live: https://coded-balagh-claude.vercel.app
 | Address | Page | Who |
 |---|---|---|
 | `/` → `/coded-balagh-claude` | Workshop home | Everyone |
-| `/day1` → `/coded-balagh-claude-day-1` | The day: run of show, files, MAP and survey QR codes | Everyone |
+| `/day1` → `/coded-balagh-claude-day-1` | The day: run of show, files, survey QR code | Everyone |
 | `/slides1` → `/coded-balagh-claude-day-1-deck` | The deck (66 slides, no notes) | Everyone |
 | `/coded-balagh-claude-prompt-sheet-day-1` | Every prompt, with COPY | Everyone |
 | `/coded-balagh-claude-lab-day-1` | Browser lab: check the dashboard | Everyone |
 | `/coded-balagh-claude-cheat-sheet`, `-safe-use-card`, `-take-home-guide` | Take-aways | Everyone |
-| `/pre`, `/post`, `/survey` | Short links to the portal | Everyone |
+| `/survey` | Short link to the final survey in the portal | Everyone |
 | `/staff` | Lesson plan, deck with notes, facilitator kit, runbook, backups, answer key, lab key | Password |
 
 ## Build and deploy
@@ -30,10 +30,10 @@ git push                             # main deploys production on Vercel
 
 The staff pages need `STAFF_PASSWORD` in Vercel → Project → Settings → Environment Variables (Production), then a redeploy.
 
-## MAP tests and survey (CODED portal)
+## Survey (CODED portal)
 
-- Pre-MAP (09:05): https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-pre-day-1
-- Post-MAP (12:40): https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-post-day-1
+No MAP test in this session (Aya's decision, 24 Nov 2026).
+
 - Final survey (12:50): https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-final-satisfaction-survey
 
 See `CLAUDE.md` for the rules and decisions, `CLASS-PLAN.md` for the plan, `CHANGELOG.md` for changes.

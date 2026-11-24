@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Every fictional name, date and number for Claude in Layers (Misbah Charity Society).
-Change numbers here only: slides, prompts, files, answer keys, backups and MAP questions all read this file."""
+Change numbers here only: slides, prompts, files, answer keys and backups all read this file."""
 import random
 
 ORG = "Misbah Charity Society"

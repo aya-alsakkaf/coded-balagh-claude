@@ -21,14 +21,14 @@ validator fails) without it. "Opt" fields have the default shown. `examples/ai-c
 | `OUTCOMES` | Req | | Hub outcomes, lesson plan, final survey "I can" items (`q_can1…`). |
 | `CONFIDENCE` | Req | | MAP Part 1 items (usually `= OUTCOMES`). |
 | `DAYS` | Req | | `{d: {"title", "claim", "sub", "brief", "artifact", "blocks": [("08:30-08:40", name, what or "" for a break)], "outcomes": [...]}}` plus hub fields `"cat"`, `"icon"` (doc, dash, eye, scale, mail, flask…), `"tag"`, `"bullets"`. Day pages, run of show (minutes are computed), cover, outcomes and road slides, lesson plan, facilitator kit. |
-| `MAP` | Req | | `[{"q", "o": [4], "a": index, "day": d, …}]`: MAP slides (question count), facilitator key, answer key (last day), surveys. |
+| `MAP` | Req | | `[{"q", "o": [4], "a": index, "day": d, …}]`: MAP slides (question count), facilitator key, answer key (last day), surveys. `[]` = no MAP test: `FORMS` holds only `"survey"`, and the hub, staff pages, payloads and validator leave the MAP out. |
 | `MAP_KEY` | Req | | One-line key string: facilitator kit, survey descriptions. |
 | `FORMS` | Req | | `{"pre"|"post"|"survey": {"name", "when", "url", "slug", "id"}}`. `when` = "Day 1 · Sun 20 Dec · 08:40": printed with each QR (MAP slides, hub, day pages, staff index). Redirects `/pre`, `/post`, `/survey`. Slugs: kebab case, at most 80 characters (surveys.py checks). |
 | `FORM_DAY` | Opt | `{first: ["pre"], last: ["post", "survey"]}` | Which forms each day page and `opening()` show. |
 | `MAP_MIN` | Opt | `10` | MAP slide timer and title, note timing. |
 | `MAP_LEDE` | Opt | engine text | `{"before": "...", "after": "..."}` replaces the MAP slide lede. |
 | `SLIDES` | Req | | `{d: count}`: the approved slide plan. The validator fails when a deck differs. The engine never asserts a total. |
-| `HUB` | Opt | short fallbacks | `"headline"` [line, accent line], `"sub"`, `"meta"` (after the venue), `"program_title"`, `"program_lead"`, `"habit_eyebrow"`, `"habit_title"`, `"habit_text"`, `"habit_list"` [(bold, text)], `"files_title"`, `"takeaway_text"`, `"map_text"`, `"about"`, `"description"`, `"day_tool_note"`, `"stats"` [(value or None for the slide count, label)], `"bands"` [(eyebrow, title, html, [items])]. |
+| `HUB` | Opt | short fallbacks | `"headline"` [line, accent line], `"sub"`, `"meta"` (after the venue), `"program_title"`, `"program_lead"`, `"habit_eyebrow"`, `"habit_title"`, `"habit_text"`, `"habit_list"` [(bold, text)], `"files_title"`, `"takeaway_text"`, `"map_text"`, `"map_eyebrow"`, `"map_title"`, `"about"`, `"description"`, `"day_tool_note"`, `"stats"` [(value or None for the slide count, label)], `"bands"` [(eyebrow, title, html, [items])]. |
 | `SHEET` | Opt | by `TOOL_MODE` | `{"name", "slug", "nav", "what", "howto": [html], "note": html}`: the daily sheet page. |
 | `CARD` | Req | name, slug by `TOOL_MODE` | `{"lede", "meta", "cards": [(green|amber|red, heading, text, [examples])], "risks_title", "risks_head", "risks": [rows], "policy_title", "policy": [...]}`: safe-use card or verify card page; the hub habit band links it. |
 | `CHEAT` | Req | | `[(part, title, sub, [(name, text, example, note)], summary)]`: cheat sheet. |

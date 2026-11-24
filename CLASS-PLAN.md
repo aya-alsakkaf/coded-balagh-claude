@@ -12,10 +12,9 @@ Generated from the kit by `_source/tools/class_plan.py`. Do not edit by hand.
 
 | Time | Min | Block | Inside |
 |---|---|---|---|
-| 09:00-09:05 | 5 | Welcome and sign-in check | Claude open and signed in; the desktop app installed |
-| 09:05-09:15 | 10 | Pre-MAP test | 10 minutes. Scan the QR code. It also checks your phone |
-| 09:15-09:25 | 10 | Opener: one request, two setups | The roadmap: Claude in four layers |
-| 09:25-09:45 | 20 | Layer 1 · Chat: ask, attach, speak | Web search, files, voice · Task 1.1 |
+| 09:00-09:10 | 10 | Welcome and setup check | Claude open and signed in; the sample files downloaded |
+| 09:10-09:20 | 10 | Opener: one request, two setups | The roadmap: Claude in four layers |
+| 09:20-09:45 | 25 | Layer 1 · Chat: ask, attach, speak | Web search, files, voice · Task 1.1 |
 | 09:45-10:15 | 30 | Layer 1 · Artifacts: from an answer to a tool | Calculator, dashboard, deck, doc, game · Task 1.3 |
 | 10:15-10:25 | 10 | Break | break |
 | 10:25-10:55 | 30 | Layer 2 · Connectors: your email and calendar | Gmail, Google Calendar, approvals, safe use · Task 2.1 |
@@ -23,8 +22,8 @@ Generated from the kit by `_source/tools/class_plan.py`. Do not edit by hand.
 | 11:15-11:40 | 25 | Layer 3 · Skills: teach Claude a task once | Create, upload, find, use with / · Task 3.2 |
 | 11:40-11:55 | 15 | Dhuhr prayer break | break |
 | 11:55-12:15 | 20 | Layer 4 · Cowork, plugins and scheduled tasks | Hand Claude a folder; role plugins; scheduled tasks · Task 4.1 |
-| 12:15-12:40 | 25 | Integration · Hire your first AI employee | Producer, marketer, designer or accountant · Task 4.2 |
-| 12:40-12:55 | 15 | Post-MAP test, then the final survey | Two QR codes · 15 minutes |
+| 12:15-12:50 | 35 | Integration · Hire your first AI employee | Producer, marketer, designer or accountant · Task 4.2 |
+| 12:50-12:55 | 5 | Final survey | One QR code · 5 minutes |
 | 12:55-13:00 | 5 | Wrap and close | Keep exploring on your own |
 | | **240** | **Total** | |
 
@@ -34,7 +33,7 @@ Generated from the kit by `_source/tools/class_plan.py`. Do not edit by hand.
 |---|---|---|---|---|---|---|
 | Demo 1.0 | One request, two setups | demo |  | misbah-campaign-brief.docx |  |  |
 | Demo 1.1 | Trained knowledge, then web search | demo |  | none |  |  |
-| Task 1.1 | One chat, the web and three files | 10 | on your own | misbah-winter-campaign-report.pdf, misbah-donations-nov-2026.xlsx, misbah-post-screenshot.png | The KWD amount with the rate's date and link, and the 2 errors in the post with their pages. | Open the Claude app on your phone. Ask the PDF question by voice: tap the voice mode icon (the sound wave), not the microphone. |
+| Task 1.1 | One chat, the web and three files | 15 | on your own | misbah-winter-campaign-report.pdf, misbah-donations-nov-2026.xlsx, misbah-post-screenshot.png | The KWD amount with the rate's date and link, and the 2 errors in the post with their pages. | Open the Claude app on your phone. Ask the PDF question by voice: tap the voice mode icon (the sound wave), not the microphone. |
 | Demo 1.2 | The winter-kit cost calculator | demo |  | misbah-campaign-brief.docx |  |  |
 | Demo 1.3 | A donations dashboard from the Excel file | demo |  | misbah-donations-nov-2026.xlsx |  |  |
 | Task 1.3 | Build one artifact for Misbah | 15 | on your own | misbah-campaign-brief.docx, misbah-donations-nov-2026.xlsx, misbah-winter-campaign-report.pdf | One working artifact, one number checked against its file, and its share link. | Build a second artifact from another choice, or add an “Ask Claude” box inside your artifact. |
@@ -47,13 +46,11 @@ Generated from the kit by `_source/tools/class_plan.py`. Do not edit by hand.
 | Demo 4.1 | Hand Cowork the receipts folder | demo |  | misbah-receipts-nov-2026.zip |  |  |
 | Task 4.1 | Hand Cowork a folder | 8 | on your own | misbah-receipts-nov-2026.zip | The Excel table and the 2 flags, checked against the receipts. | In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin. |
 | Demo 4.2 | The AI accountant, hired | demo |  | misbah-donations-nov-2026.xlsx |  |  |
-| Task 4.2 | Hire one AI employee | 14 | on your own | misbah-campaign-brief.docx, misbah-brand-guide.docx, misbah-donations-nov-2026.xlsx | A working AI employee Project, its first output checked, and its employee card. | Add the role's weekly job as a scheduled task (Scheduled › New task, or ask in the chat), set to wait for your approval. |
+| Task 4.2 | Hire one AI employee | 20 | on your own | misbah-campaign-brief.docx, misbah-brand-guide.docx, misbah-donations-nov-2026.xlsx | A working AI employee Project, its first output checked, and its employee card. | Add the role's weekly job as a scheduled task (Scheduled › New task, or ask in the chat), set to wait for your approval. |
 
-Hands-on minutes: 82. No points: a one-day session.
+Hands-on minutes: 93. No points: a one-day session.
 
-## MAP and survey
+## Survey
 
-- Pre-MAP: Day 1 · Thu 26 Nov · 09:05 · https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-pre-day-1
-- Post-MAP: Day 1 · Thu 26 Nov · 12:40 · https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-post-day-1
+- No MAP test in this session (Aya's decision, 24 Nov 2026).
 - Final survey: Day 1 · Thu 26 Nov · 12:50 · https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-final-satisfaction-survey
-- 12 questions, not graded. The answer key is in the portal description and on /staff, never here.

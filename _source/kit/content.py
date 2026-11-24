@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Single source of truth for the program shape: the day, blocks, outcomes, cards, MAP test and survey words.
+"""Single source of truth for the program shape: the day, blocks, outcomes, cards and the final survey words.
 Claude in Layers · CODED × Al-Balagh Al-Mubeen · one-day client session, Thu 26 Nov 2026 (approved handoff, 24 Nov 2026)."""
 import data as D
 from data import kwd
@@ -34,7 +34,7 @@ SOURCES = {
  "academy": ("Introduction to Claude Cowork (Claude Academy)", "https://academy.claude.com/courses/introduction-to-claude-cowork/getting-set-up"),
 }
 
-# the five outcomes (handoff section 2): MAP confidence items and the final survey "I can" items
+# the five outcomes (handoff section 2): the final survey "I can" items
 OUTCOMES = ["I can choose between Claude's trained knowledge and web search, and give Claude PDFs, spreadsheets and screenshots to work from.",
             "I can turn a spreadsheet or an idea into an artifact, such as a dashboard, a calculator or a short deck, and share it.",
             "I can connect my email and calendar to Claude and keep every send and change under my approval.",
@@ -43,13 +43,12 @@ OUTCOMES = ["I can choose between Claude's trained knowledge and web search, and
 
 DAYS = {
 1: {"title": "From chat to your first AI employee", "claim": "Each layer you switch on does more of the work. You stay the manager.",
-    "sub": "Four layers of Claude, seven hands-on tasks, and one AI employee for a role at your organization by 12:40.",
+    "sub": "Four layers of Claude, seven hands-on tasks, and one AI employee for a role at your organization by 12:50.",
     "brief": "The day starts with one request and two setups. Then you work up the layers: chat and artifacts, connectors, memory, Projects and Skills, then Cowork, plugins and schedules. You end by hiring one AI employee for Misbah: a producer, a marketer, a designer or an accountant.",
     "artifact": "One AI employee for one Misbah role, built from every layer of the morning",
-    "blocks": [("09:00-09:05", "Welcome and sign-in check", "Claude open and signed in; the desktop app installed"),
-               ("09:05-09:15", "Pre-MAP test", "10 minutes. Scan the QR code. It also checks your phone"),
-               ("09:15-09:25", "Opener: one request, two setups", "The roadmap: Claude in four layers"),
-               ("09:25-09:45", "Layer 1 · Chat: ask, attach, speak", "Web search, files, voice · Task 1.1"),
+    "blocks": [("09:00-09:10", "Welcome and setup check", "Claude open and signed in; the sample files downloaded"),
+               ("09:10-09:20", "Opener: one request, two setups", "The roadmap: Claude in four layers"),
+               ("09:20-09:45", "Layer 1 · Chat: ask, attach, speak", "Web search, files, voice · Task 1.1"),
                ("09:45-10:15", "Layer 1 · Artifacts: from an answer to a tool", "Calculator, dashboard, deck, doc, game · Task 1.3"),
                ("10:15-10:25", "Break", ""),
                ("10:25-10:55", "Layer 2 · Connectors: your email and calendar", "Gmail, Google Calendar, approvals, safe use · Task 2.1"),
@@ -57,8 +56,8 @@ DAYS = {
                ("11:15-11:40", "Layer 3 · Skills: teach Claude a task once", "Create, upload, find, use with / · Task 3.2"),
                ("11:40-11:55", "Dhuhr prayer break", ""),
                ("11:55-12:15", "Layer 4 · Cowork, plugins and scheduled tasks", "Hand Claude a folder; role plugins; scheduled tasks · Task 4.1"),
-               ("12:15-12:40", "Integration · Hire your first AI employee", "Producer, marketer, designer or accountant · Task 4.2"),
-               ("12:40-12:55", "Post-MAP test, then the final survey", "Two QR codes · 15 minutes"),
+               ("12:15-12:50", "Integration · Hire your first AI employee", "Producer, marketer, designer or accountant · Task 4.2"),
+               ("12:50-12:55", "Final survey", "One QR code · 5 minutes"),
                ("12:55-13:00", "Wrap and close", "Keep exploring on your own")],
     "outcomes": ["Choose between <b>trained knowledge and web search</b>, and give Claude files to work from.",
                  "Turn a spreadsheet or an idea into an <b>artifact</b> you can share.",
@@ -69,15 +68,15 @@ DAYS = {
 
 # minutes inside each session (lesson plan): consecutive, and they fill the session
 SEGMENTS = {1: [
- ("09:15-09:25", "Opener", [("09:15", 1, "Story: the General Manager's question"), ("09:16", 6, "Demo 1.0: one request, two setups"), ("09:22", 1, "Outcomes and today's map"), ("09:23", 2, "The four layers")]),
- ("09:25-09:45", "Layer 1 · Chat", [("09:25", 1, "Story: the donor's pledge"), ("09:26", 2, "A library book and today's newspaper"), ("09:28", 2, "Next-word widget"), ("09:30", 3, "Demo 1.1: web search"), ("09:33", 1, "Files and voice"), ("09:34", 1, "Two quick checks"), ("09:35", 10, "Task 1.1")]),
+ ("09:10-09:20", "Opener", [("09:10", 1, "Story: the General Manager's question"), ("09:11", 6, "Demo 1.0: one request, two setups"), ("09:17", 1, "Outcomes and today's map"), ("09:18", 2, "The four layers")]),
+ ("09:20-09:45", "Layer 1 · Chat", [("09:20", 1, "Story: the donor's pledge"), ("09:21", 2, "A library book and today's newspaper"), ("09:23", 2, "Next-word widget"), ("09:25", 3, "Demo 1.1: web search"), ("09:28", 1, "Files and voice"), ("09:29", 1, "Two quick checks"), ("09:30", 15, "Task 1.1")]),
  ("09:45-10:15", "Layer 1 · Artifacts", [("09:45", 1, "Story: the board meets Wednesday"), ("09:46", 2, "Artifact"), ("09:48", 2, "Six artifacts"), ("09:50", 3, "Demo 1.2: the calculator"), ("09:53", 4, "Demo 1.3: the dashboard"), ("09:57", 1, "Edit, check, share"), ("09:58", 1, "Quick check"), ("09:59", 15, "Task 1.3"), ("10:14", 1, "Two artifacts on the screen")]),
  ("10:25-10:55", "Layer 2 · Connectors", [("10:25", 1, "Story: 40 unread emails"), ("10:26", 1, "A visitor badge"), ("10:27", 1, "Connector"), ("10:28", 3, "Demo 2.1: Sunday's brief"), ("10:31", 2, "You decide: modes and permissions"), ("10:33", 4, "Safe-use sort"), ("10:37", 1, "Quick check"), ("10:38", 15, "Task 2.1"), ("10:53", 2, "What you caught")]),
  ("10:55-11:15", "Layer 3 · Memory, instructions and Projects", [("10:55", 1, "Story: the same three paragraphs"), ("10:56", 3, "Four places to teach Claude"), ("10:59", 1, "Project"), ("11:00", 3, "Demo 3.1: the campaign Project"), ("11:03", 1, "Quick check"), ("11:04", 8, "Task 3.1"), ("11:12", 3, "Memory: what Claude keeps, and a quick check")]),
  ("11:15-11:40", "Layer 3 · Skills", [("11:15", 1, "Story: 30 letters a week"), ("11:16", 1, "A recipe card"), ("11:17", 1, "Skill"), ("11:18", 2, "Inside a skill"), ("11:20", 3, "Demo 3.2: create a skill"), ("11:23", 2, "Find skills"), ("11:25", 1, "Quick check"), ("11:26", 12, "Task 3.2"), ("11:38", 2, "One letter read aloud")]),
  ("11:55-12:15", "Layer 4 · Cowork, plugins and schedules", [("11:55", 1, "Story: a morning of receipts"), ("11:56", 1, "Cowork"), ("11:57", 3, "Demo 4.1: the receipts folder"), ("12:00", 1, "Plugins"), ("12:01", 1, "Quick check: plugins"), ("12:02", 1, "Scheduled tasks"), ("12:03", 2, "Two quick checks"), ("12:05", 8, "Task 4.1"), ("12:13", 2, "The flags you found")]),
- ("12:15-12:40", "Integration · Your first AI employee", [("12:15", 1, "Story: the General Manager's four roles"), ("12:16", 2, "Hire it like a person"), ("12:18", 2, "Four AI employees"), ("12:20", 3, "Demo 4.2: the AI accountant"), ("12:23", 14, "Task 4.2"), ("12:37", 3, "Show and tell")]),
- ("12:40-12:55", "Post-MAP and survey", [("12:40", 10, "Post-MAP test"), ("12:50", 5, "Final survey")]),
+ ("12:15-12:50", "Integration · Your first AI employee", [("12:15", 1, "Story: the General Manager's four roles"), ("12:16", 2, "Hire it like a person"), ("12:18", 2, "Four AI employees"), ("12:20", 3, "Demo 4.2: the AI accountant"), ("12:23", 20, "Task 4.2"), ("12:43", 7, "Show and tell")]),
+ ("12:50-12:55", "Final survey", [("12:50", 5, "Final survey")]),
  ("12:55-13:00", "Wrap and close", [("12:55", 2, "Wrap: what you built"), ("12:57", 2, "Keep exploring"), ("12:59", 1, "Close")]),
 ]}
 
@@ -170,54 +169,20 @@ GUIDE = [("Your first week", ["Build one artifact you will use again: a calculat
 GUIDE_HABIT = "Claude drafts. You check. You approve what goes out. Your organization's AI and data policy comes first."
 GUIDE_META = [("home", "Your own work, safely"), ("list", "First week, first month"), ("shield", "Policy first")]
 
-# ------------------------------------------------------------------ MAP test: the same 12 questions before and after (approved handoff, section 6)
+# ------------------------------------------------------------------ no MAP test in this session (Aya, 24 Nov 2026): only the final survey
 CONFIDENCE = OUTCOMES
-_Q = lambda q, o, a, topic, where: {"q": q, "o": o, "a": a, "day": 1, "topic": topic, "where": where}
-MAP = [
- _Q("Fahad asks Claude for today's USD to KWD rate. Web search is off. What is Claude's answer based on?",
-    ["What it learned in training, which may be old", "The live rate, which Claude checks with the banks", "The Central Bank of Kuwait site, read on its own", "A quick search Claude runs in the background"], 0, "Trained knowledge and web search", "Layer 1 · next-word widget and Demo 1.1"),
- _Q(f"Hessa needs total donations by campaign from a {D.DON_ROWS}-row Excel file. Which request gives the most reliable numbers?",
-    ["Paste the first 50 rows into the chat and ask for totals", "Send a screenshot of the sheet and ask for totals", "Attach the file and ask Claude to calculate with code", "Describe the columns in words and ask for an estimate"], 2, "Files", "Layer 1 · files and voice, Task 1.1"),
- _Q("Noura wants a winter-kit cost calculator that volunteers can open again next week. What should she ask Claude for?",
-    ["A long answer that explains the formula step by step", "An artifact: a small calculator she can share", "A memory entry that stores the unit costs", "A scheduled task that sends her the costs daily"], 1, "Artifacts", "Layer 1 · Artifacts, Demo 1.2"),
- _Q(f"Claude's receipts table shows Winter Warmth {kwd(D.RC_DUP)} above the supplier invoices. What do you do first?",
-    ["Ask Claude to recalculate until the totals match", "Change the table by hand to match the invoices", "Send it to Fahad with a note that it is a draft", "Look for a receipt that is counted twice"], 3, "Check before you share", "Layer 1 · Demo 1.3 check; Layer 4 · Task 4.1 flags"),
- _Q("Hessa asks Claude to forward the heater email to the board secretary through the Gmail connector. She works in Manual mode. What happens before it is forwarded?",
-    ["Nothing: Claude forwards it as soon as it is ready", "Claude forwards it, because forwarding is read-only", "Claude asks her to approve the forward first", "Claude saves a draft and she forwards it in Gmail"], 2, "Connectors and approvals", "Layer 2 · you decide"),
- _Q("Hessa plans the delivery days with Claude, in an account her organization approved. Which file must she keep out of the chat?",
-    ["The booking times for the three community halls", "The list of families with their civil IDs and addresses", "The heater order from the supplier, with its prices", "The campaign brief with the kit and the budget"], 1, "Safe use", "Layer 2 · safe-use sort and card"),
- _Q("Noura's Ramadan Iftar 2027 chats all need the menu rules and the venue list, but her other work does not. Where do they go?",
-    ["In a Ramadan Iftar Project, as its knowledge", "In a pinned chat that she goes back to each time", "In her personal settings, so every chat starts with them", "In the first message of each chat, pasted by hand"], 0, "Projects", "Layer 3 · four places to teach Claude"),
- _Q("Fahad writes donor thank-you letters every week with the same five steps. What makes Claude follow those steps when the task comes up?",
-    ["A Skill with the steps, an example and a template", "A longer prompt saved in a file on his desktop", "A connector to the shared drive that holds old letters", "A memory entry that says he writes letters weekly"], 0, "Skills", "Layer 3 · Skills"),
- _Q("Noura wants Claude ready for marketing work in one step, with commands such as /campaign-plan. What does she add?",
-    ["A new Project named Marketing, with no files yet", "A connector to Instagram from the + menu", "Longer Instructions for Claude in Settings", "The Marketing plugin from the Plugins page"], 3, "Plugins", "Layer 4 · plugins"),
- _Q("Which task fits Cowork better than a normal chat?",
-    ["Explaining the meaning of one word in a post", "Sorting 15 receipt files into one Excel table", "Checking the date in one short email from Salem", "Translating one sentence of a post into Arabic"], 1, "Cowork", "Layer 4 · Cowork, Demo 4.1"),
- _Q("You want a donations summary every Sunday at 08:00, even when your laptop is off. What do you set up?",
-    ["A memory entry that says “every Sunday at 08:00”", "A Skill named weekly-summary with the steps", "A pinned chat that you open each Sunday", "A scheduled task in Claude for Sunday 08:00"], 3, "Scheduled tasks", "Layer 4 · scheduled tasks"),
- _Q("You set up an AI accountant for Misbah. Which part should stay with a person?",
-    ["Reading the receipts in the Google Drive folder", "Sorting the November donations by campaign", "Approving any payment or email that goes out", "Drafting the weekly three-line note"], 2, "AI employees", "Integration · the recipe"),
-]
-MAP_KEY = " · ".join(f"{i} {'abcd'[q['a']]}" for i, q in enumerate(MAP, 1))
-MAP_MIN = 10
-MAP_LEDE = {"before": f"{len(MAP)} questions. You take the same test again at 12:40. Not graded. It measures what this morning changes. Phone only: no notes, no search, no AI.",
-            "after": f"The same {len(MAP)} questions as this morning. Not graded. Phone only: no notes, no search, no AI. Then scan the second code for the final survey."}
+MAP = []
 
 # ------------------------------------------------------------------ the approved slide plan (the validator checks the deck against it)
 SLIDES = {1: 66}
 
-# ------------------------------------------------------------------ MAP tests and the final survey (CODED portal; links filled after publishing)
+# ------------------------------------------------------------------ the final survey (CODED portal; the link is filled after publishing)
 PORTAL = "https://platform.joincoded.com/sv/"
-_SL = {"pre": "coded-al-balagh-al-mubeen-claude-in-layers-map-test-pre-day-1",
-       "post": "coded-al-balagh-al-mubeen-claude-in-layers-map-test-post-day-1",
-       "survey": "coded-al-balagh-al-mubeen-claude-in-layers-final-satisfaction-survey"}
-FORMS = {
-    "pre":    {"name": "Pre-MAP test", "when": "Day 1 · Thu 26 Nov · 09:05", "slug": _SL["pre"], "url": PORTAL + _SL["pre"], "id": "6bc37002-4c02-4aa4-9c79-64be5b9213ee"},
-    "post":   {"name": "Post-MAP test", "when": "Day 1 · Thu 26 Nov · 12:40", "slug": _SL["post"], "url": PORTAL + _SL["post"], "id": "2c1bce62-400a-45aa-b391-05ec7d7b232a"},
+_SL = {"survey": "coded-al-balagh-al-mubeen-claude-in-layers-final-satisfaction-survey"}
+FORMS = {   # no MAP test in this session (Aya, 24 Nov 2026): only the final survey
     "survey": {"name": "Final satisfaction survey", "when": "Day 1 · Thu 26 Nov · 12:50", "slug": _SL["survey"], "url": PORTAL + _SL["survey"], "id": "402362fa-61c5-43f2-9eb2-3b15ff667498"},
 }
-FORM_DAY = {1: ["pre", "post", "survey"]}            # one day: the morning test, the closing test and the survey
+FORM_DAY = {1: ["survey"]}                           # one day: the final survey at 12:50
 
 # ------------------------------------------------------------------ the workshop home (hub)
 DAYS[1].update({"cat": "Four layers", "icon": "flask", "tag": "chat · connectors · skills · cowork",
@@ -232,10 +197,11 @@ HUB = {
     "habit_text": "Claude drafts. You check. You approve what goes out. Run the five checks before anything leaves Claude:", "habit_list": CHECKS,
     "files_title": "One charity. One story all morning.",
     "takeaway_text": "The cheat sheet: the four layers, six artifacts, where to teach Claude what, the AI employee recipe and the settings paths. The take-home guide says what to do in your first week and your first month. Every prompt from the morning is on the prompt sheet with a COPY button.",
-    "map_text": f"{len(MAP)} questions, at 09:05 and again at 12:40. Not graded. It measures what this morning changes. Phone only, no AI. The final survey comes right after the second test.",
+    "map_text": "One short survey at 12:50: five minutes on your phone. Tell us what worked and what to change.",
+    "map_title": "Five minutes of feedback.",
     "about": "Claude in Layers is a CODED Professionals session for Al-Balagh Al-Mubeen.",
     "day_tool_note": "Use Claude in the desktop app or at claude.ai, signed in with your own paid account.",
-    "stats": [(4, "layers"), (None, "slides"), (7, "hands-on tasks"), (9, "in-slide demos"), (8, "sample files"), (12, "MAP questions")],
+    "stats": [(4, "layers"), (None, "slides"), (7, "hands-on tasks"), (9, "in-slide demos"), (8, "sample files"), (1, "AI employee you build")],
 }
 SHEET = {"howto": ["<b>Watch the trainer first.</b> Then find the same card here.", "<b>Download the file</b> on the card. In Claude, attach it with the + button.",
                    "Click <b>COPY</b>, paste the prompt into Claude, then press <code>Enter</code>.", "<b>Check the answer</b> against the file before you trust it: numbers, dates, names and actions."],
@@ -267,11 +233,11 @@ FACILITATOR = [
     "The day before: upload misbah-donor-thanks-skill.zip from the Plugins page, note the exact button labels for Task 3.2, then delete the skill again. If the new page refuses a skill .zip, teach the fallback: create the skill with Claude (Demo 3.2).",
     "The day before: load the CODED training Google account with the fictional inbox and Sunday 29 November's calendar (from misbah-inbox-and-calendar.pdf) for Demo 2.1.",
     "This room left AI Essentials because of too much prompting. Do not teach prompting. Every block is a Claude feature, shown, then done.",
-    "The three portal surveys are not linked to a cohort (there is none for this session). Ops can link one later."])]),
+    "There is no MAP test in this session. The final survey is not linked to a cohort (there is none for this session). Ops can link one later."])]),
  ("room", "Room and laptops", "pre-flight", [("ol", [
     "Legacy room. Three to six people: one table facing the screen; everyone works solo.",
     "Wi-Fi name and password on the board before 08:45.",
-    "09:00: every laptop opens Claude and signs in. The pre-MAP QR at 09:05 is also the phone check.",
+    "09:00 to 09:10: every laptop opens Claude, signs in and downloads the sample files from the workshop home. Help anyone who is stuck before the opener.",
     "Print one safe-use card and one cheat sheet per person.",
     "The General Manager is in the room. Ask him which role he wants his first AI employee for before Task 4.2."])]),
  ("failplan", "If something fails", "Plan A, B, C", [("table", [["What fails", "Plan B", "Plan C"],
@@ -302,39 +268,13 @@ LABS = {
 SURVEY = {
  "program": "CODED × Al-Balagh Al-Mubeen", "program_ar": "Claude في طبقات", "client": "Al-Balagh Al-Mubeen Charity",
  "subtitle": {"en": "CODED × Al-Balagh Al-Mubeen", "ar": "CODED × جمعية البلاغ المبين"},
- "folder": "9d0ed253-6ffa-4591-aa6b-3c95f22972ec", "name_prefix": "CODED × Al-Balagh Al-Mubeen", "note": "", "test_min": 10, "cohort": "",
+ "folder": "9d0ed253-6ffa-4591-aa6b-3c95f22972ec", "name_prefix": "CODED × Al-Balagh Al-Mubeen", "note": "", "cohort": "",
  "day_ar": {1: "من المحادثة إلى أول موظف ذكاء اصطناعي"},
  "confidence_ar": ["أستطيع الاختيار بين معرفة Claude المدرَّبة والبحث في الويب، وأن أعطي Claude ملفات PDF وجداول ولقطات شاشة ليعمل منها.",
                    "أستطيع تحويل جدول بيانات أو فكرة إلى Artifact، مثل لوحة بيانات أو حاسبة أو عرض قصير، ومشاركته.",
                    "أستطيع ربط بريدي الإلكتروني وتقويمي بـ Claude، مع إبقاء كل إرسال وتغيير بموافقتي.",
                    "أستطيع تعليم Claude مرة واحدة عبر الذاكرة والتعليمات والمشروع (Project) والمهارة (Skill)، وأن أجد مهارات وإضافات جاهزة.",
                    "أستطيع شرح ما يفعله Cowork والمهام المجدولة، وإعداد موظف ذكاء اصطناعي لدور واحد في مؤسستي."],
- "map_ar": [
-  ("يسأل فهد Claude عن سعر صرف الدولار الأمريكي مقابل الدينار الكويتي اليوم، والبحث في الويب متوقف. على ماذا تعتمد إجابة Claude؟",
-   ["على ما تعلّمه أثناء التدريب، وقد يكون قديماً", "على السعر المباشر الذي يتحقق منه Claude لدى البنوك", "على موقع بنك الكويت المركزي، يقرؤه من تلقاء نفسه", "على بحث سريع يجريه Claude في الخلفية"]),
-  (f"تحتاج حصة إلى إجمالي التبرعات لكل حملة من ملف Excel فيه {D.DON_ROWS} صفاً. أي طلب يعطي أدق الأرقام؟",
-   ["لصق أول 50 صفاً في المحادثة وطلب الإجماليات", "إرسال لقطة شاشة للورقة وطلب الإجماليات", "إرفاق الملف وطلب الحساب من Claude باستخدام الكود", "وصف الأعمدة بالكلمات وطلب تقدير"]),
-  ("تريد نورة حاسبة لتكلفة حقيبة الشتاء يفتحها المتطوعون مرة أخرى الأسبوع القادم. ماذا تطلب من Claude؟",
-   ["إجابة طويلة تشرح المعادلة خطوة بخطوة", "عنصر Artifact: حاسبة صغيرة يمكنها مشاركتها", "إدخالاً في الذاكرة يحفظ تكاليف الوحدات", "مهمة مجدولة ترسل لها التكاليف يومياً"]),
-  (f"يُظهر جدول الإيصالات الذي أعدّه Claude أن حملة Winter Warmth أعلى بمقدار {D.RC_DUP:,.3f} دينار من فواتير الموردين. ماذا تفعل أولاً؟",
-   ["أطلب من Claude إعادة الحساب حتى تتطابق الإجماليات", "أعدّل الجدول يدوياً ليطابق الفواتير", "أرسله إلى فهد مع ملاحظة أنه مسودة", "أبحث عن إيصال محسوب مرتين"]),
-  ("تطلب حصة من Claude إعادة توجيه رسالة الدفايات إلى سكرتير مجلس الإدارة عبر موصل Gmail، وهي تعمل في الوضع اليدوي (Manual). ماذا يحدث قبل إعادة التوجيه؟",
-   ["لا شيء: يعيد Claude توجيهها فور جاهزيتها", "يعيد Claude توجيهها، لأن إعادة التوجيه للقراءة فقط", "يطلب منها Claude الموافقة على إعادة التوجيه أولاً", "يحفظ Claude مسودة وتعيد هي توجيهها من Gmail"]),
-  ("تخطط حصة لأيام التوزيع مع Claude، في حساب وافقت عليه مؤسستها. أي ملف يجب أن تُبقيه خارج المحادثة؟",
-   ["مواعيد حجز القاعات المجتمعية الثلاث", "قائمة الأسر بأرقامها المدنية وعناوينها", "طلب الدفايات من المورّد، مع أسعاره", "موجز الحملة بمحتويات الحقيبة والميزانية"]),
-  ("كل محادثات نورة عن حملة Ramadan Iftar 2027 تحتاج قواعد قائمة الطعام وقائمة القاعات، لكن عملها الآخر لا يحتاجها. أين تضعها؟",
-   ["في مشروع (Project) لحملة Ramadan Iftar، كملفات معرفة", "في محادثة مثبّتة تعود إليها كل مرة", "في إعداداتها الشخصية، لتبدأ بها كل محادثة", "في أول رسالة من كل محادثة، بلصقها يدوياً"]),
-  ("يكتب فهد رسائل شكر للمتبرعين كل أسبوع بالخطوات الخمس نفسها. ما الذي يجعل Claude يتبع هذه الخطوات عندما تأتي المهمة؟",
-   ["مهارة (Skill) فيها الخطوات ومثال وقالب", "طلب أطول محفوظ في ملف على سطح المكتب", "موصل إلى المجلد المشترك الذي يضم الرسائل القديمة", "إدخال في الذاكرة يقول إنه يكتب رسائل كل أسبوع"]),
-  ("تريد نورة تجهيز Claude لأعمال التسويق بخطوة واحدة، مع أوامر جاهزة مثل /campaign-plan. ماذا تضيف؟",
-   ["مشروعاً جديداً باسم Marketing، دون ملفات بعد", "موصلاً إلى Instagram من قائمة +", "تعليمات أطول لـ Claude في الإعدادات", "إضافة Marketing من صفحة Plugins"]),
-  ("أي مهمة تناسب Cowork أكثر من المحادثة العادية؟",
-   ["شرح معنى كلمة واحدة في منشور", "فرز 15 ملف إيصال في جدول Excel واحد", "التحقق من التاريخ في رسالة قصيرة واحدة من سالم", "ترجمة جملة واحدة من منشور إلى العربية"]),
-  ("تريد ملخصاً للتبرعات كل يوم أحد الساعة 08:00، حتى وحاسوبك مغلق. ماذا تُعدّ؟",
-   ["إدخالاً في الذاكرة يقول «كل أحد الساعة 08:00»", "مهارة (Skill) باسم weekly-summary فيها الخطوات", "محادثة مثبّتة تفتحها كل أحد", "مهمة مجدولة في Claude ليوم الأحد الساعة 08:00"]),
-  ("أعددت محاسباً بالذكاء الاصطناعي لجمعية المصباح. أي جزء يجب أن يبقى مع شخص؟",
-   ["قراءة الإيصالات في مجلد Google Drive", "فرز تبرعات نوفمبر حسب الحملة", "الموافقة على أي دفعة أو رسالة تخرج", "كتابة مسودة الملاحظة الأسبوعية من ثلاثة أسطر"]),
- ],
  "hands_on": ("The hands-on parts, such as the seven tasks, the Misbah sample files and the prompt sheet, helped me apply what I learned.",
               "ساعدتني الأجزاء التطبيقية، مثل المهام السبع وملفات المصباح التجريبية وورقة الأوامر، على تطبيق ما تعلّمته."),
  "materials": ("The workshop website, the cheat sheet, the safe-use card and the take-home guide were clear and useful.",

@@ -72,7 +72,7 @@ demo("d11", day=1, skill="1.1", sec=2, title="Trained knowledge, then web search
          "best": 2, "reco": ["<b>Trained knowledge</b> stops on a date. It does not know today.", "<b>Web search</b> reads current pages and shows its sources.", "<b>Your check:</b> open the link and compare the number."],
          "control": "Open the source link and check the rate before you use the amount."})
 
-demo("t11", day=1, skill="1.1", sec=2, title="One chat, the web and three files", tool="Claude · web search and files", files=[FILE_REPORT, FILE_DON, FILE_POST], kind="task", hands_on=True, minutes=10, solo="on your own",
+demo("t11", day=1, skill="1.1", sec=2, title="One chat, the web and three files", tool="Claude · web search and files", files=[FILE_REPORT, FILE_DON, FILE_POST], kind="task", hands_on=True, minutes=15, solo="on your own",
  setup=["Run prompt 1 (older layout: turn on Web search in the + menu first). Open the link it gives.",
         "Attach the report (PDF), the donations file (Excel) and the post (PNG). Run prompts 2 to 4.", "Check the page Claude gives for each error in the post."],
  prompts=[("1 · The web", "Search the web: a US donor pledged USD 5,000. What is that in KWD today? Give the rate, its date and the link."),
@@ -327,7 +327,7 @@ demo("d42", day=1, skill="4.2", sec=8, title="The AI accountant, hired", tool="C
          "reco": ["<b>Job:</b> Project instructions. <b>Binder:</b> its files.", "<b>Procedures:</b> skills and the plugin. <b>Keys:</b> connectors.", "<b>Shift:</b> Thursday 08:00. <b>Manager:</b> you."],
          "control": "Nothing is sent or paid until a person approves it."})
 
-demo("t42", day=1, skill="4.2", sec=8, title="Hire one AI employee", tool="Claude · Projects, skills, plugins", files=[FILE_BRIEF, FILE_BRAND, FILE_DON], kind="task", hands_on=True, minutes=14, solo="on your own",
+demo("t42", day=1, skill="4.2", sec=8, title="Hire one AI employee", tool="Claude · Projects, skills, plugins", files=[FILE_BRIEF, FILE_BRAND, FILE_DON], kind="task", hands_on=True, minutes=20, solo="on your own",
  setup=["Choose a role. Create a Project named for it, for example Misbah AI Accountant.", "Paste its job description (Demo 4.2 on your prompt sheet) and add its files.",
         "Add the role's plugin from the Plugins page. Run its first job from your prompt sheet.", "Check one fact. Write the employee card: role, tools, schedule, approvals."],
  prompts=[(f"{r} · {ROLE_LABEL[r]}", first) for r, _j, _f, first in ROLES],

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-24 · No MAP test (Aya's decision)
+
+- PRE and POST MAP removed: slides, links, answer key and portal drafts. Setup check at 09:00; Task 1.1 15 min; Task 4.2 20 min; show and tell 7 min; one survey QR slide at 12:50 (still 66 slides).
+- Small engine change (`wk.HAS_MAP`), approved and logged, so the hub and trainer pages carry no MAP wording.
+
 ## 2026-11-24 · QA round 5 fixes
 
 - Plugins note corrected: connect each bundled connector yourself. Voice-mode check replaces the files check (still 66 slides).

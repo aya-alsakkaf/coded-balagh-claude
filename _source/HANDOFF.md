@@ -310,3 +310,11 @@ The independent audit of round 1 found gaps. These changes close them; nothing o
 - Wrap label "Between you, you caught"; showcase timing for more than three people; Designer shift Wednesday 09:00.
 - Task 3.1 and Task 4.2 steps point to the prompt sheet. Day-before items moved to Facilitator "Before the session".
 - Receipt PDF prices with thousands separators. MAP Q4 shows KWD 1,950.000 (key unchanged; both portal drafts updated).
+
+## Change after the approval: no MAP test (24 November 2026, Aya)
+
+Aya: "No need for a map test. Omit it." This replaces every MAP item above (sections on the MAP, the run of show rows at 09:05 and 12:40, and the MAP notes in the QA changes).
+- No PRE or POST sitting, no MAP slides, no `/pre` or `/post` links, no MAP answer key. The PRE and POST portal drafts were deleted with Aya's confirmation. The final survey stays (12:50, 5 minutes).
+- New run of show: 09:00-09:10 welcome and setup check (a timer slide: sign in, download the sample files, open the prompt sheet) · 09:10-09:20 opener · 09:20-09:45 Layer 1 chat (Task 1.1 now 15 min) · unchanged to 12:15 · 12:15-12:50 integration (Task 4.2 now 20 min, show and tell 7 min) · 12:50-12:55 final survey (one QR slide) · 12:55-13:00 wrap and close.
+- Still 66 slides: the pre-MAP and post-MAP slides are replaced by the setup slide and the survey slide.
+- One logged engine change (CLAUDE.md decision 18, PLUGIN-FEEDBACK.md #7) so the hub and the trainer pages carry no MAP wording.

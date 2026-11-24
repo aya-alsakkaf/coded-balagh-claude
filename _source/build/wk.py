@@ -113,6 +113,7 @@ def text_rules(h):
 FORMS = C.FORMS                     # {"pre": {...}, "post": {...}, "survey": {...}}: name, when, url (and id, slug)
 FORM_DAY = opt("FORM_DAY") or {FIRST: ["pre"], LAST: ["post", "survey"]}
 MAP_MIN = opt("MAP_MIN", 10)
+HAS_MAP = bool(opt("MAP"))           # a workshop may have no MAP test (MAP = []): only the final survey
 def qr_svg(url, cls="wk-qr-code", label=""):
     """QR code as inline SVG: CODED navy on white with a quiet zone (build.md section 11)."""
     import segno

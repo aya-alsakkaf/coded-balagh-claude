@@ -143,7 +143,7 @@ def hub(nslides):
     tasks = sum(1 for v in DEMOS.values() if v.get("hands_on"))
     demos = sum(1 for v in DEMOS.values() if not v.get("hands_on"))
     strip_ = HB.get("stats") or [(wk.NDAYS, "days"), (nslides, "slides"), (tasks, "hands-on tasks"), (demos, "prompt demos" if wk.AI else "in-slide demos"),
-                                 (len(ALL_FILES), "sample files"), (len(C.MAP), "MAP questions")]
+                                 (len(ALL_FILES), "sample files")] + ([(len(C.MAP), "MAP questions")] if wk.HAS_MAP else [])
     strip_html = "".join(stat(nslides if a is None else a, b) for a, b in strip_)
     cards = ""
     for d in DAYS:
@@ -207,7 +207,7 @@ def hub(nslides):
   <div class="sheet-links">{sheets}{labs}</div></div>
 </div></section>
 <section class="band" id="map"><div class="wrap band-grid">
-  <div class="rvl"><div class="eyebrow">Before and after</div><h2>A short skills check, twice. Then the survey.</h2></div>
+  <div class="rvl"><div class="eyebrow">{e(HB.get("map_eyebrow", "Before and after" if wk.HAS_MAP else "Before you leave"))}</div><h2>{e(HB.get("map_title", "A short skills check, twice. Then the survey." if wk.HAS_MAP else "One short survey at the end."))}</h2></div>
   <div><p>{e(HB.get("map_text", ""))}</p>
   <div class="map-list">{maps}</div></div>
 </div></section>

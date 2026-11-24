@@ -3,6 +3,7 @@
 One helper call is one slide. Every note is written as N(...) parts and never repeats the slide text.
 The engine adds the close slide from CLOSE."""
 from deck import *
+import wk
 import content as C
 import content_demos as CD
 import data as D
@@ -68,6 +69,11 @@ EXTRA_CSS = """
 .ws-steps li[data-s="1"] em::after{content:"Plain chat"}
 .ws-steps li[data-s="2"] em::after{content:"Plain result"}
 .ws-steps li[data-s="7"] em::after{content:"Project result"}
+/* the final survey slide: text on the left, the portal QR on the right (no MAP test in this session) */
+#c6survey .cd-eyebrow,#c6survey .cd-h1,#c6survey .wk-lead,#c6survey .wk-map-timer{max-width:56%}
+#c6survey .wk-lead{position:relative}
+#c6survey .wk-survey-qr{position:absolute;left:calc(100% + clamp(48px,7vw,120px));top:50%;transform:translateY(-50%);margin:0;width:max-content}
+#c6survey .wk-survey-qr .wk-qr-code{width:clamp(200px,20vw,300px)}
 """
 EXTRA_JS = """
 (function(){function f(n){var s=Math.abs(n).toFixed(3).split('.');s[0]=s[0].replace(/\\B(?=(\\d{3})+(?!\\d))/g,',');return (n<0?'-':'')+s.join('.');}
@@ -80,13 +86,24 @@ document.querySelectorAll('.mc-calc').forEach(function(c){var B=+c.dataset.budge
  c.addEventListener('input',run);c.addEventListener('change',run);c.addEventListener('keydown',function(e){e.stopPropagation();});run();});})();
 """
 
+# ------------------------------------------------------------------ the final survey slide (no MAP test: Aya, 24 Nov 2026). Kit HTML: the portal QR with its name and time
+_SV = C.FORMS["survey"]
+SURVEY_LEAD = ("Scan the code with your phone. It takes about five minutes, and it is not a test. "
+               f'<a class="wk-qr-card wk-survey-qr" href="{_SV["url"]}" target="_blank" rel="noopener">{wk.qr_svg(_SV["url"], label=_SV["name"])}'
+               f'<span class="wk-qr-lbl">{_SV["name"]}</span> <span class="wk-qr-when">{_SV["when"]}</span></a>')
+
 # ------------------------------------------------------------------ the day
 TASK_N = N(do="Start the timer. Walk the room. Ask each person what they found so far.")
 def day1():
-    opener = [story("o_story", "open", "Opener · the question", "Thursday 19 November, 08:30",
+    opener = [timer_slide("setup", "open", "Welcome · 09:00", "Ten minutes: <span class=\"hl\">get ready to build.</span>",
+        "Open the Claude desktop app and sign in with your paid account. Open the workshop home and download the eight Misbah sample files. Keep the prompt sheet open in a browser tab.", 10,
+        n=N(do="Start the timer. Walk the room and check every laptop: Claude signed in, the desktop app open, the files downloaded.", say="Everything today happens on your own laptop, so we set it up first.",
+            fallback="If someone cannot sign in, pair them with a neighbor for the morning and fix the account at the break.", silent="open the workshop home on the screen and point to the sample files.",
+            more=["Check the plan on each laptop: Cowork, plugins and scheduled tasks need a paid plan."], time="09:00-09:10")),
+        story("o_story", "open", "Opener · the question", "Thursday 19 November, 08:30",
         "Misbah's General Manager closes his laptop and asks the team: <b>“We use Claude every day. Why does it still feel like a chat box?”</b> Noura asks Claude for a winter post. She gets a nice post that could belong to any charity.",
         "Same Claude. <span class=\"hl\">Different setups.</span>", "See what each layer adds, before you build them.",
-        n=N(do="Read the story. Ask: what did Noura's Claude not know?", expect="The brand voice, the rules, the languages.", silent="name one thing yourself: the campaign facts.", time="09:15-09:25")),
+        n=N(do="Read the story. Ask: what did Noura's Claude not know?", expect="The brand voice, the rules, the languages.", silent="name one thing yourself: the campaign facts.", time="09:10-09:20")),
         showcase("o_ws", "open", CD.SHOWCASE, n=N(do="Press → through the steps. Stop at each layer on the right and ask what it adds.",
             more=["Steps 1 to 3: the same brief in a plain chat, and its post. Read the red flags aloud against the brand guide.", "Steps 4 to 7: the same words, sent inside the Project; then what the Project already holds.",
                   "Step 8: the Project's post. Point at the one number, the two languages and the link at the end.", "Steps 9 and 10: the scorecard, then the lesson."],
@@ -106,7 +123,7 @@ def day1():
     s.append(story("l1story", "l1", "Layer 1 · Chat", "Sunday 22 November, 09:10",
         "A donor in the US pledges <b>USD 5,000</b> to the winter campaign. Fahad asks Claude what that is in KWD. The answer comes in one second, <b>with a rate and no date.</b>",
         "Fast is not <span class=\"hl\">the same as current.</span>", "Choose web search or trained knowledge, and give Claude your files.",
-        n=N(do="Ask: would you put that amount on the donor's receipt?", expect="No, not without checking the rate.", silent="ask where they would check a rate today.", time="09:25-09:45")))
+        n=N(do="Ask: would you put that amount on the donor's receipt?", expect="No, not without checking the rate.", silent="ask where they would check a rate today.", time="09:20-09:45")))
     s.append(scene("l1scene", "l1", "Layer 1 · the picture", "A library book and <span class=\"hl\">today's newspaper.</span>",
         "A library book was printed on one date. It knows nothing after that. Today's newspaper knows this morning, and it names its sources.",
         "Trained knowledge = the book. Web search = the newspaper.",
@@ -326,7 +343,7 @@ def day1():
     s.append(story("aestory", "l5", "Integration · Your first AI employee", "Thursday 26 November, 12:15",
         "The General Manager asks: <b>“Can Claude be our producer, our marketer, our designer and our accountant?”</b> Yes, if you set it up the way you set up a new hire.",
         "An AI employee is <span class=\"hl\">the layers, set up for one job.</span>", "Hire one AI employee for one Misbah role, and test its first job.",
-        n=N(do="Turn to the General Manager: which role would save Al-Balagh the most time?", expect="Often the accountant or the marketer.", silent="suggest the accountant: the receipts are already in the room.", time="12:15-12:40")))
+        n=N(do="Turn to the General Manager: which role would save Al-Balagh the most time?", expect="Often the accountant or the marketer.", silent="suggest the accountant: the receipts are already in the room.", time="12:15-12:50")))
     s.append(scene("aescene", "l5", "Integration · the recipe", "Hire it <span class=\"hl\">like a person.</span>",
         "A new hire gets a job description, a binder, the team's procedures, keys, a shift and a manager. An AI employee needs the same things, plus a starter kit.",
         "Job · binder · procedures · keys · starter kit · shift · manager.",
@@ -346,13 +363,16 @@ def day1():
         n=N(do="Ask each person to choose a row for Task 4.2.", expect="Different roles across the room.", silent="assign the roles yourself, one each.")))
     s.append(player("aepp", "l5", "d42", n=N(time="3 min")))
     s.append(task("aetask", "l5", "t42", n=TASK_N))
-    s.append(timer_slide("aeshow", "l5", "Show and tell · 12:37", "One minute each: <span class=\"hl\">meet your AI employee.</span>",
-        "Show its job description, its first output, and the one fact you checked.", 3,
-        n=N(do="One minute per person; with more than three people, pick three or give 30 seconds each. Ask each: what will it do next week, and what will you approve?", expect="Three different roles.", silent="show the accountant from the demo.",
+    s.append(timer_slide("aeshow", "l5", "Show and tell · 12:43", "One minute each: <span class=\"hl\">meet your AI employee.</span>",
+        "Show its job description, its first output, and the one fact you checked.", 7,
+        n=N(do="One minute per person; with more than six people, pick six or give 30 seconds each. Ask each: what will it do next week, and what will you approve?", expect="Different roles across the room.", silent="show the accountant from the demo.",
             fallback="If nobody finished, show the backup note from Demo 4.2.")))
 
     # Close
-    s.append(mapslide("c6map", "c6", "after", n=N(time="12:40-12:55")))
+    s.append(timer_slide("c6survey", "c6", "Final survey · 12:50", "Five minutes: <span class=\"hl\">tell us how it went.</span>", SURVEY_LEAD, 5,
+        n=N(do="Leave the slide up while they scan. Start the timer.", say="This is not a test. Tell us what worked and what we should change.",
+            fallback="Read out the short link: the site address, then /survey.", silent="give your own one-line answer to: which part was most useful?",
+            more=["The same QR code is on the workshop home and the day page.", "Check the response count in the portal before you close."], time="12:50-12:55")))
     s.append(wrap("w1", "close", "Four layers, one morning: <span class=\"hl\">and you stay the manager.</span>",
         [("You built", "Six things", "An artifact, a brief, a Project, a skill, a Cowork table and an AI employee."),
          ("Between you, you caught", "5 planted problems", "2 errors in the post, 1 duplicate donation, 2 receipt flags."),
@@ -368,5 +388,5 @@ def day1():
     return s
 
 TOPICS = {1: {"open": "Opening", "l1": "Layer 1 · Chat", "l1b": "Layer 1 · Artifacts", "l2": "Layer 2 · Connectors", "l3": "Layer 3 · Memory, instructions, Projects",
-              "l3b": "Layer 3 · Skills", "l4": "Layer 4 · Cowork, plugins, schedules", "l5": "Integration · AI employee", "c6": "Post-MAP and survey", "close": "Close"}}
+              "l3b": "Layer 3 · Skills", "l4": "Layer 4 · Cowork, plugins, schedules", "l5": "Integration · AI employee", "c6": "Final survey", "close": "Close"}}
 DAYFN = {1: day1}

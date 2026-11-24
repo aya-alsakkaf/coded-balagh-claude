@@ -16,21 +16,19 @@
 "flat": "09:00 · cover. · Do: Welcome. Introduce yourself and CODED in one minute. Name the reason for today: Claude's features, in depth, with your hands on the keys. · Housekeeping: coffee at 10:15, Dhuhr break at 11:40. Prayer room and toilets. · Sign-in check: Claude desktop app open and signed in on every laptop. Help anyone who is still on the free plan or the web only. · If the room is silent: ask the General Manager which feature he most wants to see working today. · Say: “This morning is about Claude, not about prompting. You already write good prompts.”"
 },
 {
-"say": "Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.",
-"do": "Phones only. No notes, no search, no AI. It is not graded.",
+"say": "Everything today happens on your own laptop, so we set it up first.",
+"do": "Start the timer. Walk the room and check every laptop: Claude signed in, the desktop app open, the files downloaded.",
 "expect": null,
-"silent": null,
-"fallback": "read out the short link (/pre) if a phone cannot scan.",
+"silent": "open the workshop home on the screen and point to the sample files.",
+"fallback": "If someone cannot sign in, pair them with a neighbor for the morning and fix the account at the break.",
 "more": [
-"Leave the slide up while they scan. The same link is on the workshop home and the day page.",
-"This is also the pre-flight check: help anyone whose phone does not open the link.",
-"Check the response count in the portal before you move on."
+"Check the plan on each laptop: Cowork, plugins and scheduled tasks need a paid plan."
 ],
-"time": "10 min",
+"time": "09:00-09:10",
 "t": "open",
-"k": "map",
-"h": "MAP test (before)",
-"flat": "10 min. · Do: Phones only. No notes, no search, no AI. It is not graded. · Leave the slide up while they scan. The same link is on the workshop home and the day page. · This is also the pre-flight check: help anyone whose phone does not open the link. · Check the response count in the portal before you move on. · Fallback: read out the short link (/pre) if a phone cannot scan. · Say: “Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.”"
+"k": "timer",
+"h": "Ten minutes: get ready to build.",
+"flat": "09:00-09:10. · Do: Start the timer. Walk the room and check every laptop: Claude signed in, the desktop app open, the files downloaded. · Check the plan on each laptop: Cowork, plugins and scheduled tasks need a paid plan. · If the room is silent: open the workshop home on the screen and point to the sample files. · Fallback: If someone cannot sign in, pair them with a neighbor for the morning and fix the account at the break. · Say: “Everything today happens on your own laptop, so we set it up first.”"
 },
 {
 "say": null,
@@ -39,11 +37,11 @@
 "silent": "name one thing yourself: the campaign facts.",
 "fallback": null,
 "more": [],
-"time": "09:15-09:25",
+"time": "09:10-09:20",
 "t": "open",
 "k": "story",
 "h": "Opener · the question",
-"flat": "09:15-09:25. · Do: Read the story. Ask: what did Noura's Claude not know? · Expect: The brand voice, the rules, the languages. · If the room is silent: name one thing yourself: the campaign facts."
+"flat": "09:10-09:20. · Do: Read the story. Ask: what did Noura's Claude not know? · Expect: The brand voice, the rules, the languages. · If the room is silent: name one thing yourself: the campaign facts."
 },
 {
 "say": "I typed the same words both times, with the same file. Only the setup behind Claude changed.",
@@ -109,11 +107,11 @@
 "silent": "ask where they would check a rate today.",
 "fallback": null,
 "more": [],
-"time": "09:25-09:45",
+"time": "09:20-09:45",
 "t": "l1",
 "k": "story",
 "h": "Layer 1 · Chat",
-"flat": "09:25-09:45. · Do: Ask: would you put that amount on the donor's receipt? · Expect: No, not without checking the rate. · If the room is silent: ask where they would check a rate today."
+"flat": "09:20-09:45. · Do: Ask: would you put that amount on the donor's receipt? · Expect: No, not without checking the rate. · If the room is silent: ask where they would check a rate today."
 },
 {
 "say": "For ideas and drafting, the book is fine. For anything that changes, switch on the newspaper.",
@@ -208,14 +206,14 @@
 "silent": null,
 "fallback": "If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF.",
 "more": [
-"Give the hint at about 3 min.",
+"Give the hint at about 5 min.",
 "Fast finishers have an extra task on the slide."
 ],
-"time": "10 min work, then share",
+"time": "15 min work, then share",
 "t": "l1",
 "k": "task",
-"h": "Your turn 1.1: One chat, the web and three files (10 min, on your own)",
-"flat": "10 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: Web: today's rate with its date and a link to the source, and the KWD amount. Files: two errors in the post: delivery start: the post says “Deliveries start Thursday 3 December”, the report says Deliveries start Sunday 6 December (page 2); families: the post says “1,200 families”, the report says 1,020 families (page 1). · Give the hint at about 3 min. · Fast finishers have an extra task on the slide. · Fallback: If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF. · Say: “The PDF is the source. The screenshot is a draft. Claude reads both; you decide which one is right.”"
+"h": "Your turn 1.1: One chat, the web and three files (15 min, on your own)",
+"flat": "15 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: Web: today's rate with its date and a link to the source, and the KWD amount. Files: two errors in the post: delivery start: the post says “Deliveries start Thursday 3 December”, the report says Deliveries start Sunday 6 December (page 2); families: the post says “1,200 families”, the report says 1,020 families (page 1). · Give the hint at about 5 min. · Fast finishers have an extra task on the slide. · Fallback: If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF. · Say: “The PDF is the source. The screenshot is a draft. Claude reads both; you decide which one is right.”"
 },
 {
 "say": null,
@@ -806,11 +804,11 @@
 "silent": "suggest the accountant: the receipts are already in the room.",
 "fallback": null,
 "more": [],
-"time": "12:15-12:40",
+"time": "12:15-12:50",
 "t": "l5",
 "k": "story",
 "h": "Integration · Your first AI employee",
-"flat": "12:15-12:40. · Do: Turn to the General Manager: which role would save Al-Balagh the most time? · Expect: Often the accountant or the marketer. · If the room is silent: suggest the accountant: the receipts are already in the room."
+"flat": "12:15-12:50. · Do: Turn to the General Manager: which role would save Al-Balagh the most time? · Expect: Often the accountant or the marketer. · If the room is silent: suggest the accountant: the receipts are already in the room."
 },
 {
 "say": null,
@@ -860,43 +858,43 @@
 "silent": null,
 "fallback": "Anyone short of time builds the accountant from the demo and runs its first job.",
 "more": [
-"Give the hint at about 4 min.",
+"Give the hint at about 6 min.",
 "Fast finishers have an extra task on the slide."
 ],
-"time": "14 min work, then share",
+"time": "20 min work, then share",
 "t": "l5",
 "k": "task",
-"h": "Your turn 4.2: Hire one AI employee (14 min, on your own)",
-"flat": "14 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: One working AI employee Project with a job description, its files and one skill or plugin; a first output with one fact checked; an employee card. · Give the hint at about 4 min. · Fast finishers have an extra task on the slide. · Fallback: Anyone short of time builds the accountant from the demo and runs its first job. · Say: “Same recipe, four jobs. Which job would save your team the most time?”"
+"h": "Your turn 4.2: Hire one AI employee (20 min, on your own)",
+"flat": "20 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: One working AI employee Project with a job description, its files and one skill or plugin; a first output with one fact checked; an employee card. · Give the hint at about 6 min. · Fast finishers have an extra task on the slide. · Fallback: Anyone short of time builds the accountant from the demo and runs its first job. · Say: “Same recipe, four jobs. Which job would save your team the most time?”"
 },
 {
 "say": null,
-"do": "One minute per person; with more than three people, pick three or give 30 seconds each. Ask each: what will it do next week, and what will you approve?",
-"expect": "Three different roles.",
+"do": "One minute per person; with more than six people, pick six or give 30 seconds each. Ask each: what will it do next week, and what will you approve?",
+"expect": "Different roles across the room.",
 "silent": "show the accountant from the demo.",
 "fallback": "If nobody finished, show the backup note from Demo 4.2.",
 "more": [],
-"time": "3 min",
+"time": "7 min",
 "t": "l5",
 "k": "timer",
 "h": "One minute each: meet your AI employee.",
-"flat": "3 min. · Do: One minute per person; with more than three people, pick three or give 30 seconds each. Ask each: what will it do next week, and what will you approve? · Expect: Three different roles. · If the room is silent: show the accountant from the demo. · Fallback: If nobody finished, show the backup note from Demo 4.2."
+"flat": "7 min. · Do: One minute per person; with more than six people, pick six or give 30 seconds each. Ask each: what will it do next week, and what will you approve? · Expect: Different roles across the room. · If the room is silent: show the accountant from the demo. · Fallback: If nobody finished, show the backup note from Demo 4.2."
 },
 {
-"say": "Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.",
-"do": "Phones only. No notes, no search, no AI. It is not graded.",
+"say": "This is not a test. Tell us what worked and what we should change.",
+"do": "Leave the slide up while they scan. Start the timer.",
 "expect": null,
-"silent": null,
-"fallback": "read out the short link (/post) if a phone cannot scan.",
+"silent": "give your own one-line answer to: which part was most useful?",
+"fallback": "Read out the short link: the site address, then /survey.",
 "more": [
-"Leave the slide up. Code 1 is the MAP test; code 2 is the final survey, right after it.",
-"Check the response count in the portal before you move on."
+"The same QR code is on the workshop home and the day page.",
+"Check the response count in the portal before you close."
 ],
-"time": "12:40-12:55",
+"time": "12:50-12:55",
 "t": "c6",
-"k": "map",
-"h": "MAP test (after) and the final survey",
-"flat": "12:40-12:55. · Do: Phones only. No notes, no search, no AI. It is not graded. · Leave the slide up. Code 1 is the MAP test; code 2 is the final survey, right after it. · Check the response count in the portal before you move on. · Fallback: read out the short link (/post) if a phone cannot scan. · Say: “Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.”"
+"k": "timer",
+"h": "Five minutes: tell us how it went.",
+"flat": "12:50-12:55. · Do: Leave the slide up while they scan. Start the timer. · The same QR code is on the workshop home and the day page. · Check the response count in the portal before you close. · If the room is silent: give your own one-line answer to: which part was most useful? · Fallback: Read out the short link: the site address, then /survey. · Say: “This is not a test. Tell us what worked and what we should change.”"
 },
 {
 "say": null,
