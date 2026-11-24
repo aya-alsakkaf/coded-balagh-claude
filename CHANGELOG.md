@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-24 · QA round 5 fixes
+
+- Plugins note corrected: connect each bundled connector yourself. Voice-mode check replaces the files check (still 66 slides).
+- Prompt-sheet wording in Task 3.1 and Task 4.2; day-before items in the facilitator kit; KWD with three decimals in MAP Q4 and the receipts.
+
 ## 2026-11-24 · QA rounds 3 and 4 fixes
 
 - Plugin and files quick checks (66 slides); scheduled-task check asks for a laptop-closed job.

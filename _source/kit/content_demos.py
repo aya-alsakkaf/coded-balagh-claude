@@ -186,7 +186,7 @@ demo("t21", day=1, skill="2.1", sec=4, title="Connect your email and calendar, t
          ("h", "If an account cannot connect"), ("p", "On Team and Enterprise plans an owner must turn the Google connectors on first, and Google Workspace admins may need to trust Claude. Use the fallback file and note it for their IT team.")],
  deliverable="Your brief table, one draft reply (not sent), and two facts checked against the source.",
  fallback="If the account is not approved or cannot connect, use misbah-inbox-and-calendar.pdf. Show the backup brief at the end.",
- hint="Look for the email that changes a date or a number. That is the urgent one.",
+ hint="The urgent email changes a date or a number.",
  stretch=["Ask Claude to find a free 30-minute slot next week for the Ramadan Iftar 2027 planning meeting. Approve the event only if it is real."],
  stretch_prompts=[("A free slot", "Find a free 30-minute slot next week for the Ramadan Iftar 2027 planning meeting. Propose the event, but wait for my approval before you create it.")])
 
@@ -211,7 +211,7 @@ demo("d31", day=1, skill="3.1", sec=5, title="The Misbah Winter Campaign Project
 
 demo("t31", day=1, skill="3.1", sec=5, title="Set your instructions and build the campaign Project", tool="Claude · Projects", files=[FILE_BRAND, FILE_BRIEF], kind="task", hands_on=True, minutes=8, solo="on your own",
  setup=["Settings › Your Claude › Instructions (older layout: Settings › Account): add two lines about how you like answers.",
-        "Create a Project named Misbah Winter Campaign. Paste the Project instructions below.", "Add the brand guide and the campaign brief to the Project knowledge.",
+        "Create a Project named Misbah Winter Campaign. Paste its instructions from your prompt sheet.", "Add the brand guide and the brief to the Project knowledge.",
         "Start a chat in the Project and run the request. Check one caption against the brand guide."],
  prompts=[("Instructions for Claude (example)", "Reply in English first, then Arabic. Use short sentences and tables when you compare things."), ("Project instructions", INSTR), ("First chat in the Project", PROJ[3][1])],
  expected="A Project with instructions and two knowledge files; three captions that follow the brand guide; personal instructions saved.",
@@ -242,7 +242,7 @@ demo("d32", day=1, skill="3.2", sec=6, title="Create the donor thank-you skill w
  point="A Project is where. A Skill is how.",
  backup=[("h", "Inside donor-thank-you/SKILL.md"), tbl(["Part", "What it says"], [("name", "donor-thank-you"), ("description", "Write a thank-you letter to a Misbah donor. Use when someone asks for a donor thank-you or receipt letter."), ("steps", " · ".join(SKILL_STEPS)), ("example", "One good letter, under 120 words")])],
  fallback="Upload the starter skill (misbah-donor-thanks-skill.zip) instead and test it.",
- hint="Look for the description: it decides when Claude uses the skill.",
+ hint="The description decides when Claude uses the skill.",
  player={"parts": MAKE, "table": [["Part of the skill", "What it holds"], ["Name", "donor-thank-you"], ["Description", "When to use it: a donor thank-you or receipt letter"], ["Steps", "The five steps, in order"], ["Example", "One good letter"]], "best": 1,
          "reco": ["<b>Use it:</b> type / and choose donor-thank-you.", "<b>Share it:</b> on Team and Enterprise plans, share it from the skill; otherwise send the .zip.", "<b>Edit it:</b> change a step any time; every letter after that follows it."],
          "control": "Test the skill on one letter and check all five parts."})
@@ -329,7 +329,7 @@ demo("d42", day=1, skill="4.2", sec=8, title="The AI accountant, hired", tool="C
 
 demo("t42", day=1, skill="4.2", sec=8, title="Hire one AI employee", tool="Claude · Projects, skills, plugins", files=[FILE_BRIEF, FILE_BRAND, FILE_DON], kind="task", hands_on=True, minutes=14, solo="on your own",
  setup=["Choose a role. Create a Project named for it, for example Misbah AI Accountant.", "Paste its job description (Demo 4.2 on your prompt sheet) and add its files.",
-        "Add the role's plugin from the Plugins page. Run the first job below.", "Check one fact. Write the employee card: role, tools, schedule, approvals."],
+        "Add the role's plugin from the Plugins page. Run its first job from your prompt sheet.", "Check one fact. Write the employee card: role, tools, schedule, approvals."],
  prompts=[(f"{r} · {ROLE_LABEL[r]}", first) for r, _j, _f, first in ROLES],
  expected="One working AI employee Project with a job description, its files and one skill or plugin; a first output with one fact checked; an employee card.",
  say="Same recipe, four jobs. Which job would save your team the most time?",

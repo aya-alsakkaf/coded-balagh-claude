@@ -127,15 +127,16 @@ def day1():
          ["<b>Voice mode</b>", "The sound-wave icon, best on the phone", "A spoken conversation", "Thinking aloud, on the move"]],
         "Microphone: you speak, Claude reads. Voice mode: you talk together.",
         n=N(do="Point to the Excel row: code calculates, so pasted rows are never needed. Then the last two rows: one types, one talks.",
-            expect="Someone asks about Arabic voice: the spoken language is set in Settings, under Voice.", silent="ask who has used voice mode in the car.")))
+            expect="Someone asks about Arabic voice: the spoken language is set in Settings, under Voice.", silent="ask who has used voice mode in the car.",
+            more=["Show voice mode for 30 seconds on your phone, on the projector camera or held up: ask one question about the campaign aloud."])))
     s.append(check("l1chk", "l1", "Fahad's answer gave a rate <b>with no date and no link</b>. What does that tell him?",
         [("It came from training, so it may be old", 1, "Right. No date and no source: trained knowledge. Ask Claude to search the web."),
          ("It is today's rate from the bank", 0, "Today's rate comes with a date and a source you can open."),
          ("Claude made an error in the math", 0, "The math may be fine. The rate itself may be old.")]))
-    s.append(check("l1fchk", "l1", "Fahad needs totals from a 240-row donations file. <b>Which input makes Claude calculate them with code?</b>",
-        [("A screenshot of the sheet", 0, "Claude reads a picture of the numbers. It does not calculate from the file."),
-         ("The Excel or CSV file itself", 1, "Right. Claude runs code on the file, so every row counts."),
-         ("Reading the numbers aloud in voice mode", 0, "Voice is for talking things through, not for 240 rows.")]))
+    s.append(check("l1fchk", "l1", "Hessa wants to talk through the delivery plan with Claude <b>while she walks to the hall</b>. What fits?",
+        [("The microphone in the message box", 0, "The microphone types what you say. Claude does not talk back."),
+         ("Voice mode: the sound-wave icon on her phone", 1, "Right. A spoken conversation, made for thinking aloud on the move."),
+         ("A photo of her notes, sent later", 0, "That works for a document, not for a conversation.")]))
     s.append(task("l1task", "l1", "t11", n=TASK_N))
 
     # Layer 1 · Artifacts
@@ -300,7 +301,7 @@ def day1():
          ["<b>Small business</b>", "Skills for finance, marketing, operations and hiring", "A first look at all of them"]],
         "Plugins page: browse, then Add (older layout: Customize › Plugins). Then make it fit Misbah.",
         n=N(do="Open the Plugins page and browse. Add the Marketing plugin live and type / to show its commands.", expect="The commands appear in the / menu.",
-            more=["A plugin bundles skills, connectors and helpers, so you do not add each connector by hand. Each person still signs in to a service with their own account."],
+            more=["A plugin bundles skills, commands and connectors. After you add it, open its Connectors tab and connect each one that is not connected yet, with your own account."],
             silent="ask which role plugin they would add first.", fallback="If adding fails, show the plugin's page in the directory.")))
     s.append(check("l4pchk", "l4", "Which need does <b>a plugin</b> meet best?",
         [("One rule you want in every chat", 0, "That is Instructions for Claude, in Settings."),
@@ -339,7 +340,7 @@ def day1():
     s.append(tslide("aetable", "l5", "Integration · four roles", "Four AI employees <span class=\"hl\">for Misbah.</span>", ["Role", "Its job", "Skills or plugin", "Connectors", "Shift"],
         [["<b>Producer</b>", "Scripts and shot lists from the brief", "Marketing plugin, a video-script skill", "Google Drive", "Sunday: the content plan"],
          ["<b>Marketer</b>", "Posts and captions in the brand voice", "Marketing plugin", "Google Drive, Gmail drafts", "Monday: the post plan"],
-         ["<b>Designer</b>", "Posts and posters as artifacts", "Marketing plugin (/brand-review)", "Google Drive", "On request"],
+         ["<b>Designer</b>", "Posts and posters as artifacts", "Marketing plugin (/brand-review)", "Google Drive", "Wednesday 09:00: the week's designs"],
          ["<b>Accountant</b>", "Donations, receipts, a three-line note", "Finance plugin, thank-you skill", "Google Drive, Gmail to read", "Thursday 08:00"]],
         "Same recipe, four jobs. You stay the manager.", cls="tight",
         n=N(do="Ask each person to choose a row for Task 4.2.", expect="Different roles across the room.", silent="assign the roles yourself, one each.")))
@@ -347,14 +348,14 @@ def day1():
     s.append(task("aetask", "l5", "t42", n=TASK_N))
     s.append(timer_slide("aeshow", "l5", "Show and tell · 12:37", "One minute each: <span class=\"hl\">meet your AI employee.</span>",
         "Show its job description, its first output, and the one fact you checked.", 3,
-        n=N(do="One minute per person. Ask each: what will it do next week, and what will you approve?", expect="Three different roles.", silent="show the accountant from the demo.",
+        n=N(do="One minute per person; with more than three people, pick three or give 30 seconds each. Ask each: what will it do next week, and what will you approve?", expect="Three different roles.", silent="show the accountant from the demo.",
             fallback="If nobody finished, show the backup note from Demo 4.2.")))
 
     # Close
     s.append(mapslide("c6map", "c6", "after", n=N(time="12:40-12:55")))
     s.append(wrap("w1", "close", "Four layers, one morning: <span class=\"hl\">and you stay the manager.</span>",
         [("You built", "Six things", "An artifact, a brief, a Project, a skill, a Cowork table and an AI employee."),
-         ("You caught", "5 planted problems", "2 errors in the post, 1 duplicate donation, 2 receipt flags."),
+         ("Between you, you caught", "5 planted problems", "2 errors in the post, 1 duplicate donation, 2 receipt flags."),
          ("The habit", "Claude drafts", "You check. You approve what goes out.")],
         "Your first week: one artifact, one Project, and your email in read mode in an approved account. Then one layer at a time.",
         n=N(do="Ask each person which layer they will switch on first at work.", expect="Connectors and Projects come up most.", silent="say which one you would start with: the Project.", time="12:55-13:00")))

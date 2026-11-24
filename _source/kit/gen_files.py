@@ -243,7 +243,7 @@ def receipt_pdf(r):
     buf = io.BytesIO()
     story = [Paragraph(sup, T), Paragraph("Tax invoice and receipt", B), Spacer(1, 4),
              grid([["Receipt no.", D.rc_no(n)], ["Date", D.RC_DATES[n]], ["Billed to", D.ORG], ["Campaign code", code or ""]], [40, 70], head=False), Spacer(1, 8),
-             grid([["Item", "Quantity", "Unit (KWD)", "Total (KWD)"], [what, f"{qty:,}", f"{unit:.3f}", f"{qty * unit:,.3f}"]], [52, 22, 24, 26]), Spacer(1, 8),
+             grid([["Item", "Quantity", "Unit (KWD)", "Total (KWD)"], [what, f"{qty:,}", f"{unit:,.3f}", f"{qty * unit:,.3f}"]], [52, 22, 24, 26]), Spacer(1, 8),
              Paragraph(f"<b>Paid: {kwd(D.rc_amount(r))}</b> by bank transfer.", B), Paragraph(D.FICTION, B)]
     SimpleDocTemplate(buf, pagesize=A5, leftMargin=12 * mm, rightMargin=12 * mm, topMargin=14 * mm, bottomMargin=12 * mm,
                       title=f"Receipt {D.rc_no(n)}", author="CODED", creator="CODED", invariant=1).build(story)

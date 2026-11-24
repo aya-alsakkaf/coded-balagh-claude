@@ -166,12 +166,14 @@
 "expect": "Someone asks about Arabic voice: the spoken language is set in Settings, under Voice.",
 "silent": "ask who has used voice mode in the car.",
 "fallback": null,
-"more": [],
+"more": [
+"Show voice mode for 30 seconds on your phone, on the projector camera or held up: ask one question about the campaign aloud."
+],
 "time": null,
 "t": "l1",
 "k": "table",
 "h": "Give Claude the source, not a summary of it.",
-"flat": "Do: Point to the Excel row: code calculates, so pasted rows are never needed. Then the last two rows: one types, one talks. · Expect: Someone asks about Arabic voice: the spoken language is set in Settings, under Voice. · If the room is silent: ask who has used voice mode in the car."
+"flat": "Do: Point to the Excel row: code calculates, so pasted rows are never needed. Then the last two rows: one types, one talks. · Expect: Someone asks about Arabic voice: the spoken language is set in Settings, under Voice. · Show voice mode for 30 seconds on your phone, on the projector camera or held up: ask one question about the campaign aloud. · If the room is silent: ask who has used voice mode in the car."
 },
 {
 "say": null,
@@ -719,13 +721,13 @@
 "silent": "ask which role plugin they would add first.",
 "fallback": "If adding fails, show the plugin's page in the directory.",
 "more": [
-"A plugin bundles skills, connectors and helpers, so you do not add each connector by hand. Each person still signs in to a service with their own account."
+"A plugin bundles skills, commands and connectors. After you add it, open its Connectors tab and connect each one that is not connected yet, with your own account."
 ],
 "time": null,
 "t": "l4",
 "k": "table",
 "h": "Plugins: a starter kit for a role.",
-"flat": "Do: Open the Plugins page and browse. Add the Marketing plugin live and type / to show its commands. · Expect: The commands appear in the / menu. · A plugin bundles skills, connectors and helpers, so you do not add each connector by hand. Each person still signs in to a service with their own account. · If the room is silent: ask which role plugin they would add first. · Fallback: If adding fails, show the plugin's page in the directory."
+"flat": "Do: Open the Plugins page and browse. Add the Marketing plugin live and type / to show its commands. · Expect: The commands appear in the / menu. · A plugin bundles skills, commands and connectors. After you add it, open its Connectors tab and connect each one that is not connected yet, with your own account. · If the room is silent: ask which role plugin they would add first. · Fallback: If adding fails, show the plugin's page in the directory."
 },
 {
 "say": null,
@@ -869,7 +871,7 @@
 },
 {
 "say": null,
-"do": "One minute per person. Ask each: what will it do next week, and what will you approve?",
+"do": "One minute per person; with more than three people, pick three or give 30 seconds each. Ask each: what will it do next week, and what will you approve?",
 "expect": "Three different roles.",
 "silent": "show the accountant from the demo.",
 "fallback": "If nobody finished, show the backup note from Demo 4.2.",
@@ -878,7 +880,7 @@
 "t": "l5",
 "k": "timer",
 "h": "One minute each: meet your AI employee.",
-"flat": "3 min. · Do: One minute per person. Ask each: what will it do next week, and what will you approve? · Expect: Three different roles. · If the room is silent: show the accountant from the demo. · Fallback: If nobody finished, show the backup note from Demo 4.2."
+"flat": "3 min. · Do: One minute per person; with more than three people, pick three or give 30 seconds each. Ask each: what will it do next week, and what will you approve? · Expect: Three different roles. · If the room is silent: show the accountant from the demo. · Fallback: If nobody finished, show the backup note from Demo 4.2."
 },
 {
 "say": "Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.",

@@ -180,7 +180,7 @@ MAP = [
     ["Paste the first 50 rows into the chat and ask for totals", "Send a screenshot of the sheet and ask for totals", "Attach the file and ask Claude to calculate with code", "Describe the columns in words and ask for an estimate"], 2, "Files", "Layer 1 · files and voice, Task 1.1"),
  _Q("Noura wants a winter-kit cost calculator that volunteers can open again next week. What should she ask Claude for?",
     ["A long answer that explains the formula step by step", "An artifact: a small calculator she can share", "A memory entry that stores the unit costs", "A scheduled task that sends her the costs daily"], 1, "Artifacts", "Layer 1 · Artifacts, Demo 1.2"),
- _Q(f"Claude's receipts table shows Winter Warmth KWD {D.RC_DUP:,.0f} above the supplier invoices. What do you do first?",
+ _Q(f"Claude's receipts table shows Winter Warmth {kwd(D.RC_DUP)} above the supplier invoices. What do you do first?",
     ["Ask Claude to recalculate until the totals match", "Change the table by hand to match the invoices", "Send it to Fahad with a note that it is a draft", "Look for a receipt that is counted twice"], 3, "Check before you share", "Layer 1 · Demo 1.3 check; Layer 4 · Task 4.1 flags"),
  _Q("Hessa asks Claude to forward the heater email to the board secretary through the Gmail connector. She works in Manual mode. What happens before it is forwarded?",
     ["Nothing: Claude forwards it as soon as it is ready", "Claude forwards it, because forwarding is read-only", "Claude asks her to approve the forward first", "Claude saves a draft and she forwards it in Gmail"], 2, "Connectors and approvals", "Layer 2 · you decide"),
@@ -255,9 +255,8 @@ CARD = {"lede": "<b>Before you connect an app or paste anything, sort the task.<
 LESSON_INTRO = f"CODED Professionals client session for Al-Balagh Al-Mubeen Charity. {AUDIENCE}; they know prompting and asked for Claude's features in depth. No prompting lesson. Story: Misbah Charity Society (fictional)."
 RUNBOOK_PREFLIGHT = ["Presenting laptop: Claude desktop app updated, signed in to a paid account. The message box shows Cowork (or the new Claude experience).",
                      "Settings › Capabilities: Create and edit files is on (skills and artifacts need it). Web search is on (older layout; the new Claude experience has no toggle).",
-                     "The day before: upload misbah-donor-thanks-skill.zip from the Plugins page, note the exact button labels for Task 3.2, then delete the skill again. If the new page refuses a skill .zip, teach the fallback: create the skill with Claude (Demo 3.2).",
                      "Run the Demo 1.2 calculator prompt once with the campaign brief and keep the real artifact open, to show next to the slide.",
-                     "The CODED training Google account is connected to Gmail and Google Calendar, with the fictional inbox and Sunday 29 November's calendar loaded for Demo 2.1.",
+                     "The CODED training Google account is still connected to Gmail and Google Calendar, with the fictional inbox and calendar loaded the day before.",
                      "The Misbah Winter Campaign Project exists with the Task 3.1 instructions, the brand guide and the brief (the opener uses it). No donor-thank-you skill on the laptop: it is uploaded live on the find-skills slide. The receipts folder is unzipped on the desktop.",
                      "All 8 sample files are on the laptop and on a USB stick. Open this runbook, the backups and the answer key on your own screen.",
                      "Test the projector with the deck at full screen (F). Step through one player and press R to reset it. Check the calculator slide responds."]
@@ -265,6 +264,8 @@ FACILITATOR = [
  ("open", "Before the session", "confirm by Wednesday 25 November", [("ul", [
     "Send the joining note through Yousif: bring a charged laptop with the Claude desktop app installed and signed in to a paid Claude plan (Pro, Max or Team).",
     "Ask Yousif to confirm with Al-Balagh which Claude accounts are approved for work email. Only approved accounts connect Gmail in Task 2.1; everyone else uses the fictional inbox file. On a Team plan, an owner must also turn on: the Google connectors; code execution and file creation, and Skills (Organization settings › Plugins & skills); and web search (Organization settings › Capabilities).",
+    "The day before: upload misbah-donor-thanks-skill.zip from the Plugins page, note the exact button labels for Task 3.2, then delete the skill again. If the new page refuses a skill .zip, teach the fallback: create the skill with Claude (Demo 3.2).",
+    "The day before: load the CODED training Google account with the fictional inbox and Sunday 29 November's calendar (from misbah-inbox-and-calendar.pdf) for Demo 2.1.",
     "This room left AI Essentials because of too much prompting. Do not teach prompting. Every block is a Claude feature, shown, then done.",
     "The three portal surveys are not linked to a cohort (there is none for this session). Ops can link one later."])]),
  ("room", "Room and laptops", "pre-flight", [("ol", [
@@ -315,7 +316,7 @@ SURVEY = {
    ["لصق أول 50 صفاً في المحادثة وطلب الإجماليات", "إرسال لقطة شاشة للورقة وطلب الإجماليات", "إرفاق الملف وطلب الحساب من Claude باستخدام الكود", "وصف الأعمدة بالكلمات وطلب تقدير"]),
   ("تريد نورة حاسبة لتكلفة حقيبة الشتاء يفتحها المتطوعون مرة أخرى الأسبوع القادم. ماذا تطلب من Claude؟",
    ["إجابة طويلة تشرح المعادلة خطوة بخطوة", "عنصر Artifact: حاسبة صغيرة يمكنها مشاركتها", "إدخالاً في الذاكرة يحفظ تكاليف الوحدات", "مهمة مجدولة ترسل لها التكاليف يومياً"]),
-  (f"يُظهر جدول الإيصالات الذي أعدّه Claude أن حملة Winter Warmth أعلى بمقدار {D.RC_DUP:,.0f} دينار من فواتير الموردين. ماذا تفعل أولاً؟",
+  (f"يُظهر جدول الإيصالات الذي أعدّه Claude أن حملة Winter Warmth أعلى بمقدار {D.RC_DUP:,.3f} دينار من فواتير الموردين. ماذا تفعل أولاً؟",
    ["أطلب من Claude إعادة الحساب حتى تتطابق الإجماليات", "أعدّل الجدول يدوياً ليطابق الفواتير", "أرسله إلى فهد مع ملاحظة أنه مسودة", "أبحث عن إيصال محسوب مرتين"]),
   ("تطلب حصة من Claude إعادة توجيه رسالة الدفايات إلى سكرتير مجلس الإدارة عبر موصل Gmail، وهي تعمل في الوضع اليدوي (Manual). ماذا يحدث قبل إعادة التوجيه؟",
    ["لا شيء: يعيد Claude توجيهها فور جاهزيتها", "يعيد Claude توجيهها، لأن إعادة التوجيه للقراءة فقط", "يطلب منها Claude الموافقة على إعادة التوجيه أولاً", "يحفظ Claude مسودة وتعيد هي توجيهها من Gmail"]),

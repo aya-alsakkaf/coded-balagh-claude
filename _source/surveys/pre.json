@@ -341,8 +341,8 @@
    "id": "q_4",
    "type": "select",
    "label": {
-    "en": "4. Claude's receipts table shows Winter Warmth KWD 1,950 above the supplier invoices. What do you do first?",
-    "ar": "4. يُظهر جدول الإيصالات الذي أعدّه Claude أن حملة Winter Warmth أعلى بمقدار 1,950 دينار من فواتير الموردين. ماذا تفعل أولاً؟"
+    "en": "4. Claude's receipts table shows Winter Warmth KWD 1,950.000 above the supplier invoices. What do you do first?",
+    "ar": "4. يُظهر جدول الإيصالات الذي أعدّه Claude أن حملة Winter Warmth أعلى بمقدار 1,950.000 دينار من فواتير الموردين. ماذا تفعل أولاً؟"
    },
    "required": true,
    "sectionId": "s_3",

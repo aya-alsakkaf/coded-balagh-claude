@@ -302,3 +302,11 @@ The independent audit of round 1 found gaps. These changes close them; nothing o
 - **Demo 3.2** card says "watch only: do not save". Job descriptions end with the approval rule.
 - `l2chk` now asks about a send request. The report's hall days are working days (data.py `HALLS`).
 - **MAP Q4, Q5 and Q7** are new situations with believable options (receipts table, a forward, the Ramadan Iftar Project); the key does not change.
+
+## Changes after QA round 5 (24 November 2026)
+
+- Plugins slide note: connect each bundled connector from the plugin's Connectors tab, with your own account.
+- Files quick check replaced by a voice-mode check; 30-second voice demo in the Layer 1 files note.
+- Wrap label "Between you, you caught"; showcase timing for more than three people; Designer shift Wednesday 09:00.
+- Task 3.1 and Task 4.2 steps point to the prompt sheet. Day-before items moved to Facilitator "Before the session".
+- Receipt PDF prices with thousands separators. MAP Q4 shows KWD 1,950.000 (key unchanged; both portal drafts updated).

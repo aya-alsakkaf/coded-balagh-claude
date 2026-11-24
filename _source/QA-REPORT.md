@@ -133,3 +133,12 @@ Levels 1 to 4 after the round 3 fixes: validator 0, pages 0, decks 0, walk clean
 - Concerning · prompt sheet Demo 2.1 card · Gmail connect steps with no approved-account condition, before the sort · card is watch-only (trainer account)
 - Nits fixed · `l2chk` stem · files concept check (`l1fchk`) · report hall days · job descriptions end with the approval rule · Demo 3.2 "do not save" · Task 2.1 Manual mode · MAP Q4, Q5, Q7 · Task 4.1 extra approved account
 - Nit accepted · "all 1 days" (engine, PLUGIN-FEEDBACK #2)
+
+## Round 5 · about 9.45 / 10 · FAIL (Content coherence 8.25)
+
+The last allowed round. No Blocking finding; every other dimension at 9.0 or more. Levels 1 to 4 after the round 4 fixes: validator 0, pages 0, decks 0, walk clean (66 slides). Levels 5 to 8 by a fifth fresh agent.
+- Concerning · `l4plug` note · said a plugin connects its connectors for you; the plugin docs say each bundled connector still has to be connected · note now says: open the plugin's Connectors tab and connect each one with your own account
+- Nits fixed · `l1fchk` echoed MAP Q2 and voice mode had no check: now a voice check, plus a 30-second voice demo in the `l1files` note · `w1` label "Between you, you caught" · `aeshow` timing for more than three people · `aetable` Designer shift is now a schedule (Wednesday 09:00) · Task 3.1 and Task 4.2 steps point to the prompt sheet, not "below" · day-before skill upload and inbox loading moved from the preflight list to Facilitator "Before the session" · receipt PDF unit prices with thousands separators · MAP Q4 money with three decimals (both portal drafts updated) · Task 2.1 and Demo 3.2 hints shortened
+- Nit accepted · "all 1 days" (engine, PLUGIN-FEEDBACK #2)
+
+After the fixes: validator 0 (Task 3.1 steps shortened to fit 1440 × 810), pages 0, decks 0. Not re-audited: by the QA rule, round 5 was the last round, so the build is not shipped without Aya's decision.
