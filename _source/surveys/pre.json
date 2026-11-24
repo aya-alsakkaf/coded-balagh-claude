@@ -1,0 +1,759 @@
+{
+ "name": "CODED × Al-Balagh Al-Mubeen Claude in Layers: MAP Test PRE (Day 1)",
+ "description": "MAP Skills Test for CODED × Al-Balagh Al-Mubeen \"Claude in Layers\", 1 days, Thursday 26 November 2026, 09:00-13:00. Day 1: From chat to your first AI employee. PRE sitting: Day 1 · Thu 26 Nov · 09:05. The POST sitting (Day 1 · Thu 26 Nov · 12:40) has the identical questions. Part 1: 5 confidence self-ratings (never scored). Part 2: 12 knowledge questions (Day 1: 12). About 10 minutes. Not graded. Answer key: 1 a · 2 c · 3 b · 4 d · 5 c · 6 b · 7 a · 8 a · 9 d · 10 b · 11 d · 12 c.",
+ "audience": "teacher_student",
+ "isAnonymous": false,
+ "folderId": "9d0ed253-6ffa-4591-aa6b-3c95f22972ec",
+ "sections": [
+  {
+   "id": "s_1",
+   "title": {
+    "en": "Before you start",
+    "ar": "قبل أن تبدأ"
+   },
+   "description": {
+    "en": "Please read this, then give us your name, work email and department so that we can match your two sittings.",
+    "ar": "يُرجى قراءة ما يلي، ثم تزويدنا باسمك وبريدك الإلكتروني للعمل والإدارة التي تعمل بها لكي نطابق بين محاولتيك."
+   },
+   "order": 0
+  },
+  {
+   "id": "s_2",
+   "title": {
+    "en": "Part 1: Confidence",
+    "ar": "الجزء 1: الثقة"
+   },
+   "description": {
+    "en": "Rate each statement 1 to 5. 1 = No idea / never done it. 3 = Could attempt with help. 5 = Could do it confidently on my own. There are no right answers here.",
+    "ar": "قيّم كل عبارة من 1 إلى 5. 1 = لا أعرف / لم أفعله من قبل. 3 = أستطيع المحاولة بمساعدة. 5 = أستطيع فعله بثقة وحدي. لا توجد إجابات صحيحة هنا."
+   },
+   "order": 1
+  },
+  {
+   "id": "s_3",
+   "title": {
+    "en": "Part 2: Day 1, From chat to your first AI employee",
+    "ar": "الجزء 2: اليوم 1، من المحادثة إلى أول موظف ذكاء اصطناعي"
+   },
+   "description": {
+    "en": "12 questions. Choose the one best answer.",
+    "ar": "12 أسئلة. اختر أفضل إجابة واحدة."
+   },
+   "order": 2
+  }
+ ],
+ "questions": [
+  {
+   "id": "q_intro",
+   "type": "statement",
+   "label": {
+    "en": "This short test has 12 knowledge questions and takes about 10 minutes. Work alone, and do not use an AI tool or search. If you are not sure, choose the answer you think is most likely; there is no penalty for a wrong answer. You take this same test at the start of Day 1 and at the end of Day 1.",
+    "ar": "يتضمن هذا الاختبار القصير 12 سؤالاً معرفياً ويستغرق نحو 10 دقائق. اعمل بمفردك، ولا تستخدم أي أداة ذكاء اصطناعي أو محرك بحث. إذا لم تكن متأكداً، فاختر الإجابة التي تراها الأرجح؛ لا توجد عقوبة على الإجابة الخاطئة. ستؤدي هذا الاختبار نفسه في بداية اليوم 1 وفي نهاية اليوم 1."
+   },
+   "required": false,
+   "sectionId": "s_1",
+   "order": 1
+  },
+  {
+   "id": "q_name",
+   "type": "text",
+   "label": {
+    "en": "Your full name",
+    "ar": "اسمك الكامل"
+   },
+   "required": true,
+   "sectionId": "s_1",
+   "order": 2
+  },
+  {
+   "id": "q_email",
+   "type": "email",
+   "label": {
+    "en": "Your work email. We use it only to match your two sittings.",
+    "ar": "بريدك الإلكتروني للعمل. نستخدمه فقط لمطابقة محاولتيك."
+   },
+   "required": true,
+   "sectionId": "s_1",
+   "order": 3
+  },
+  {
+   "id": "q_dept",
+   "type": "text",
+   "label": {
+    "en": "Your department",
+    "ar": "الإدارة التي تعمل بها"
+   },
+   "required": true,
+   "sectionId": "s_1",
+   "order": 4
+  },
+  {
+   "id": "q_r1",
+   "type": "scale",
+   "label": {
+    "en": "I can choose between Claude's trained knowledge and web search, and give Claude PDFs, spreadsheets and screenshots to work from.",
+    "ar": "أستطيع الاختيار بين معرفة Claude المدرَّبة والبحث في الويب، وأن أعطي Claude ملفات PDF وجداول ولقطات شاشة ليعمل منها."
+   },
+   "required": true,
+   "sectionId": "s_2",
+   "scaleConfig": {
+    "min": 1,
+    "max": 5,
+    "minLabel": {
+     "en": "1: No idea / never done it",
+     "ar": "1: لا أعرف / لم أفعله من قبل"
+    },
+    "maxLabel": {
+     "en": "5: Confidently on my own",
+     "ar": "5: بثقة وحدي"
+    }
+   },
+   "order": 5
+  },
+  {
+   "id": "q_r2",
+   "type": "scale",
+   "label": {
+    "en": "I can turn a spreadsheet or an idea into an artifact, such as a dashboard, a calculator or a short deck, and share it.",
+    "ar": "أستطيع تحويل جدول بيانات أو فكرة إلى Artifact، مثل لوحة بيانات أو حاسبة أو عرض قصير، ومشاركته."
+   },
+   "required": true,
+   "sectionId": "s_2",
+   "scaleConfig": {
+    "min": 1,
+    "max": 5,
+    "minLabel": {
+     "en": "1: No idea / never done it",
+     "ar": "1: لا أعرف / لم أفعله من قبل"
+    },
+    "maxLabel": {
+     "en": "5: Confidently on my own",
+     "ar": "5: بثقة وحدي"
+    }
+   },
+   "order": 6
+  },
+  {
+   "id": "q_r3",
+   "type": "scale",
+   "label": {
+    "en": "I can connect my email and calendar to Claude and keep every send and change under my approval.",
+    "ar": "أستطيع ربط بريدي الإلكتروني وتقويمي بـ Claude، مع إبقاء كل إرسال وتغيير بموافقتي."
+   },
+   "required": true,
+   "sectionId": "s_2",
+   "scaleConfig": {
+    "min": 1,
+    "max": 5,
+    "minLabel": {
+     "en": "1: No idea / never done it",
+     "ar": "1: لا أعرف / لم أفعله من قبل"
+    },
+    "maxLabel": {
+     "en": "5: Confidently on my own",
+     "ar": "5: بثقة وحدي"
+    }
+   },
+   "order": 7
+  },
+  {
+   "id": "q_r4",
+   "type": "scale",
+   "label": {
+    "en": "I can teach Claude once with memory, instructions, a Project and a Skill, and find ready-made skills and plugins.",
+    "ar": "أستطيع تعليم Claude مرة واحدة عبر الذاكرة والتعليمات والمشروع (Project) والمهارة (Skill)، وأن أجد مهارات وإضافات جاهزة."
+   },
+   "required": true,
+   "sectionId": "s_2",
+   "scaleConfig": {
+    "min": 1,
+    "max": 5,
+    "minLabel": {
+     "en": "1: No idea / never done it",
+     "ar": "1: لا أعرف / لم أفعله من قبل"
+    },
+    "maxLabel": {
+     "en": "5: Confidently on my own",
+     "ar": "5: بثقة وحدي"
+    }
+   },
+   "order": 8
+  },
+  {
+   "id": "q_r5",
+   "type": "scale",
+   "label": {
+    "en": "I can explain what Cowork and scheduled tasks do, and set up an AI employee for one role at my organization.",
+    "ar": "أستطيع شرح ما يفعله Cowork والمهام المجدولة، وإعداد موظف ذكاء اصطناعي لدور واحد في مؤسستي."
+   },
+   "required": true,
+   "sectionId": "s_2",
+   "scaleConfig": {
+    "min": 1,
+    "max": 5,
+    "minLabel": {
+     "en": "1: No idea / never done it",
+     "ar": "1: لا أعرف / لم أفعله من قبل"
+    },
+    "maxLabel": {
+     "en": "5: Confidently on my own",
+     "ar": "5: بثقة وحدي"
+    }
+   },
+   "order": 9
+  },
+  {
+   "id": "q_1",
+   "type": "select",
+   "label": {
+    "en": "1. Fahad asks Claude for today's USD to KWD rate. Web search is off. What is Claude's answer based on?",
+    "ar": "1. يسأل فهد Claude عن سعر صرف الدولار الأمريكي مقابل الدينار الكويتي اليوم، والبحث في الويب متوقف. على ماذا تعتمد إجابة Claude؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "What it learned in training, which may be old",
+      "ar": "على ما تعلّمه أثناء التدريب، وقد يكون قديماً"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "The live rate, which Claude checks with the banks",
+      "ar": "على السعر المباشر الذي يتحقق منه Claude لدى البنوك"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "The Central Bank of Kuwait site, read on its own",
+      "ar": "على موقع بنك الكويت المركزي، يقرؤه من تلقاء نفسه"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "A quick search Claude runs in the background",
+      "ar": "على بحث سريع يجريه Claude في الخلفية"
+     }
+    }
+   ],
+   "order": 10
+  },
+  {
+   "id": "q_2",
+   "type": "select",
+   "label": {
+    "en": "2. Hessa needs total donations by campaign from a 240-row Excel file. Which request gives the most reliable numbers?",
+    "ar": "2. تحتاج حصة إلى إجمالي التبرعات لكل حملة من ملف Excel فيه 240 صفاً. أي طلب يعطي أدق الأرقام؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "Paste the first 50 rows into the chat and ask for totals",
+      "ar": "لصق أول 50 صفاً في المحادثة وطلب الإجماليات"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "Send a screenshot of the sheet and ask for totals",
+      "ar": "إرسال لقطة شاشة للورقة وطلب الإجماليات"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "Attach the file and ask Claude to calculate with code",
+      "ar": "إرفاق الملف وطلب الحساب من Claude باستخدام الكود"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "Describe the columns in words and ask for an estimate",
+      "ar": "وصف الأعمدة بالكلمات وطلب تقدير"
+     }
+    }
+   ],
+   "order": 11
+  },
+  {
+   "id": "q_3",
+   "type": "select",
+   "label": {
+    "en": "3. Noura wants a winter-kit cost calculator that volunteers can open again next week. What should she ask Claude for?",
+    "ar": "3. تريد نورة حاسبة لتكلفة حقيبة الشتاء يفتحها المتطوعون مرة أخرى الأسبوع القادم. ماذا تطلب من Claude؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "A long answer that explains the formula step by step",
+      "ar": "إجابة طويلة تشرح المعادلة خطوة بخطوة"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "An artifact: a small calculator she can share",
+      "ar": "عنصر Artifact: حاسبة صغيرة يمكنها مشاركتها"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "A memory entry that stores the unit costs",
+      "ar": "إدخالاً في الذاكرة يحفظ تكاليف الوحدات"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "A scheduled task that sends her the costs daily",
+      "ar": "مهمة مجدولة ترسل لها التكاليف يومياً"
+     }
+    }
+   ],
+   "order": 12
+  },
+  {
+   "id": "q_4",
+   "type": "select",
+   "label": {
+    "en": "4. Claude's dashboard shows Winter Warmth KWD 2,500 above the Control totals sheet. What do you do first?",
+    "ar": "4. تُظهر لوحة البيانات التي أعدّها Claude أن حملة Winter Warmth أعلى بمقدار 2,500 دينار من ورقة Control totals. ماذا تفعل أولاً؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "Ask Claude to recalculate until the totals match",
+      "ar": "أطلب من Claude إعادة الحساب حتى تتطابق الإجماليات"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "Change the chart by hand to match the sheet",
+      "ar": "أعدّل الرسم يدوياً ليطابق الورقة"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "Send it to the board with a note that it is a draft",
+      "ar": "أرسلها إلى مجلس الإدارة مع ملاحظة أنها مسودة"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "Look for a duplicate row behind that total",
+      "ar": "أبحث عن صف مكرر وراء هذا الإجمالي"
+     }
+    }
+   ],
+   "order": 13
+  },
+  {
+   "id": "q_5",
+   "type": "select",
+   "label": {
+    "en": "5. Hessa asks Claude to forward the heater email to the board secretary through the Gmail connector. She works in Manual mode. What happens before it is forwarded?",
+    "ar": "5. تطلب حصة من Claude إعادة توجيه رسالة الدفايات إلى سكرتير مجلس الإدارة عبر موصل Gmail، وهي تعمل في الوضع اليدوي (Manual). ماذا يحدث قبل إعادة التوجيه؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "Nothing: Claude forwards it as soon as it is ready",
+      "ar": "لا شيء: يعيد Claude توجيهها فور جاهزيتها"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "Gmail holds it for one hour, then forwards it",
+      "ar": "يحتفظ بها Gmail ساعة ثم يعيد توجيهها"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "Claude asks her to approve the forward first",
+      "ar": "يطلب منها Claude الموافقة على إعادة التوجيه أولاً"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "The board secretary approves it before it arrives",
+      "ar": "يوافق عليها سكرتير المجلس قبل وصولها"
+     }
+    }
+   ],
+   "order": 14
+  },
+  {
+   "id": "q_6",
+   "type": "select",
+   "label": {
+    "en": "6. Hessa plans the delivery days with Claude, in an account her organization approved. Which file must she keep out of the chat?",
+    "ar": "6. تخطط حصة لأيام التوزيع مع Claude، في حساب وافقت عليه مؤسستها. أي ملف يجب أن تُبقيه خارج المحادثة؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "The booking times for the three community halls",
+      "ar": "مواعيد حجز القاعات المجتمعية الثلاث"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "The list of families with their civil IDs and addresses",
+      "ar": "قائمة الأسر بأرقامها المدنية وعناوينها"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "The heater order from the supplier, with its prices",
+      "ar": "طلب الدفايات من المورّد، مع أسعاره"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "The campaign brief with the kit and the budget",
+      "ar": "موجز الحملة بمحتويات الحقيبة والميزانية"
+     }
+    }
+   ],
+   "order": 15
+  },
+  {
+   "id": "q_7",
+   "type": "select",
+   "label": {
+    "en": "7. Every winter-campaign chat needs the brand guide, but your other work does not. Where do you put the brand guide?",
+    "ar": "7. كل محادثة عن حملة الشتاء تحتاج دليل الهوية، لكن عملك الآخر لا يحتاجه. أين تضع دليل الهوية؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "In a Project's knowledge, with the campaign rules",
+      "ar": "في ملفات المعرفة في مشروع (Project)، مع قواعد الحملة"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "In a pinned chat that you go back to for each post",
+      "ar": "في محادثة مثبّتة تعود إليها مع كل منشور"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "In your personal settings, so every chat starts with it",
+      "ar": "في إعداداتك الشخصية، لتبدأ بها كل محادثة"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "In the first message of each chat, pasted by hand",
+      "ar": "في أول رسالة من كل محادثة، بلصقه يدوياً"
+     }
+    }
+   ],
+   "order": 16
+  },
+  {
+   "id": "q_8",
+   "type": "select",
+   "label": {
+    "en": "8. Fahad writes donor thank-you letters every week with the same five steps. What makes Claude follow those steps when the task comes up?",
+    "ar": "8. يكتب فهد رسائل شكر للمتبرعين كل أسبوع بالخطوات الخمس نفسها. ما الذي يجعل Claude يتبع هذه الخطوات عندما تأتي المهمة؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "A Skill with the steps, an example and a template",
+      "ar": "مهارة (Skill) فيها الخطوات ومثال وقالب"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "A longer prompt saved in a file on his desktop",
+      "ar": "طلب أطول محفوظ في ملف على سطح المكتب"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "A connector to the shared drive that holds old letters",
+      "ar": "موصل إلى المجلد المشترك الذي يضم الرسائل القديمة"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "A memory entry that says he writes letters weekly",
+      "ar": "إدخال في الذاكرة يقول إنه يكتب رسائل كل أسبوع"
+     }
+    }
+   ],
+   "order": 17
+  },
+  {
+   "id": "q_9",
+   "type": "select",
+   "label": {
+    "en": "9. Noura wants Claude ready for marketing work in one step, with commands such as /campaign-plan. What does she add?",
+    "ar": "9. تريد نورة تجهيز Claude لأعمال التسويق بخطوة واحدة، مع أوامر جاهزة مثل /campaign-plan. ماذا تضيف؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "A new Project named Marketing, with no files yet",
+      "ar": "مشروعاً جديداً باسم Marketing، دون ملفات بعد"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "A connector to Instagram from the + menu",
+      "ar": "موصلاً إلى Instagram من قائمة +"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "Longer Instructions for Claude in Settings",
+      "ar": "تعليمات أطول لـ Claude في الإعدادات"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "The Marketing plugin from the Plugins page",
+      "ar": "إضافة Marketing من صفحة Plugins"
+     }
+    }
+   ],
+   "order": 18
+  },
+  {
+   "id": "q_10",
+   "type": "select",
+   "label": {
+    "en": "10. Which task fits Cowork better than a normal chat?",
+    "ar": "10. أي مهمة تناسب Cowork أكثر من المحادثة العادية؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "Explaining the meaning of one word in a post",
+      "ar": "شرح معنى كلمة واحدة في منشور"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "Sorting 15 receipt files into one Excel table",
+      "ar": "فرز 15 ملف إيصال في جدول Excel واحد"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "Checking the date in one short email from Salem",
+      "ar": "التحقق من التاريخ في رسالة قصيرة واحدة من سالم"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "Translating one sentence of a post into Arabic",
+      "ar": "ترجمة جملة واحدة من منشور إلى العربية"
+     }
+    }
+   ],
+   "order": 19
+  },
+  {
+   "id": "q_11",
+   "type": "select",
+   "label": {
+    "en": "11. You want a donations summary every Sunday at 08:00, even when your laptop is off. What do you set up?",
+    "ar": "11. تريد ملخصاً للتبرعات كل يوم أحد الساعة 08:00، حتى وحاسوبك مغلق. ماذا تُعدّ؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "A memory entry that says “every Sunday at 08:00”",
+      "ar": "إدخالاً في الذاكرة يقول «كل أحد الساعة 08:00»"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "A Skill named weekly-summary with the steps",
+      "ar": "مهارة (Skill) باسم weekly-summary فيها الخطوات"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "A pinned chat that you open each Sunday",
+      "ar": "محادثة مثبّتة تفتحها كل أحد"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "A scheduled task in Claude for Sunday 08:00",
+      "ar": "مهمة مجدولة في Claude ليوم الأحد الساعة 08:00"
+     }
+    }
+   ],
+   "order": 20
+  },
+  {
+   "id": "q_12",
+   "type": "select",
+   "label": {
+    "en": "12. You set up an AI accountant for Misbah. Which part should stay with a person?",
+    "ar": "12. أعددت محاسباً بالذكاء الاصطناعي لجمعية المصباح. أي جزء يجب أن يبقى مع شخص؟"
+   },
+   "required": true,
+   "sectionId": "s_3",
+   "options": [
+    {
+     "id": "opt_a",
+     "value": "a",
+     "label": {
+      "en": "Reading the receipts in the Google Drive folder",
+      "ar": "قراءة الإيصالات في مجلد Google Drive"
+     }
+    },
+    {
+     "id": "opt_b",
+     "value": "b",
+     "label": {
+      "en": "Sorting the November donations by campaign",
+      "ar": "فرز تبرعات نوفمبر حسب الحملة"
+     }
+    },
+    {
+     "id": "opt_c",
+     "value": "c",
+     "label": {
+      "en": "Approving any payment or email that goes out",
+      "ar": "الموافقة على أي دفعة أو رسالة تخرج"
+     }
+    },
+    {
+     "id": "opt_d",
+     "value": "d",
+     "label": {
+      "en": "Drafting the weekly three-line note",
+      "ar": "كتابة مسودة الملاحظة الأسبوعية من ثلاثة أسطر"
+     }
+    }
+   ],
+   "order": 21
+  }
+ ],
+ "_update": {
+  "brandingTitle": {
+   "en": "Claude in Layers · MAP Test PRE (Day 1)",
+   "ar": "Claude في طبقات · اختبار MAP: القبلي (اليوم 1)"
+  },
+  "brandingSubtitle": {
+   "en": "CODED × Al-Balagh Al-Mubeen",
+   "ar": "CODED × جمعية البلاغ المبين"
+  },
+  "clientName": "Al-Balagh Al-Mubeen Charity",
+  "cohortName": "",
+  "slug": "coded-al-balagh-al-mubeen-claude-in-layers-map-test-pre-day-1"
+ }
+}

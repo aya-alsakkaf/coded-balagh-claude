@@ -1,0 +1,152 @@
+{
+ "$schema": "https://openapi.vercel.sh/vercel.json",
+ "outputDirectory": "public",
+ "cleanUrls": true,
+ "trailingSlash": false,
+ "redirects": [
+  {
+   "source": "/",
+   "destination": "/coded-balagh-claude",
+   "permanent": false
+  },
+  {
+   "source": "/pre",
+   "destination": "https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-pre-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/post",
+   "destination": "https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-map-test-post-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/survey",
+   "destination": "https://platform.joincoded.com/sv/coded-al-balagh-al-mubeen-claude-in-layers-final-satisfaction-survey",
+   "permanent": false
+  },
+  {
+   "source": "/day1",
+   "destination": "/coded-balagh-claude-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/slides1",
+   "destination": "/coded-balagh-claude-day-1-deck",
+   "permanent": false
+  },
+  {
+   "source": "/deck-day-1",
+   "destination": "/coded-balagh-claude-day-1-deck",
+   "permanent": false
+  },
+  {
+   "source": "/prompt-sheet-day-1",
+   "destination": "/coded-balagh-claude-prompt-sheet-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/presenter-notes-day-1",
+   "destination": "/staff/coded-balagh-claude-notes-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/demo-runbook-day-1",
+   "destination": "/staff/coded-balagh-claude-runbook-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/backup-outputs-day-1",
+   "destination": "/staff/coded-balagh-claude-backup-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/answer-key-day-1",
+   "destination": "/staff/coded-balagh-claude-answer-key-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/lab-day-1",
+   "destination": "/coded-balagh-claude-lab-day-1",
+   "permanent": false
+  },
+  {
+   "source": "/cheat-sheet",
+   "destination": "/coded-balagh-claude-cheat-sheet",
+   "permanent": false
+  },
+  {
+   "source": "/safe-use-card",
+   "destination": "/coded-balagh-claude-safe-use-card",
+   "permanent": false
+  },
+  {
+   "source": "/take-home-guide",
+   "destination": "/coded-balagh-claude-take-home-guide",
+   "permanent": false
+  },
+  {
+   "source": "/facilitator-kit",
+   "destination": "/staff/coded-balagh-claude-facilitator-kit",
+   "permanent": false
+  },
+  {
+   "source": "/lesson-plan",
+   "destination": "/staff/coded-balagh-claude-lesson-plan",
+   "permanent": false
+  },
+  {
+   "source": "/workshop-index",
+   "destination": "/staff",
+   "permanent": false
+  }
+ ],
+ "headers": [
+  {
+   "source": "/(.*)",
+   "headers": [
+    {
+     "key": "X-Content-Type-Options",
+     "value": "nosniff"
+    },
+    {
+     "key": "Referrer-Policy",
+     "value": "strict-origin-when-cross-origin"
+    },
+    {
+     "key": "X-Frame-Options",
+     "value": "SAMEORIGIN"
+    },
+    {
+     "key": "X-Robots-Tag",
+     "value": "noindex, nofollow"
+    }
+   ]
+  },
+  {
+   "source": "/staff/(.*)",
+   "headers": [
+    {
+     "key": "X-Robots-Tag",
+     "value": "noindex, nofollow"
+    },
+    {
+     "key": "Cache-Control",
+     "value": "private, no-store"
+    }
+   ]
+  },
+  {
+   "source": "/staff",
+   "headers": [
+    {
+     "key": "X-Robots-Tag",
+     "value": "noindex, nofollow"
+    },
+    {
+     "key": "Cache-Control",
+     "value": "private, no-store"
+    }
+   ]
+  }
+ ]
+}

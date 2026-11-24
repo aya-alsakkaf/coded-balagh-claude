@@ -1,0 +1,927 @@
+[
+{
+"say": "This morning is about Claude, not about prompting. You already write good prompts.",
+"do": "Welcome. Introduce yourself and CODED in one minute. Name the reason for today: Claude's features, in depth, with your hands on the keys.",
+"expect": null,
+"silent": "ask the General Manager which feature he most wants to see working today.",
+"fallback": null,
+"more": [
+"Housekeeping: coffee at 10:15, Dhuhr break at 11:40. Prayer room and toilets.",
+"Sign-in check: Claude desktop app open and signed in on every laptop. Help anyone who is still on the free plan or the web only."
+],
+"time": "09:00 · cover",
+"t": "open",
+"k": "cover",
+"h": "Cover: welcome",
+"flat": "09:00 · cover. · Do: Welcome. Introduce yourself and CODED in one minute. Name the reason for today: Claude's features, in depth, with your hands on the keys. · Housekeeping: coffee at 10:15, Dhuhr break at 11:40. Prayer room and toilets. · Sign-in check: Claude desktop app open and signed in on every laptop. Help anyone who is still on the free plan or the web only. · If the room is silent: ask the General Manager which feature he most wants to see working today. · Say: “This morning is about Claude, not about prompting. You already write good prompts.”"
+},
+{
+"say": "Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.",
+"do": "Phones only. No notes, no search, no AI. It is not graded.",
+"expect": null,
+"silent": null,
+"fallback": "read out the short link (/pre) if a phone cannot scan.",
+"more": [
+"Leave the slide up while they scan. The same link is on the workshop home and the day page.",
+"This is also the pre-flight check: help anyone whose phone does not open the link.",
+"Check the response count in the portal before you move on."
+],
+"time": "10 min",
+"t": "open",
+"k": "map",
+"h": "MAP test (before)",
+"flat": "10 min. · Do: Phones only. No notes, no search, no AI. It is not graded. · Leave the slide up while they scan. The same link is on the workshop home and the day page. · This is also the pre-flight check: help anyone whose phone does not open the link. · Check the response count in the portal before you move on. · Fallback: read out the short link (/pre) if a phone cannot scan. · Say: “Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.”"
+},
+{
+"say": null,
+"do": "Read the story. Ask: what did Noura's Claude not know?",
+"expect": "The brand voice, the rules, the languages.",
+"silent": "name one thing yourself: the campaign facts.",
+"fallback": null,
+"more": [],
+"time": "09:15-09:25",
+"t": "open",
+"k": "story",
+"h": "Opener · the question",
+"flat": "09:15-09:25. · Do: Read the story. Ask: what did Noura's Claude not know? · Expect: The brand voice, the rules, the languages. · If the room is silent: name one thing yourself: the campaign facts."
+},
+{
+"say": "I typed the same words both times, with the same file. Only the setup behind Claude changed.",
+"do": "Press → through the steps. Stop at each layer on the right and ask what it adds.",
+"expect": null,
+"silent": "ask before step 4: would the General Manager publish the plain post?",
+"fallback": null,
+"more": [
+"Steps 1 to 3: the same brief in a plain chat, and its post. Read the red flags aloud against the brand guide.",
+"Steps 4 to 7: the same words, sent inside the Project; then what the Project already holds.",
+"Step 8: the Project's post. Point at the one number, the two languages and the link at the end.",
+"Steps 9 and 10: the scorecard, then the lesson."
+],
+"time": "6 min",
+"t": "open",
+"k": "showcase",
+"h": "Opener: weak and strong prompt",
+"flat": "6 min. · Do: Press → through the steps. Stop at each layer on the right and ask what it adds. · Steps 1 to 3: the same brief in a plain chat, and its post. Read the red flags aloud against the brand guide. · Steps 4 to 7: the same words, sent inside the Project; then what the Project already holds. · Step 8: the Project's post. Point at the one number, the two languages and the link at the end. · Steps 9 and 10: the scorecard, then the lesson. · If the room is silent: ask before step 4: would the General Manager publish the plain post? · Say: “I typed the same words both times, with the same file. Only the setup behind Claude changed.”"
+},
+{
+"say": "Five things you will do yourself before 13:00, on fictional files.",
+"do": "Read the outcomes quickly. Ask which one each person came for.",
+"expect": "Most pick the AI employee or the connectors.",
+"silent": "say which one you would pick for their team, and why.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "open",
+"k": "outcomes",
+"h": "Outcomes",
+"flat": "Do: Read the outcomes quickly. Ask which one each person came for. · Expect: Most pick the AI employee or the connectors. · If the room is silent: say which one you would pick for their team, and why. · Say: “Five things you will do yourself before 13:00, on fictional files.”"
+},
+{
+"say": "This is the roadmap for the whole morning. Nothing on it is about prompting.",
+"do": "Point to the four layers on the map and the two breaks. The cup button starts the break clock.",
+"expect": null,
+"silent": "ask which block they expect to use first at work.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "open",
+"k": "road",
+"h": "Road: the shape of Day 1",
+"flat": "Do: Point to the four layers on the map and the two breaks. The cup button starts the break clock. · If the room is silent: ask which block they expect to use first at work. · Say: “This is the roadmap for the whole morning. Nothing on it is about prompting.”"
+},
+{
+"say": "Each layer is one block this morning. The AI employee at the top uses all four.",
+"do": "Point to each layer as it lights up. Then point to the top: the AI employee is where the morning ends.",
+"expect": "Nods. Someone asks about plugins: say they come in layer 4.",
+"silent": "ask which layer they already use every day (layer 1).",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "open",
+"k": "scene",
+"h": "Claude in four layers.",
+"flat": "Do: Point to each layer as it lights up. Then point to the top: the AI employee is where the morning ends. · Expect: Nods. Someone asks about plugins: say they come in layer 4. · If the room is silent: ask which layer they already use every day (layer 1). · Say: “Each layer is one block this morning. The AI employee at the top uses all four.”"
+},
+{
+"say": null,
+"do": "Ask: would you put that amount on the donor's receipt?",
+"expect": "No, not without checking the rate.",
+"silent": "ask where they would check a rate today.",
+"fallback": null,
+"more": [],
+"time": "09:25-09:45",
+"t": "l1",
+"k": "story",
+"h": "Layer 1 · Chat",
+"flat": "09:25-09:45. · Do: Ask: would you put that amount on the donor's receipt? · Expect: No, not without checking the rate. · If the room is silent: ask where they would check a rate today."
+},
+{
+"say": "For ideas and drafting, the book is fine. For anything that changes, switch on the newspaper.",
+"do": "Ask: which one would you use for a rate, a law or a price?",
+"expect": "The newspaper: anything that changes.",
+"silent": "say it yourself: anything that changes needs the newspaper.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l1",
+"k": "scene",
+"h": "A library book and today's newspaper.",
+"flat": "Do: Ask: which one would you use for a rate, a law or a price? · Expect: The newspaper: anything that changes. · If the room is silent: say it yourself: anything that changes needs the newspaper. · Say: “For ideas and drafting, the book is fine. For anything that changes, switch on the newspaper.”"
+},
+{
+"say": "Nothing in this sentence was looked up. That is why the rate had no date.",
+"do": "Read the start of the sentence. Ask the room which word comes next and click it.",
+"expect": null,
+"silent": "ask one person to choose for the room.",
+"fallback": null,
+"more": [
+"Click Pick the top word once. Then Start again and pick seven: the sentence still sounds sure.",
+"The percentages are made up for the demo."
+],
+"time": "2 min",
+"t": "l1",
+"k": "llm",
+"h": "Trained knowledge is a prediction.",
+"flat": "2 min. · Do: Read the start of the sentence. Ask the room which word comes next and click it. · Click Pick the top word once. Then Start again and pick seven: the sentence still sounds sure. · The percentages are made up for the demo. · If the room is silent: ask one person to choose for the room. · Say: “Nothing in this sentence was looked up. That is why the rate had no date.”"
+},
+{
+"say": "Without web search, Claude answers from what it learned. With it, Claude reads today's pages and shows you where the number came from.",
+"do": "Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud.",
+"expect": "Off: an approximate rate from training, often with a note that it may be out of date, and no source. On: today's rate with its date, a link to the source, and the KWD amount calculated from that rate.",
+"silent": null,
+"fallback": "Show the backup table. Rates change daily, so never put a rate on the slide as fact.",
+"more": [
+"This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words.",
+"Older layout: the Web search switch is in the + menu. The new Claude experience has no switch: Claude searches when it helps, or when you ask."
+],
+"time": "3 min",
+"t": "l1",
+"k": "player",
+"h": "Prompt playback, Demo 1.1: Trained knowledge, then web search",
+"flat": "3 min. · Do: Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud. · Expect: Off: an approximate rate from training, often with a note that it may be out of date, and no source. On: today's rate with its date, a link to the source, and the KWD amount calculated from that rate. · This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words. · Older layout: the Web search switch is in the + menu. The new Claude experience has no switch: Claude searches when it helps, or when you ask. · Fallback: Show the backup table. Rates change daily, so never put a rate on the slide as fact. · Say: “Without web search, Claude answers from what it learned. With it, Claude reads today's pages and shows you where the number came from.”"
+},
+{
+"say": null,
+"do": "Point to the Excel row: code calculates, so pasted rows are never needed. Then the last two rows: one types, one talks.",
+"expect": "Someone asks about Arabic voice: the spoken language is set in Settings, under Voice.",
+"silent": "ask who has used voice mode in the car.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l1",
+"k": "table",
+"h": "Give Claude the source, not a summary of it.",
+"flat": "Do: Point to the Excel row: code calculates, so pasted rows are never needed. Then the last two rows: one types, one talks. · Expect: Someone asks about Arabic voice: the spoken language is set in Settings, under Voice. · If the room is silent: ask who has used voice mode in the car."
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option A.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l1",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option A. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": "The PDF is the source. The screenshot is a draft. Claude reads both; you decide which one is right.",
+"do": "Start the timer. Walk the room. Ask each person what they found so far.",
+"expect": "Web: today's rate with its date and a link to the source, and the KWD amount. Files: two errors in the post: delivery start: the post says “Deliveries start Thursday 3 December”, the report says Deliveries start Sunday 6 December (page 2); families: the post says “1,200 families”, the report says 1,020 families (page 1).",
+"silent": null,
+"fallback": "If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF.",
+"more": [
+"Give the hint at about 3 min.",
+"Fast finishers have an extra task on the slide."
+],
+"time": "10 min work, then share",
+"t": "l1",
+"k": "task",
+"h": "Your turn 1.1: One chat, the web and three files (10 min, on your own)",
+"flat": "10 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: Web: today's rate with its date and a link to the source, and the KWD amount. Files: two errors in the post: delivery start: the post says “Deliveries start Thursday 3 December”, the report says Deliveries start Sunday 6 December (page 2); families: the post says “1,200 families”, the report says 1,020 families (page 1). · Give the hint at about 3 min. · Fast finishers have an extra task on the slide. · Fallback: If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF. · Say: “The PDF is the source. The screenshot is a draft. Claude reads both; you decide which one is right.”"
+},
+{
+"say": null,
+"do": "Ask: which of the three would you still build by hand today?",
+"expect": "The slides, usually.",
+"silent": "say most teams still build the slides by hand.",
+"fallback": null,
+"more": [],
+"time": "09:45-10:15",
+"t": "l1b",
+"k": "story",
+"h": "Layer 1 · Artifacts",
+"flat": "09:45-10:15. · Do: Ask: which of the three would you still build by hand today? · Expect: The slides, usually. · If the room is silent: say most teams still build the slides by hand."
+},
+{
+"say": null,
+"do": "Show the Artifacts tab on the presenting laptop for ten seconds.",
+"expect": "Some have seen artifacts; few have shared one.",
+"silent": "ask who has shared a link from Claude before.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l1b",
+"k": "term",
+"h": "An answer you read once. A tool you keep.",
+"flat": "Do: Show the Artifacts tab on the presenting laptop for ten seconds. · Expect: Some have seen artifacts; few have shared one. · If the room is silent: ask who has shared a link from Claude before."
+},
+{
+"say": null,
+"do": "Ask each person which one they would use next week.",
+"expect": "The dashboard and the deck are the usual picks.",
+"silent": "pick the calculator and move to the next slide.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l1b",
+"k": "table",
+"h": "Six things to ask for today.",
+"flat": "Do: Ask each person which one they would use next week. · Expect: The dashboard and the deck are the usual picks. · If the room is silent: pick the calculator and move to the next slide."
+},
+{
+"say": "This is what Claude builds when you ask for a tool. I ran the same prompt this morning: here it is in Claude.",
+"do": "Change the families to 1200: the budget goes negative. Set it back to 1020. Untick the heater and watch the cost per family fall.",
+"expect": "KWD 46.500 per family; KWD 47,430.000 in total; KWD 570.000 left.",
+"silent": "ask what number the volunteers would change first.",
+"fallback": "If the slide calculator does not respond, press R to reload the slide; the numbers are on the backup.",
+"more": [
+"Switch to the real artifact you built before the session (runbook) and change one input there too."
+],
+"time": "3 min",
+"t": "l1b",
+"k": "widget",
+"h": "Demo 1.2: The winter-kit cost calculator",
+"flat": "3 min. · Do: Change the families to 1200: the budget goes negative. Set it back to 1020. Untick the heater and watch the cost per family fall. · Expect: KWD 46.500 per family; KWD 47,430.000 in total; KWD 570.000 left. · Switch to the real artifact you built before the session (runbook) and change one input there too. · If the room is silent: ask what number the volunteers would change first. · Fallback: If the slide calculator does not respond, press R to reload the slide; the numbers are on the backup. · Say: “This is what Claude builds when you ask for a tool. I ran the same prompt this morning: here it is in Claude.”"
+},
+{
+"say": "The chart looks finished. The check line is what tells you it is not ready yet.",
+"do": "Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud.",
+"expect": "Two charts and three summary lines. Rows: 240; total KWD 24,725.000. The Control totals sheet says KWD 22,225.000: KWD 2,500.000 more in Winter Warmth.",
+"silent": null,
+"fallback": "Show the backup table. If file upload fails, the trainer runs it on the presenting laptop.",
+"more": [
+"This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words."
+],
+"time": "4 min",
+"t": "l1b",
+"k": "player",
+"h": "Prompt playback, Demo 1.3: A donations dashboard from the Excel file",
+"flat": "4 min. · Do: Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud. · Expect: Two charts and three summary lines. Rows: 240; total KWD 24,725.000. The Control totals sheet says KWD 22,225.000: KWD 2,500.000 more in Winter Warmth. · This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words. · Fallback: Show the backup table. If file upload fails, the trainer runs it on the presenting laptop. · Say: “The chart looks finished. The check line is what tells you it is not ready yet.”"
+},
+{
+"say": null,
+"do": "Stress the second line: the dashboard on the last slide was neat and wrong.",
+"expect": "Agreement; someone asks who can see a shared link.",
+"silent": "ask who would see the board deck if you shared it.",
+"fallback": null,
+"more": [
+"Share options (Help Center, November 2026): Pro and Max choose Only you or Anyone with the link. Team and Enterprise choose Only people invited, Anyone at the organization, or Anyone with the link if an owner allows it. Free cannot share new artifacts.",
+"Older chat artifacts still show Publish or Share & copy link."
+],
+"time": null,
+"t": "l1b",
+"k": "list",
+"h": "Change it, check it, then share it.",
+"flat": "Do: Stress the second line: the dashboard on the last slide was neat and wrong. · Expect: Agreement; someone asks who can see a shared link. · Share options (Help Center, November 2026): Pro and Max choose Only you or Anyone with the link. Team and Enterprise choose Only people invited, Anyone at the organization, or Anyone with the link if an owner allows it. Free cannot share new artifacts. · Older chat artifacts still show Publish or Share & copy link. · If the room is silent: ask who would see the board deck if you shared it."
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option B.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l1b",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option B. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": "Pick the one you would really use next week.",
+"do": "Start the timer. Walk the room. Ask each person what they found so far.",
+"expect": "A: KWD 46.500 per family, KWD 47,430.000 for 1,020 families. B: 240 rows and KWD 24,725.000, KWD 2,500.000 above the Control totals because receipt R-2026-11408 is in the file twice. C: questions that match the report. D: five slides with the report's numbers. E: a doc you edit in place, with deliveries from Sunday 6 December to Thursday 17 December.",
+"silent": null,
+"fallback": "If artifacts do not open, check Settings › Capabilities: Create and edit files must be on.",
+"more": [
+"Give the hint at about 5 min.",
+"Fast finishers have an extra task on the slide."
+],
+"time": "15 min work, then share",
+"t": "l1b",
+"k": "task",
+"h": "Your turn 1.3: Build one artifact for Misbah (15 min, on your own)",
+"flat": "15 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: A: KWD 46.500 per family, KWD 47,430.000 for 1,020 families. B: 240 rows and KWD 24,725.000, KWD 2,500.000 above the Control totals because receipt R-2026-11408 is in the file twice. C: questions that match the report. D: five slides with the report's numbers. E: a doc you edit in place, with deliveries from Sunday 6 December to Thursday 17 December. · Give the hint at about 5 min. · Fast finishers have an extra task on the slide. · Fallback: If artifacts do not open, check Settings › Capabilities: Create and edit files must be on. · Say: “Pick the one you would really use next week.”"
+},
+{
+"say": null,
+"do": "Ask: how much of your morning goes on reading email before meetings?",
+"expect": "Half an hour or more.",
+"silent": "say how long your own inbox takes on a Sunday.",
+"fallback": null,
+"more": [],
+"time": "10:25-10:55",
+"t": "l2",
+"k": "story",
+"h": "Layer 2 · Connectors",
+"flat": "10:25-10:55. · Do: Ask: how much of your morning goes on reading email before meetings? · Expect: Half an hour or more. · If the room is silent: say how long your own inbox takes on a Sunday."
+},
+{
+"say": "You decide the doors. You can change them any time.",
+"do": "Ask: which doors would you open for Claude on day one?",
+"expect": "Read and draft. Not send.",
+"silent": "say you would open read and draft, and keep send.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l2",
+"k": "scene",
+"h": "A visitor badge opens some doors, not all.",
+"flat": "Do: Ask: which doors would you open for Claude on day one? · Expect: Read and draft. Not send. · If the room is silent: say you would open read and draft, and keep send. · Say: “You decide the doors. You can change them any time.”"
+},
+{
+"say": null,
+"do": "Open the + menu on the presenting laptop and hover over Connectors.",
+"expect": "Gmail, Google Calendar and Drive in the list.",
+"silent": "ask which app they would connect first.",
+"fallback": null,
+"more": [
+"On Team plans, an owner must turn the Google connectors on before members can sign in."
+],
+"time": null,
+"t": "l2",
+"k": "term",
+"h": "Claude reads the app. You hold the keys.",
+"flat": "Do: Open the + menu on the presenting laptop and hover over Connectors. · Expect: Gmail, Google Calendar and Drive in the list. · On Team plans, an owner must turn the Google connectors on before members can sign in. · If the room is silent: ask which app they would connect first."
+},
+{
+"say": "Claude reads the inbox and the calendar with your sign-in. It drafts. Sending stays with you.",
+"do": "Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud.",
+"expect": "Three meetings on Sunday 29 November 2026, with the heater delay as the urgent item. One draft reply to Salem, saved, not sent.",
+"silent": null,
+"fallback": "Use the CODED training Google account. If it fails, attach misbah-inbox-and-calendar.pdf and show the backup.",
+"more": [
+"This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words."
+],
+"time": "3 min",
+"t": "l2",
+"k": "player",
+"h": "Prompt playback, Demo 2.1: Sunday's brief from email and calendar",
+"flat": "3 min. · Do: Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud. · Expect: Three meetings on Sunday 29 November 2026, with the heater delay as the urgent item. One draft reply to Salem, saved, not sent. · This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words. · Fallback: Use the CODED training Google account. If it fails, attach misbah-inbox-and-calendar.pdf and show the backup. · Say: “Claude reads the inbox and the calendar with your sign-in. It drafts. Sending stays with you.”"
+},
+{
+"say": null,
+"do": "Point to Manual mode: the mode picker is in the message box. Gmail send, reply and forward ask first unless you are in Auto mode.",
+"expect": "Questions about who sees the inbox: only the person who signed in.",
+"silent": "ask which tool they would block on day one.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l2",
+"k": "table",
+"h": "You decide what Claude may do.",
+"flat": "Do: Point to Manual mode: the mode picker is in the message box. Gmail send, reply and forward ask first unless you are in Auto mode. · Expect: Questions about who sees the inbox: only the person who signed in. · If the room is silent: ask which tool they would block on day one."
+},
+{
+"say": "Call it out first, then I tap the card.",
+"do": "Read each card aloud. The room calls the answer, then tap the card.",
+"expect": "Donor lists, case files and auto-sending are red.",
+"silent": null,
+"fallback": null,
+"more": [
+"Amber needs two things: an account the organization approved, and approvals on.",
+"Donor and family data stays red in any account."
+],
+"time": "4 min",
+"t": "l2",
+"k": "sort",
+"h": "Green, amber or red? Tap a card.",
+"flat": "4 min. · Do: Read each card aloud. The room calls the answer, then tap the card. · Expect: Donor lists, case files and auto-sending are red. · Amber needs two things: an account the organization approved, and approvals on. · Donor and family data stays red in any account. · Say: “Call it out first, then I tap the card.”"
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option B.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l2",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option B. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": "Amber needs an approved account. Without one, the fictional inbox teaches the same thing. Nothing leaves your account without you.",
+"do": "Start the timer. Walk the room. Ask each person what they found so far.",
+"expect": "A brief table for the next working day, one draft saved (not sent), and two facts checked. With the fallback file: the three meetings on Sunday 29 November and a draft to Salem about the heaters.",
+"silent": null,
+"fallback": "If the account is not approved or cannot connect, use misbah-inbox-and-calendar.pdf. Show the backup brief at the end.",
+"more": [
+"Give the hint at about 5 min.",
+"Fast finishers have an extra task on the slide."
+],
+"time": "15 min work, then share",
+"t": "l2",
+"k": "task",
+"h": "Your turn 2.1: Connect your email and calendar, then get Sunday's brief (15 min, on your own)",
+"flat": "15 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: A brief table for the next working day, one draft saved (not sent), and two facts checked. With the fallback file: the three meetings on Sunday 29 November and a draft to Salem about the heaters. · Give the hint at about 5 min. · Fast finishers have an extra task on the slide. · Fallback: If the account is not approved or cannot connect, use misbah-inbox-and-calendar.pdf. Show the backup brief at the end. · Say: “Amber needs an approved account. Without one, the fictional inbox teaches the same thing. Nothing leaves your account without you.”"
+},
+{
+"say": null,
+"do": "Ask: what do you paste into Claude again and again?",
+"expect": "The organization, the tone, a template.",
+"silent": "say what Noura pastes: the brand voice.",
+"fallback": null,
+"more": [],
+"time": "10:55-11:15",
+"t": "l3",
+"k": "story",
+"h": "Layer 3 · Teach once",
+"flat": "10:55-11:15. · Do: Ask: what do you paste into Claude again and again? · Expect: The organization, the tone, a template. · If the room is silent: say what Noura pastes: the brand voice."
+},
+{
+"say": null,
+"do": "Read the last column only. Ask where the photo rule belongs.",
+"expect": "In the Project, for the campaign.",
+"silent": "answer it: the Project, because it is a campaign rule.",
+"fallback": null,
+"more": [
+"Memory: Settings › Your Claude, or Settings › Memory on the older layout. Each item can be edited or deleted.",
+"To keep one chat out of memory, turn Memory off in the + menu before the first message."
+],
+"time": null,
+"t": "l3",
+"k": "table",
+"h": "Four places to teach Claude.",
+"flat": "Do: Read the last column only. Ask where the photo rule belongs. · Expect: In the Project, for the campaign. · Memory: Settings › Your Claude, or Settings › Memory on the older layout. Each item can be edited or deleted. · To keep one chat out of memory, turn Memory off in the + menu before the first message. · If the room is silent: answer it: the Project, because it is a campaign rule."
+},
+{
+"say": null,
+"do": "Open the campaign Project on the presenting laptop. Show the instructions and the two files.",
+"expect": "Questions about sharing: Projects can be shared on Team plans.",
+"silent": "ask which Project they would make first at work.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l3",
+"k": "term",
+"h": "One area of work. One Project.",
+"flat": "Do: Open the campaign Project on the presenting laptop. Show the instructions and the two files. · Expect: Questions about sharing: Projects can be shared on Team plans. · If the room is silent: ask which Project they would make first at work."
+},
+{
+"say": "Write the rules once. Every chat in this Project starts with them and with the two files.",
+"do": "Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud.",
+"expect": "Three short captions, English then Arabic, each with one checked number (1,020 families, 64 volunteers or KWD 46.500 per kit), both hashtags, no faces or family names, each ending with misbah-charity.example/give.",
+"silent": null,
+"fallback": "Show the backup table and build the Project live on the presenting laptop.",
+"more": [
+"This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words."
+],
+"time": "3 min",
+"t": "l3",
+"k": "player",
+"h": "Prompt playback, Demo 3.1: The Misbah Winter Campaign Project",
+"flat": "3 min. · Do: Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud. · Expect: Three short captions, English then Arabic, each with one checked number (1,020 families, 64 volunteers or KWD 46.500 per kit), both hashtags, no faces or family names, each ending with misbah-charity.example/give. · This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words. · Fallback: Show the backup table and build the Project live on the presenting laptop. · Say: “Write the rules once. Every chat in this Project starts with them and with the two files.”"
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option B.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l3",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option B. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": "Who you are and how you like answers: your instructions. The rules for one area of work: a Project.",
+"do": "Start the timer. Walk the room. Ask each person what they found so far.",
+"expect": "A Project with instructions and two knowledge files; three captions that follow the brand guide; personal instructions saved.",
+"silent": null,
+"fallback": "If Projects are slow, build the instructions in a normal chat first, then move them into the Project.",
+"more": [
+"Give the hint at about 3 min.",
+"Fast finishers have an extra task on the slide."
+],
+"time": "8 min work, then share",
+"t": "l3",
+"k": "task",
+"h": "Your turn 3.1: Set your instructions and build the campaign Project (8 min, on your own)",
+"flat": "8 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: A Project with instructions and two knowledge files; three captions that follow the brand guide; personal instructions saved. · Give the hint at about 3 min. · Fast finishers have an extra task on the slide. · Fallback: If Projects are slow, build the instructions in a normal chat first, then move them into the Project. · Say: “Who you are and how you like answers: your instructions. The rules for one area of work: a Project.”"
+},
+{
+"say": null,
+"do": "Open Settings › Your Claude on the presenting laptop and show one memory topic. Do not open anything personal.",
+"expect": "Surprise at what Claude already keeps.",
+"silent": "ask who has looked at their memory before.",
+"fallback": null,
+"more": [
+"On Team and Enterprise plans, an owner decides whether memory is on.",
+"Some details are never saved to memory, such as civil ID and bank account numbers."
+],
+"time": "2 min",
+"t": "l3",
+"k": "list",
+"h": "Memory: what Claude keeps between chats.",
+"flat": "2 min. · Do: Open Settings › Your Claude on the presenting laptop and show one memory topic. Do not open anything personal. · Expect: Surprise at what Claude already keeps. · On Team and Enterprise plans, an owner decides whether memory is on. · Some details are never saved to memory, such as civil ID and bank account numbers. · If the room is silent: ask who has looked at their memory before."
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option B.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l3",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option B. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": null,
+"do": "Ask: which method in your team lives in one person's head?",
+"expect": "Reports, letters, checklists.",
+"silent": "say Fahad's letters are the example for today.",
+"fallback": null,
+"more": [],
+"time": "11:15-11:40",
+"t": "l3b",
+"k": "story",
+"h": "Layer 3 · Skills",
+"flat": "11:15-11:40. · Do: Ask: which method in your team lives in one person's head? · Expect: Reports, letters, checklists. · If the room is silent: say Fahad's letters are the example for today."
+},
+{
+"say": null,
+"do": "Point to When to use it: that is the part Claude reads first.",
+"expect": "People connect skills with templates.",
+"silent": "say a skill is a template plus the method plus the trigger.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l3b",
+"k": "scene",
+"h": "A recipe card in the kitchen drawer.",
+"flat": "Do: Point to When to use it: that is the part Claude reads first. · Expect: People connect skills with templates. · If the room is silent: say a skill is a template plus the method plus the trigger."
+},
+{
+"say": null,
+"do": "Contrast with the Project slide: a Project is a place; a skill travels to any chat.",
+"expect": "The difference lands with the recipe picture.",
+"silent": "ask: would the thank-you method work outside the campaign Project? Yes.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l3b",
+"k": "term",
+"h": "Teach a method once.",
+"flat": "Do: Contrast with the Project slide: a Project is a place; a skill travels to any chat. · Expect: The difference lands with the recipe picture. · If the room is silent: ask: would the thank-you method work outside the campaign Project? Yes."
+},
+{
+"say": null,
+"do": "Open the starter skill's SKILL.md on screen. Point to the description line.",
+"expect": "Surprise at how short it is.",
+"silent": "read the description aloud and ask what would trigger it.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l3b",
+"k": "table",
+"h": "What is inside a Skill?",
+"flat": "Do: Open the starter skill's SKILL.md on screen. Point to the description line. · Expect: Surprise at how short it is. · If the room is silent: read the description aloud and ask what would trigger it."
+},
+{
+"say": "A skill is a method you write once. Claude reads its description and uses it when the task comes up.",
+"do": "Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud.",
+"expect": "Claude asks one or two questions, then offers a skill with a name, a description of when to use it, the five steps and an example. Saved, it shows in the / menu.",
+"silent": null,
+"fallback": "Upload the starter skill (misbah-donor-thanks-skill.zip) instead and test it.",
+"more": [
+"This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words."
+],
+"time": "3 min",
+"t": "l3b",
+"k": "player",
+"h": "Prompt playback, Demo 3.2: Create the donor thank-you skill with Claude",
+"flat": "3 min. · Do: Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud. · Expect: Claude asks one or two questions, then offers a skill with a name, a description of when to use it, the five steps and an example. Saved, it shows in the / menu. · This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words. · Fallback: Upload the starter skill (misbah-donor-thanks-skill.zip) instead and test it. · Say: “A skill is a method you write once. Claude reads its description and uses it when the task comes up.”"
+},
+{
+"say": null,
+"do": "Open the Plugins page and filter by skills. Then upload the starter .zip live, so the room sees the path Task 3.2 uses.",
+"expect": "Someone spots a skill for their job.",
+"silent": "name one skill you would add for an accountant.",
+"fallback": null,
+"more": [
+"The sidebar item was renamed from Customize to Plugins this month. Some accounts still show the old name."
+],
+"time": null,
+"t": "l3b",
+"k": "list",
+"h": "Search first. Build only what is missing.",
+"flat": "Do: Open the Plugins page and filter by skills. Then upload the starter .zip live, so the room sees the path Task 3.2 uses. · Expect: Someone spots a skill for their job. · The sidebar item was renamed from Customize to Plugins this month. Some accounts still show the old name. · If the room is silent: name one skill you would add for an accountant."
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option A.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l3b",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option A. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": "Test it once, then change it. That is how a skill becomes yours.",
+"do": "Start the timer. Walk the room. Ask each person what they found so far.",
+"expect": "A letter under 120 words with all five parts: greeting, Winter Warmth and KWD 150.000, what it paid for (about three winter kits), one line of thanks, receipt R-2026-11487 and the sign-off.",
+"silent": null,
+"fallback": "If the upload is missing or refuses the .zip, turn on Create and edit files in Settings › Capabilities, or create the skill with Claude as in Demo 3.2.",
+"more": [
+"Give the hint at about 4 min.",
+"Fast finishers have an extra task on the slide."
+],
+"time": "12 min work, then share",
+"t": "l3b",
+"k": "task",
+"h": "Your turn 3.2: Install the starter skill, test it, make it yours (12 min, on your own)",
+"flat": "12 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: A letter under 120 words with all five parts: greeting, Winter Warmth and KWD 150.000, what it paid for (about three winter kits), one line of thanks, receipt R-2026-11487 and the sign-off. · Give the hint at about 4 min. · Fast finishers have an extra task on the slide. · Fallback: If the upload is missing or refuses the .zip, turn on Create and edit files in Settings › Capabilities, or create the skill with Claude as in Demo 3.2. · Say: “Test it once, then change it. That is how a skill becomes yours.”"
+},
+{
+"say": null,
+"do": "Ask: what folder do you open every week to do the same thing?",
+"expect": "Receipts, invoices, reports.",
+"silent": "say Fahad's receipts are today's folder.",
+"fallback": null,
+"more": [],
+"time": "11:55-12:15",
+"t": "l4",
+"k": "story",
+"h": "Layer 4 · Cowork",
+"flat": "11:55-12:15. · Do: Ask: what folder do you open every week to do the same thing? · Expect: Receipts, invoices, reports. · If the room is silent: say Fahad's receipts are today's folder."
+},
+{
+"say": null,
+"do": "Show the message box on the presenting laptop: Chat and Cowork, or the merged box.",
+"expect": "Some have the new experience, some the toggle. Both work.",
+"silent": "ask whose laptop shows the Cowork option.",
+"fallback": null,
+"more": [
+"Cowork needs a paid plan. Local folders need the desktop app open."
+],
+"time": null,
+"t": "l4",
+"k": "term",
+"h": "Hand over a task, not a question.",
+"flat": "Do: Show the message box on the presenting laptop: Chat and Cowork, or the merged box. · Expect: Some have the new experience, some the toggle. Both work. · Cowork needs a paid plan. Local folders need the desktop app open. · If the room is silent: ask whose laptop shows the Cowork option."
+},
+{
+"say": "Chat answers a question. Cowork works through a task with steps and files, and asks you before risky steps.",
+"do": "Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud.",
+"expect": "An Excel file of the 14 receipts with a total for each campaign; the largest is Winter Warmth. Two flags: receipt 09 has no campaign code, and receipt 04 is in the folder twice.",
+"silent": null,
+"fallback": "Show the backup. If Cowork is not on the account, run the same task in chat with the 15 files attached.",
+"more": [
+"This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words."
+],
+"time": "3 min",
+"t": "l4",
+"k": "player",
+"h": "Prompt playback, Demo 4.1: Hand Cowork the receipts folder",
+"flat": "3 min. · Do: Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud. · Expect: An Excel file of the 14 receipts with a total for each campaign; the largest is Winter Warmth. Two flags: receipt 09 has no campaign code, and receipt 04 is in the folder twice. · This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words. · Fallback: Show the backup. If Cowork is not on the account, run the same task in chat with the 15 files attached. · Say: “Chat answers a question. Cowork works through a task with steps and files, and asks you before risky steps.”"
+},
+{
+"say": null,
+"do": "Open the Plugins page and browse. Add the Marketing plugin live and type / to show its commands.",
+"expect": "The commands appear in the / menu.",
+"silent": "ask which role plugin they would add first.",
+"fallback": "If adding fails, show the plugin's page in the directory.",
+"more": [
+"A plugin bundles skills, connectors and helpers, so you do not add each connector by hand. Each person still signs in to a service with their own account."
+],
+"time": null,
+"t": "l4",
+"k": "table",
+"h": "Plugins: a starter kit for a role.",
+"flat": "Do: Open the Plugins page and browse. Add the Marketing plugin live and type / to show its commands. · Expect: The commands appear in the / menu. · A plugin bundles skills, connectors and helpers, so you do not add each connector by hand. Each person still signs in to a service with their own account. · If the room is silent: ask which role plugin they would add first. · Fallback: If adding fails, show the plugin's page in the directory."
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option B.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l4",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option B. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": null,
+"do": "Open Scheduled › New task on the presenting laptop and show the form. Do not save it.",
+"expect": "Questions about approvals: a scheduled task still asks before Always ask tools.",
+"silent": "ask which weekly job they would schedule first.",
+"fallback": null,
+"more": [
+"A task on a laptop folder runs only while the laptop is awake and the desktop app is open (Require this computer). For a job that must run with the laptop closed, use Google Drive or files saved to Claude."
+],
+"time": null,
+"t": "l4",
+"k": "term",
+"h": "The same job, on a time you set.",
+"flat": "Do: Open Scheduled › New task on the presenting laptop and show the form. Do not save it. · Expect: Questions about approvals: a scheduled task still asks before Always ask tools. · A task on a laptop folder runs only while the laptop is awake and the desktop app is open (Require this computer). For a job that must run with the laptop closed, use Google Drive or files saved to Claude. · If the room is silent: ask which weekly job they would schedule first."
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option C.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l4",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option C. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option C.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l4",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option C. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
+"say": "Hand over the task, stay in Manual mode, and approve the steps you agree with.",
+"do": "Start the timer. Walk the room. Ask each person what they found so far.",
+"expect": "An Excel table of 14 receipts with totals by campaign (Winter Warmth KWD 11,987.500), receipt 09 flagged for no campaign code and receipt 04 flagged as a duplicate.",
+"silent": null,
+"fallback": "If Cowork is not on the account, attach the 15 files to a chat and run the same task there.",
+"more": [
+"Give the hint at about 3 min.",
+"Fast finishers have an extra task on the slide."
+],
+"time": "8 min work, then share",
+"t": "l4",
+"k": "task",
+"h": "Your turn 4.1: Hand Cowork a folder (8 min, on your own)",
+"flat": "8 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: An Excel table of 14 receipts with totals by campaign (Winter Warmth KWD 11,987.500), receipt 09 flagged for no campaign code and receipt 04 flagged as a duplicate. · Give the hint at about 3 min. · Fast finishers have an extra task on the slide. · Fallback: If Cowork is not on the account, attach the 15 files to a chat and run the same task there. · Say: “Hand over the task, stay in Manual mode, and approve the steps you agree with.”"
+},
+{
+"say": null,
+"do": "Turn to the General Manager: which role would save Al-Balagh the most time?",
+"expect": "Often the accountant or the marketer.",
+"silent": "suggest the accountant: the receipts are already in the room.",
+"fallback": null,
+"more": [],
+"time": "12:15-12:40",
+"t": "l5",
+"k": "story",
+"h": "Integration · Your first AI employee",
+"flat": "12:15-12:40. · Do: Turn to the General Manager: which role would save Al-Balagh the most time? · Expect: Often the accountant or the marketer. · If the room is silent: suggest the accountant: the receipts are already in the room."
+},
+{
+"say": null,
+"do": "Map each pill to a layer from the morning: instructions and files were layer 3, keys were layer 2, the shift was layer 4.",
+"expect": "The room sees that they already built every part.",
+"silent": "point to the manager pill and say: that one is always a person.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l5",
+"k": "scene",
+"h": "Hire it like a person.",
+"flat": "Do: Map each pill to a layer from the morning: instructions and files were layer 3, keys were layer 2, the shift was layer 4. · Expect: The room sees that they already built every part. · If the room is silent: point to the manager pill and say: that one is always a person."
+},
+{
+"say": null,
+"do": "Ask each person to choose a row for Task 4.2.",
+"expect": "Different roles across the room.",
+"silent": "assign the roles yourself, one each.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "l5",
+"k": "table",
+"h": "Four AI employees for Misbah.",
+"flat": "Do: Ask each person to choose a row for Task 4.2. · Expect: Different roles across the room. · If the room is silent: assign the roles yourself, one each."
+},
+{
+"say": "An AI employee is the same layers, set up for one job. You stay the manager.",
+"do": "Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud.",
+"expect": "The accountant Project returns donations by campaign (KWD 22,225.000 after the duplicate R-2026-11408 is removed), flags the duplicate, and writes a three-line note. The weekly task is scheduled for Thursday 08:00.",
+"silent": null,
+"fallback": "Show the backup note. Build the Project live if the room has time.",
+"more": [
+"This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words."
+],
+"time": "3 min",
+"t": "l5",
+"k": "player",
+"h": "Prompt playback, Demo 4.2: The AI accountant, hired",
+"flat": "3 min. · Do: Press → once per part and ask the room what each part adds. After Send, point to the table first, then the bullets. Read the decision line aloud. · Expect: The accountant Project returns donations by campaign (KWD 22,225.000 after the duplicate R-2026-11408 is removed), flags the duplicate, and writes a three-line note. The weekly task is scheduled for Thursday 08:00. · This is the ideal run. Then run the same prompt live from the prompt sheet; the live answer may use other words. · Fallback: Show the backup note. Build the Project live if the room has time. · Say: “An AI employee is the same layers, set up for one job. You stay the manager.”"
+},
+{
+"say": "Same recipe, four jobs. Which job would save your team the most time?",
+"do": "Start the timer. Walk the room. Ask each person what they found so far.",
+"expect": "One working AI employee Project with a job description, its files and one skill or plugin; a first output with one fact checked; an employee card.",
+"silent": null,
+"fallback": "Anyone short of time builds the accountant from the demo and runs its first job.",
+"more": [
+"Give the hint at about 4 min.",
+"Fast finishers have an extra task on the slide."
+],
+"time": "14 min work, then share",
+"t": "l5",
+"k": "task",
+"h": "Your turn 4.2: Hire one AI employee (14 min, on your own)",
+"flat": "14 min work, then share. · Do: Start the timer. Walk the room. Ask each person what they found so far. · Expect: One working AI employee Project with a job description, its files and one skill or plugin; a first output with one fact checked; an employee card. · Give the hint at about 4 min. · Fast finishers have an extra task on the slide. · Fallback: Anyone short of time builds the accountant from the demo and runs its first job. · Say: “Same recipe, four jobs. Which job would save your team the most time?”"
+},
+{
+"say": null,
+"do": "One minute per person. Ask each: what will it do next week, and what will you approve?",
+"expect": "Three different roles.",
+"silent": "show the accountant from the demo.",
+"fallback": "If nobody finished, show the backup note from Demo 4.2.",
+"more": [],
+"time": "3 min",
+"t": "l5",
+"k": "timer",
+"h": "One minute each: meet your AI employee.",
+"flat": "3 min. · Do: One minute per person. Ask each: what will it do next week, and what will you approve? · Expect: Three different roles. · If the room is silent: show the accountant from the demo. · Fallback: If nobody finished, show the backup note from Demo 4.2."
+},
+{
+"say": "Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.",
+"do": "Phones only. No notes, no search, no AI. It is not graded.",
+"expect": null,
+"silent": null,
+"fallback": "read out the short link (/post) if a phone cannot scan.",
+"more": [
+"Leave the slide up. Code 1 is the MAP test; code 2 is the final survey, right after it.",
+"Check the response count in the portal before you move on."
+],
+"time": "12:40-12:55",
+"t": "c6",
+"k": "map",
+"h": "MAP test (after) and the final survey",
+"flat": "12:40-12:55. · Do: Phones only. No notes, no search, no AI. It is not graded. · Leave the slide up. Code 1 is the MAP test; code 2 is the final survey, right after it. · Check the response count in the portal before you move on. · Fallback: read out the short link (/post) if a phone cannot scan. · Say: “Answer honestly. If you are not sure, pick your best guess. This measures the workshop, not you.”"
+},
+{
+"say": null,
+"do": "Ask each person which layer they will switch on first at work.",
+"expect": "Connectors and Projects come up most.",
+"silent": "say which one you would start with: the Project.",
+"fallback": null,
+"more": [],
+"time": "12:55-13:00",
+"t": "close",
+"k": "wrap",
+"h": "Day wrap-up",
+"flat": "12:55-13:00. · Do: Ask each person which layer they will switch on first at work. · Expect: Connectors and Projects come up most. · If the room is silent: say which one you would start with: the Project."
+},
+{
+"say": null,
+"do": "Point to the site link on the cheat sheet. Mention Claude Code in one sentence only.",
+"expect": "Questions about a follow-up session: take them to Yousif.",
+"silent": "say the Help Center is where you check anything new.",
+"fallback": null,
+"more": [],
+"time": null,
+"t": "close",
+"k": "list",
+"h": "Keep exploring on your own.",
+"flat": "Do: Point to the site link on the cheat sheet. Mention Claude Code in one sentence only. · Expect: Questions about a follow-up session: take them to Yousif. · If the room is silent: say the Help Center is where you check anything new."
+},
+{
+"say": "Pick one layer you will switch on at work this week.",
+"do": "Thank the room. Point to the take-home guide and the cheat sheet on the site.",
+"expect": null,
+"silent": null,
+"fallback": null,
+"more": [
+"Ask the General Manager for one line of feedback before he leaves."
+],
+"time": "last 5 min",
+"t": "close",
+"k": "close",
+"h": "Close",
+"flat": "last 5 min. · Do: Thank the room. Point to the take-home guide and the cheat sheet on the site. · Ask the General Manager for one line of feedback before he leaves. · Say: “Pick one layer you will switch on at work this week.”"
+}
+]

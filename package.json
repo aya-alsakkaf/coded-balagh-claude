@@ -1,0 +1,9 @@
+{
+  "name": "coded-balagh-claude",
+  "private": true,
+  "type": "module",
+  "description": "CODED \u00b7 Claude in Layers workshop site (static, in public/) with a staff password on /staff.",
+  "dependencies": {
+    "@vercel/functions": "^3.10.4"
+  }
+}
