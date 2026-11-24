@@ -28,6 +28,9 @@ DELIVERY_START_WRONG = "Thursday 3 December"           # planted in the post scr
 DELIVERY_END = "Thursday 17 December"
 CENTERS = ["Jahra community hall", "Farwaniya community hall", "Sabah Al-Salem community hall"]
 VOLUNTEERS = 64
+# delivery days per hall (working days, Sunday to Thursday) and families per hall
+HALLS = [(CENTERS[0], "6 to 10 December", 340), (CENTERS[1], "6 to 10 December", 380), (CENTERS[2], "13 to 17 December", 300)]
+assert sum(n for _c, _d, n in HALLS) == FAMILIES
 BUDGET = 48000.0
 # the kit for one family: (item, unit cost KWD, quantity per family)
 KIT = [("Blanket", 4.750, 2), ("Heater", 13.500, 1), ("Food basket", 9.250, 1), ("Child's winter jacket", 6.500, 2)]

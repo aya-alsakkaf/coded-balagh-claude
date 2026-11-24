@@ -70,7 +70,7 @@ DAYS = {
 # minutes inside each session (lesson plan): consecutive, and they fill the session
 SEGMENTS = {1: [
  ("09:15-09:25", "Opener", [("09:15", 1, "Story: the General Manager's question"), ("09:16", 6, "Demo 1.0: one request, two setups"), ("09:22", 1, "Outcomes and today's map"), ("09:23", 2, "The four layers")]),
- ("09:25-09:45", "Layer 1 · Chat", [("09:25", 1, "Story: the donor's pledge"), ("09:26", 2, "A library book and today's newspaper"), ("09:28", 2, "Next-word widget"), ("09:30", 3, "Demo 1.1: web search"), ("09:33", 1, "Files and voice"), ("09:34", 1, "Quick check"), ("09:35", 10, "Task 1.1")]),
+ ("09:25-09:45", "Layer 1 · Chat", [("09:25", 1, "Story: the donor's pledge"), ("09:26", 2, "A library book and today's newspaper"), ("09:28", 2, "Next-word widget"), ("09:30", 3, "Demo 1.1: web search"), ("09:33", 1, "Files and voice"), ("09:34", 1, "Two quick checks"), ("09:35", 10, "Task 1.1")]),
  ("09:45-10:15", "Layer 1 · Artifacts", [("09:45", 1, "Story: the board meets Wednesday"), ("09:46", 2, "Artifact"), ("09:48", 2, "Six artifacts"), ("09:50", 3, "Demo 1.2: the calculator"), ("09:53", 4, "Demo 1.3: the dashboard"), ("09:57", 1, "Edit, check, share"), ("09:58", 1, "Quick check"), ("09:59", 15, "Task 1.3"), ("10:14", 1, "Two artifacts on the screen")]),
  ("10:25-10:55", "Layer 2 · Connectors", [("10:25", 1, "Story: 40 unread emails"), ("10:26", 1, "A visitor badge"), ("10:27", 1, "Connector"), ("10:28", 3, "Demo 2.1: Sunday's brief"), ("10:31", 2, "You decide: modes and permissions"), ("10:33", 4, "Safe-use sort"), ("10:37", 1, "Quick check"), ("10:38", 15, "Task 2.1"), ("10:53", 2, "What you caught")]),
  ("10:55-11:15", "Layer 3 · Memory, instructions and Projects", [("10:55", 1, "Story: the same three paragraphs"), ("10:56", 3, "Four places to teach Claude"), ("10:59", 1, "Project"), ("11:00", 3, "Demo 3.1: the campaign Project"), ("11:03", 1, "Quick check"), ("11:04", 8, "Task 3.1"), ("11:12", 3, "Memory: what Claude keeps, and a quick check")]),
@@ -180,14 +180,14 @@ MAP = [
     ["Paste the first 50 rows into the chat and ask for totals", "Send a screenshot of the sheet and ask for totals", "Attach the file and ask Claude to calculate with code", "Describe the columns in words and ask for an estimate"], 2, "Files", "Layer 1 · files and voice, Task 1.1"),
  _Q("Noura wants a winter-kit cost calculator that volunteers can open again next week. What should she ask Claude for?",
     ["A long answer that explains the formula step by step", "An artifact: a small calculator she can share", "A memory entry that stores the unit costs", "A scheduled task that sends her the costs daily"], 1, "Artifacts", "Layer 1 · Artifacts, Demo 1.2"),
- _Q(f"Claude's dashboard shows Winter Warmth KWD {D.DIFF:,.0f} above the Control totals sheet. What do you do first?",
-    ["Ask Claude to recalculate until the totals match", "Change the chart by hand to match the sheet", "Send it to the board with a note that it is a draft", "Look for a duplicate row behind that total"], 3, "Check an artifact", "Layer 1 · Demo 1.3 and Task 1.3"),
+ _Q(f"Claude's receipts table shows Winter Warmth KWD {D.RC_DUP:,.0f} above the supplier invoices. What do you do first?",
+    ["Ask Claude to recalculate until the totals match", "Change the table by hand to match the invoices", "Send it to Fahad with a note that it is a draft", "Look for a receipt that is counted twice"], 3, "Check before you share", "Layer 1 · Demo 1.3 check; Layer 4 · Task 4.1 flags"),
  _Q("Hessa asks Claude to forward the heater email to the board secretary through the Gmail connector. She works in Manual mode. What happens before it is forwarded?",
-    ["Nothing: Claude forwards it as soon as it is ready", "Gmail holds it for one hour, then forwards it", "Claude asks her to approve the forward first", "The board secretary approves it before it arrives"], 2, "Connectors and approvals", "Layer 2 · you decide"),
+    ["Nothing: Claude forwards it as soon as it is ready", "Claude forwards it, because forwarding is read-only", "Claude asks her to approve the forward first", "Claude saves a draft and she forwards it in Gmail"], 2, "Connectors and approvals", "Layer 2 · you decide"),
  _Q("Hessa plans the delivery days with Claude, in an account her organization approved. Which file must she keep out of the chat?",
     ["The booking times for the three community halls", "The list of families with their civil IDs and addresses", "The heater order from the supplier, with its prices", "The campaign brief with the kit and the budget"], 1, "Safe use", "Layer 2 · safe-use sort and card"),
- _Q("Every winter-campaign chat needs the brand guide, but your other work does not. Where do you put the brand guide?",
-    ["In a Project's knowledge, with the campaign rules", "In a pinned chat that you go back to for each post", "In your personal settings, so every chat starts with it", "In the first message of each chat, pasted by hand"], 0, "Projects", "Layer 3 · four places to teach Claude"),
+ _Q("Noura's Ramadan Iftar 2027 chats all need the menu rules and the venue list, but her other work does not. Where do they go?",
+    ["In a Ramadan Iftar Project, as its knowledge", "In a pinned chat that she goes back to each time", "In her personal settings, so every chat starts with them", "In the first message of each chat, pasted by hand"], 0, "Projects", "Layer 3 · four places to teach Claude"),
  _Q("Fahad writes donor thank-you letters every week with the same five steps. What makes Claude follow those steps when the task comes up?",
     ["A Skill with the steps, an example and a template", "A longer prompt saved in a file on his desktop", "A connector to the shared drive that holds old letters", "A memory entry that says he writes letters weekly"], 0, "Skills", "Layer 3 · Skills"),
  _Q("Noura wants Claude ready for marketing work in one step, with commands such as /campaign-plan. What does she add?",
@@ -205,7 +205,7 @@ MAP_LEDE = {"before": f"{len(MAP)} questions. You take the same test again at 12
             "after": f"The same {len(MAP)} questions as this morning. Not graded. Phone only: no notes, no search, no AI. Then scan the second code for the final survey."}
 
 # ------------------------------------------------------------------ the approved slide plan (the validator checks the deck against it)
-SLIDES = {1: 65}
+SLIDES = {1: 66}
 
 # ------------------------------------------------------------------ MAP tests and the final survey (CODED portal; links filled after publishing)
 PORTAL = "https://platform.joincoded.com/sv/"
@@ -315,14 +315,14 @@ SURVEY = {
    ["لصق أول 50 صفاً في المحادثة وطلب الإجماليات", "إرسال لقطة شاشة للورقة وطلب الإجماليات", "إرفاق الملف وطلب الحساب من Claude باستخدام الكود", "وصف الأعمدة بالكلمات وطلب تقدير"]),
   ("تريد نورة حاسبة لتكلفة حقيبة الشتاء يفتحها المتطوعون مرة أخرى الأسبوع القادم. ماذا تطلب من Claude؟",
    ["إجابة طويلة تشرح المعادلة خطوة بخطوة", "عنصر Artifact: حاسبة صغيرة يمكنها مشاركتها", "إدخالاً في الذاكرة يحفظ تكاليف الوحدات", "مهمة مجدولة ترسل لها التكاليف يومياً"]),
-  (f"تُظهر لوحة البيانات التي أعدّها Claude أن حملة Winter Warmth أعلى بمقدار {D.DIFF:,.0f} دينار من ورقة Control totals. ماذا تفعل أولاً؟",
-   ["أطلب من Claude إعادة الحساب حتى تتطابق الإجماليات", "أعدّل الرسم يدوياً ليطابق الورقة", "أرسلها إلى مجلس الإدارة مع ملاحظة أنها مسودة", "أبحث عن صف مكرر وراء هذا الإجمالي"]),
+  (f"يُظهر جدول الإيصالات الذي أعدّه Claude أن حملة Winter Warmth أعلى بمقدار {D.RC_DUP:,.0f} دينار من فواتير الموردين. ماذا تفعل أولاً؟",
+   ["أطلب من Claude إعادة الحساب حتى تتطابق الإجماليات", "أعدّل الجدول يدوياً ليطابق الفواتير", "أرسله إلى فهد مع ملاحظة أنه مسودة", "أبحث عن إيصال محسوب مرتين"]),
   ("تطلب حصة من Claude إعادة توجيه رسالة الدفايات إلى سكرتير مجلس الإدارة عبر موصل Gmail، وهي تعمل في الوضع اليدوي (Manual). ماذا يحدث قبل إعادة التوجيه؟",
-   ["لا شيء: يعيد Claude توجيهها فور جاهزيتها", "يحتفظ بها Gmail ساعة ثم يعيد توجيهها", "يطلب منها Claude الموافقة على إعادة التوجيه أولاً", "يوافق عليها سكرتير المجلس قبل وصولها"]),
+   ["لا شيء: يعيد Claude توجيهها فور جاهزيتها", "يعيد Claude توجيهها، لأن إعادة التوجيه للقراءة فقط", "يطلب منها Claude الموافقة على إعادة التوجيه أولاً", "يحفظ Claude مسودة وتعيد هي توجيهها من Gmail"]),
   ("تخطط حصة لأيام التوزيع مع Claude، في حساب وافقت عليه مؤسستها. أي ملف يجب أن تُبقيه خارج المحادثة؟",
    ["مواعيد حجز القاعات المجتمعية الثلاث", "قائمة الأسر بأرقامها المدنية وعناوينها", "طلب الدفايات من المورّد، مع أسعاره", "موجز الحملة بمحتويات الحقيبة والميزانية"]),
-  ("كل محادثة عن حملة الشتاء تحتاج دليل الهوية، لكن عملك الآخر لا يحتاجه. أين تضع دليل الهوية؟",
-   ["في ملفات المعرفة في مشروع (Project)، مع قواعد الحملة", "في محادثة مثبّتة تعود إليها مع كل منشور", "في إعداداتك الشخصية، لتبدأ بها كل محادثة", "في أول رسالة من كل محادثة، بلصقه يدوياً"]),
+  ("كل محادثات نورة عن حملة Ramadan Iftar 2027 تحتاج قواعد قائمة الطعام وقائمة القاعات، لكن عملها الآخر لا يحتاجها. أين تضعها؟",
+   ["في مشروع (Project) لحملة Ramadan Iftar، كملفات معرفة", "في محادثة مثبّتة تعود إليها كل مرة", "في إعداداتها الشخصية، لتبدأ بها كل محادثة", "في أول رسالة من كل محادثة، بلصقها يدوياً"]),
   ("يكتب فهد رسائل شكر للمتبرعين كل أسبوع بالخطوات الخمس نفسها. ما الذي يجعل Claude يتبع هذه الخطوات عندما تأتي المهمة؟",
    ["مهارة (Skill) فيها الخطوات ومثال وقالب", "طلب أطول محفوظ في ملف على سطح المكتب", "موصل إلى المجلد المشترك الذي يضم الرسائل القديمة", "إدخال في الذاكرة يقول إنه يكتب رسائل كل أسبوع"]),
   ("تريد نورة تجهيز Claude لأعمال التسويق بخطوة واحدة، مع أوامر جاهزة مثل /campaign-plan. ماذا تضيف؟",

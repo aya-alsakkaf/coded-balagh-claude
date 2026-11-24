@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-24 · QA rounds 3 and 4 fixes
+
+- Plugin and files quick checks (66 slides); scheduled-task check asks for a laptop-closed job.
+- Demo 2.1 and Demo 3.2 watch-only on the prompt sheet; one live skill upload; Manual mode in Task 2.1.
+- MAP Q4, Q5, Q7 rewritten (key unchanged); report hall days are working days; Team owner settings in the joining note.
+
 ## 2026-11-24 · QA round 2 fixes
 
 - Web search for both layouts; scheduled tasks via Scheduled › New task or a chat; skill upload paths for both layouts.

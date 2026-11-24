@@ -341,8 +341,8 @@
    "id": "q_4",
    "type": "select",
    "label": {
-    "en": "4. Claude's dashboard shows Winter Warmth KWD 2,500 above the Control totals sheet. What do you do first?",
-    "ar": "4. تُظهر لوحة البيانات التي أعدّها Claude أن حملة Winter Warmth أعلى بمقدار 2,500 دينار من ورقة Control totals. ماذا تفعل أولاً؟"
+    "en": "4. Claude's receipts table shows Winter Warmth KWD 1,950 above the supplier invoices. What do you do first?",
+    "ar": "4. يُظهر جدول الإيصالات الذي أعدّه Claude أن حملة Winter Warmth أعلى بمقدار 1,950 دينار من فواتير الموردين. ماذا تفعل أولاً؟"
    },
    "required": true,
    "sectionId": "s_3",
@@ -359,24 +359,24 @@
      "id": "opt_b",
      "value": "b",
      "label": {
-      "en": "Change the chart by hand to match the sheet",
-      "ar": "أعدّل الرسم يدوياً ليطابق الورقة"
+      "en": "Change the table by hand to match the invoices",
+      "ar": "أعدّل الجدول يدوياً ليطابق الفواتير"
      }
     },
     {
      "id": "opt_c",
      "value": "c",
      "label": {
-      "en": "Send it to the board with a note that it is a draft",
-      "ar": "أرسلها إلى مجلس الإدارة مع ملاحظة أنها مسودة"
+      "en": "Send it to Fahad with a note that it is a draft",
+      "ar": "أرسله إلى فهد مع ملاحظة أنه مسودة"
      }
     },
     {
      "id": "opt_d",
      "value": "d",
      "label": {
-      "en": "Look for a duplicate row behind that total",
-      "ar": "أبحث عن صف مكرر وراء هذا الإجمالي"
+      "en": "Look for a receipt that is counted twice",
+      "ar": "أبحث عن إيصال محسوب مرتين"
      }
     }
    ],
@@ -404,8 +404,8 @@
      "id": "opt_b",
      "value": "b",
      "label": {
-      "en": "Gmail holds it for one hour, then forwards it",
-      "ar": "يحتفظ بها Gmail ساعة ثم يعيد توجيهها"
+      "en": "Claude forwards it, because forwarding is read-only",
+      "ar": "يعيد Claude توجيهها، لأن إعادة التوجيه للقراءة فقط"
      }
     },
     {
@@ -420,8 +420,8 @@
      "id": "opt_d",
      "value": "d",
      "label": {
-      "en": "The board secretary approves it before it arrives",
-      "ar": "يوافق عليها سكرتير المجلس قبل وصولها"
+      "en": "Claude saves a draft and she forwards it in Gmail",
+      "ar": "يحفظ Claude مسودة وتعيد هي توجيهها من Gmail"
      }
     }
    ],
@@ -476,8 +476,8 @@
    "id": "q_7",
    "type": "select",
    "label": {
-    "en": "7. Every winter-campaign chat needs the brand guide, but your other work does not. Where do you put the brand guide?",
-    "ar": "7. كل محادثة عن حملة الشتاء تحتاج دليل الهوية، لكن عملك الآخر لا يحتاجه. أين تضع دليل الهوية؟"
+    "en": "7. Noura's Ramadan Iftar 2027 chats all need the menu rules and the venue list, but her other work does not. Where do they go?",
+    "ar": "7. كل محادثات نورة عن حملة Ramadan Iftar 2027 تحتاج قواعد قائمة الطعام وقائمة القاعات، لكن عملها الآخر لا يحتاجها. أين تضعها؟"
    },
    "required": true,
    "sectionId": "s_3",
@@ -486,24 +486,24 @@
      "id": "opt_a",
      "value": "a",
      "label": {
-      "en": "In a Project's knowledge, with the campaign rules",
-      "ar": "في ملفات المعرفة في مشروع (Project)، مع قواعد الحملة"
+      "en": "In a Ramadan Iftar Project, as its knowledge",
+      "ar": "في مشروع (Project) لحملة Ramadan Iftar، كملفات معرفة"
      }
     },
     {
      "id": "opt_b",
      "value": "b",
      "label": {
-      "en": "In a pinned chat that you go back to for each post",
-      "ar": "في محادثة مثبّتة تعود إليها مع كل منشور"
+      "en": "In a pinned chat that she goes back to each time",
+      "ar": "في محادثة مثبّتة تعود إليها كل مرة"
      }
     },
     {
      "id": "opt_c",
      "value": "c",
      "label": {
-      "en": "In your personal settings, so every chat starts with it",
-      "ar": "في إعداداتك الشخصية، لتبدأ بها كل محادثة"
+      "en": "In her personal settings, so every chat starts with them",
+      "ar": "في إعداداتها الشخصية، لتبدأ بها كل محادثة"
      }
     },
     {
@@ -511,7 +511,7 @@
      "value": "d",
      "label": {
       "en": "In the first message of each chat, pasted by hand",
-      "ar": "في أول رسالة من كل محادثة، بلصقه يدوياً"
+      "ar": "في أول رسالة من كل محادثة، بلصقها يدوياً"
      }
     }
    ],

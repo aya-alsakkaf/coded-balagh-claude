@@ -45,7 +45,7 @@ Generated from the kit by `_source/tools/class_plan.py`. Do not edit by hand.
 | Demo 3.2 | Create the donor thank-you skill with Claude | demo |  | none |  |  |
 | Task 3.2 | Install the starter skill, test it, make it yours | 12 | on your own | misbah-donor-thanks-skill.zip | A working skill and one tested letter with all five parts. | Open the Plugins page (Customize on some accounts), filter by skills and add one skill you would use at work. |
 | Demo 4.1 | Hand Cowork the receipts folder | demo |  | misbah-receipts-nov-2026.zip |  |  |
-| Task 4.1 | Hand Cowork a folder | 8 | on your own | misbah-receipts-nov-2026.zip | The Excel table and the 2 flags, checked against the receipts. | Put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin. |
+| Task 4.1 | Hand Cowork a folder | 8 | on your own | misbah-receipts-nov-2026.zip | The Excel table and the 2 flags, checked against the receipts. | In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin. |
 | Demo 4.2 | The AI accountant, hired | demo |  | misbah-donations-nov-2026.xlsx |  |  |
 | Task 4.2 | Hire one AI employee | 14 | on your own | misbah-campaign-brief.docx, misbah-brand-guide.docx, misbah-donations-nov-2026.xlsx | A working AI employee Project, its first output checked, and its employee card. | Add the role's weekly job as a scheduled task (Scheduled › New task, or ask in the chat), set to wait for your approval. |
 

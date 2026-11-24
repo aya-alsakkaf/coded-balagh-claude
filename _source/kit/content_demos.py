@@ -153,7 +153,8 @@ BRIEF = [["Connectors", "Gmail and Google Calendar are on, from the + menu."],
          ["Limit", "Read only. Draft a reply to anything urgent, but do not send it."],
          ["Format", "A table: time, meeting, what to prepare, the email to answer."]]
 demo("d21", day=1, skill="2.1", sec=4, title="Sunday's brief from email and calendar", tool="Claude · Gmail and Google Calendar", files=[FILE_INBOX], kind="player",
- setup=["Click + in the chat, then Connectors. Turn on Gmail and Google Calendar (sign in to Google the first time).", "Paste the prompt below. Check one meeting and one email against the source."],
+ setup=["Watch only: the trainer runs this on the CODED training account. You connect an approved account, or use the fictional inbox file, in Task 2.1.",
+        "[T] Click + › Connectors, turn on Gmail and Google Calendar, paste the prompt, then check one meeting and one email against the source."],
  prompts=[("Sunday's brief", joined(BRIEF[1:]))],
  expected=f"Three meetings on {D.BRIEF_DAY}, with the heater delay as the urgent item. One draft reply to Salem, saved, not sent.",
  say="Claude reads the inbox and the calendar with your sign-in. It drafts. Sending stays with you.",
@@ -172,7 +173,7 @@ SORT = [("Rewrite a public post about the winter campaign", "green"), ("Practice
         ("Let Claude send emails to donors without your approval", "red"), ("Summarize a public news article about the weather this winter", "green")]
 demo("t21", day=1, skill="2.1", sec=4, title="Connect your email and calendar, then get Sunday's brief", tool="Claude · Gmail and Google Calendar", files=[FILE_INBOX], kind="task", hands_on=True, minutes=15, solo="on your own",
  setup=["Connect only an account your organization approved for Claude. No approval, or donor or family emails in it? Attach misbah-inbox-and-calendar.pdf instead.",
-        "Approved: click + › Connectors, turn on Gmail and Google Calendar and sign in. Run the brief for your next working day. Read only.",
+        "Approved: + › Connectors, turn on Gmail and Calendar, sign in. Set the mode to Manual. Run the brief for your next working day, read only.",
         "Ask for one draft reply. Do not send it.", "Check two facts in the brief against the email or the calendar itself."],
  prompts=[("The brief", "Brief me for my next working day: each meeting, who attends, and the latest email about it. Read only. A table: time, meeting, what to prepare, the email to answer."),
           ("One draft", "Draft a short reply to the most urgent email in the brief. Save it as a draft. Do not send it.")],
@@ -234,7 +235,7 @@ MAKE = [["Ask", "Help me create a skill for donor thank-you letters."],
         ["Example", f"Here is one good letter: “Dear supporter, thank you for your gift of {kwd(D.EXAMPLE_GIFT['amount'])} to Winter Warmth. It pays for about two winter kits. Receipt: {D.EXAMPLE_GIFT['receipt']}. With thanks, Misbah Charity Society.” Copy its tone, not its numbers."],
         ["Save", "Package it as a skill named donor-thank-you. I will test it with /."]]
 demo("d32", day=1, skill="3.2", sec=6, title="Create the donor thank-you skill with Claude", tool="Claude · Skills", files=[], kind="player",
- setup=["Check Settings › Capabilities: Create and edit files is on.", "In a new chat, paste the prompt below and answer Claude's questions.", "[T] Show the skill Claude offers and its Save button, but do not save it: the starter skill with the same name is uploaded on the next slide."],
+ setup=["Check Settings › Capabilities: Create and edit files is on.", "In a new chat, paste the prompt below and answer Claude's questions.", "Watch only: do not save this skill. You install the starter skill, which has the same name, in Task 3.2."],
  prompts=[("Create the skill", joined(MAKE))],
  expected="Claude asks one or two questions, then offers a skill with a name, a description of when to use it, the five steps and an example. Saved, it shows in the / menu.",
  say="A skill is a method you write once. Claude reads its description and uses it when the task comes up.",
@@ -294,12 +295,12 @@ demo("t41", day=1, skill="4.1", sec=7, title="Hand Cowork a folder", tool="Claud
  deliverable="The Excel table and the 2 flags, checked against the receipts.",
  fallback="If Cowork is not on the account, attach the 15 files to a chat and run the same task there.",
  hint="One receipt has no campaign code. One receipt is in the folder twice.",
- stretch=["Put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin."],
+ stretch=["In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin."],
  stretch_prompts=[("Schedule it", "Schedule a task for every Thursday at 08:00. Read the new receipts in our Misbah receipts folder on Google Drive, update the table by campaign, and list any receipt with no campaign code or a duplicate. Ask me before you change any file.")])
 
 # ===================================================================== INTEGRATION · YOUR FIRST AI EMPLOYEE
 def job(role, jobs, files, rules=f"{D.PHOTO_RULE} Never send, publish or pay: draft only and wait for my approval."):
-    return f"You are Misbah Charity Society's AI {role}. Your jobs: {jobs} Use the files in this Project. Rules: {rules} End every answer with what you checked and what I must check."
+    return f"You are Misbah Charity Society's AI {role}. Your jobs: {jobs} Use the files in this Project. End every answer with what you checked and what I must check. Rules: {rules}"
 ROLES = [("Producer", "write 60-second video scripts and shot lists for our campaigns, and a weekly content plan.", FILE_BRIEF,
           "Write a 60-second video script and shot list for the first delivery day."),
          ("Marketer", "plan campaign posts, write captions in our brand voice, and draft the newsletter.", f"{FILE_BRIEF}, {FILE_BRAND}",

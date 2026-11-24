@@ -114,3 +114,22 @@ Levels 1 to 4 after the round 2 fixes: validator 0, pages 0, decks 0, walk clean
 - Concerning · runbook, Demo 3.2, `skfind` · donor-thank-you would already exist on the presenting laptop · delete the test upload, do not save in Demo 3.2, upload once live
 - Nits fixed · plugin quick check added (`l4pchk`) · skill sharing per plan · "one hands-on task each" · Demo 1.2 shown as kit HTML plus a real artifact · Task 4.2 extra uses each role's shift · Task 4.1 extra puts the folder on Drive first · Team owner settings in the joining note · 35-word sentence split
 - Nits accepted · MAP Q4 and Q7 stems echo two quick checks (new options; a third portal rewrite not worth the risk two days out) · "all 1 days" (engine, PLUGIN-FEEDBACK #2)
+
+## Round 4 · 9.5 / 10 · FAIL (Language and data safety 8.5)
+
+| Dimension | Score |
+|---|---|
+| Files, links and config | 10.0 |
+| Pages | 10.0 (the engine Nit is counted under Language) |
+| Decks | 10.0 |
+| Interactivity | 10.0 |
+| Content coherence | 9.25 |
+| Tasks and demos | 9.25 |
+| MAP tests | 9.25 |
+| Final survey | 10.0 |
+| Language and data safety | 8.5 |
+
+Levels 1 to 4 after the round 3 fixes: validator 0, pages 0, decks 0, walk clean (65 slides). Levels 5 to 8 by a fourth fresh agent; all product facts and every sample-file number verified.
+- Concerning · prompt sheet Demo 2.1 card · Gmail connect steps with no approved-account condition, before the sort · card is watch-only (trainer account)
+- Nits fixed · `l2chk` stem · files concept check (`l1fchk`) · report hall days · job descriptions end with the approval rule · Demo 3.2 "do not save" · Task 2.1 Manual mode · MAP Q4, Q5, Q7 · Task 4.1 extra approved account
+- Nit accepted · "all 1 days" (engine, PLUGIN-FEEDBACK #2)

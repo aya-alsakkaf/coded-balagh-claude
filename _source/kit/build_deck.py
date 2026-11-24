@@ -132,6 +132,10 @@ def day1():
         [("It came from training, so it may be old", 1, "Right. No date and no source: trained knowledge. Ask Claude to search the web."),
          ("It is today's rate from the bank", 0, "Today's rate comes with a date and a source you can open."),
          ("Claude made an error in the math", 0, "The math may be fine. The rate itself may be old.")]))
+    s.append(check("l1fchk", "l1", "Fahad needs totals from a 240-row donations file. <b>Which input makes Claude calculate them with code?</b>",
+        [("A screenshot of the sheet", 0, "Claude reads a picture of the numbers. It does not calculate from the file."),
+         ("The Excel or CSV file itself", 1, "Right. Claude runs code on the file, so every row counts."),
+         ("Reading the numbers aloud in voice mode", 0, "Voice is for talking things through, not for 240 rows.")]))
     s.append(task("l1task", "l1", "t11", n=TASK_N))
 
     # Layer 1 · Artifacts
@@ -198,7 +202,7 @@ def day1():
     s.append(sortslide("l2sort", "l2", "Safe-use sort · green, amber, red", "Green, amber or red? <span class=\"hl\">Tap a card.</span>", CD.SORT, C.SORT_LABELS,
         n=N(say="Call it out first, then I tap the card.", expect="Donor lists, case files and auto-sending are red.",
             more=["Amber needs two things: an account the organization approved, and approvals on.", "Donor and family data stays red in any account."], time="4 min")))
-    s.append(check("l2chk", "l2", "Claude drafted the reply to Salem. You are in Manual mode. <b>What happens next?</b>",
+    s.append(check("l2chk", "l2", "You ask Claude to send the reply to Salem. You are in Manual mode. <b>What happens before it goes?</b>",
         [("Claude sends it at once", 0, "Not in Manual mode. Sending waits for you."),
          ("Claude asks you to allow or deny the send", 1, "Right. You read it, check it, then decide."),
          ("Salem sees it as a draft", 0, "Drafts stay in your account until you send.")]))

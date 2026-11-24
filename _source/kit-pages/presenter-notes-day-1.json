@@ -187,6 +187,19 @@
 "flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option A. · If the room is silent: ask one table to choose together, then tap their choice."
 },
 {
+"say": null,
+"do": "Read the question. Ask for hands up on each option, then tap the most popular one.",
+"expect": "Option B.",
+"silent": "ask one table to choose together, then tap their choice.",
+"fallback": null,
+"more": [],
+"time": "1 min",
+"t": "l1",
+"k": "check",
+"h": "Quick check",
+"flat": "1 min. · Do: Read the question. Ask for hands up on each option, then tap the most popular one. · Expect: Option B. · If the room is silent: ask one table to choose together, then tap their choice."
+},
+{
 "say": "The PDF is the source. The screenshot is a draft. Claude reads both; you decide which one is right.",
 "do": "Start the timer. Walk the room. Ask each person what they found so far.",
 "expect": "Web: today's rate with its date and a link to the source, and the KWD amount. Files: two errors in the post: delivery start: the post says “Deliveries start Thursday 3 December”, the report says Deliveries start Sunday 6 December (page 2); families: the post says “1,200 families”, the report says 1,020 families (page 1).",

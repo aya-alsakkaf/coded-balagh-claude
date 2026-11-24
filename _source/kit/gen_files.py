@@ -76,7 +76,7 @@ pdf(os.path.join(OUT, FILE_REPORT), "Winter Warmth 2026: campaign report (fictio
      Paragraph("Every registered family receives its kit before the coldest weeks of January. Every donor receives a thank-you letter and a receipt within 3 working days.", B)],
     [Paragraph("3. Delivery plan", H),
      Paragraph(f"<b>Deliveries start on {D.DELIVERY_START} 2026</b> and end on {D.DELIVERY_END}, from 08:00 to 13:00 on working days.", B),
-     grid([["Center", "Days", "Families"], [D.CENTERS[0], "6 to 10 December", "340"], [D.CENTERS[1], "6 to 12 December", "380"], [D.CENTERS[2], "13 to 17 December", "300"], ["Total", "", f"{D.FAMILIES:,}"]], [70, 55, 30]),
+     grid([["Center", "Days", "Families"]] + [[c, d, str(n)] for c, d, n in D.HALLS] + [["Total", "", f"{D.FAMILIES:,}"]], [70, 55, 30]),
      Spacer(1, 8),
      Paragraph("Each family books a time slot by phone. Volunteers check the family's booking number, not their name, at the door.", B),
      Paragraph("Heaters arrive from the supplier before the first delivery day. Blankets, jackets and food baskets are packed at the Farwaniya hall.", B)],

@@ -294,3 +294,11 @@ The independent audit of round 1 found gaps. These changes close them; nothing o
 - Team-plan owner settings for Yousif to confirm: Google connectors, code execution and Skills, web search.
 - Skill sharing: Team and Enterprise share from the skill; other plans send the .zip.
 - MAP Q4 and Q7 stay: their stems echo the artifact and Project quick checks with new options (accepted Nit, round 3).
+
+## Changes after QA round 4 (24 November 2026)
+
+- **Slides 65 → 66:** a files quick check (`l1fchk`) after the trained-knowledge check.
+- **Demo 2.1** is watch-only on the prompt sheet (trainer account); participants connect only in Task 2.1, with Manual mode set. The Task 4.1 extra connects Drive only in an approved account.
+- **Demo 3.2** card says "watch only: do not save". Job descriptions end with the approval rule.
+- `l2chk` now asks about a send request. The report's hall days are working days (data.py `HALLS`).
+- **MAP Q4, Q5 and Q7** are new situations with believable options (receipts table, a forward, the Ramadan Iftar Project); the key does not change.

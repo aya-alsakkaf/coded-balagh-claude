@@ -476,6 +476,27 @@
 },
 {
 "n": 14,
+"id": "l1fchk",
+"kind": "check",
+"title": "Quick check",
+"topic": "l1",
+"kit": [
+"Fahad needs totals from a 240-row donations file. Which input makes Claude calculate them with code?",
+"A screenshot of the sheet",
+"The Excel or CSV file itself",
+"Reading the numbers aloud in voice mode"
+],
+"chrome": [
+"Quick check",
+"A",
+"B",
+"C",
+"Correct",
+"Not quite"
+]
+},
+{
+"n": 15,
 "id": "l1task",
 "kind": "task",
 "title": "Your turn 1.1",
@@ -532,7 +553,7 @@
 ]
 },
 {
-"n": 15,
+"n": 16,
 "id": "abstory",
 "kind": "story",
 "title": "Layer 1 · Artifacts",
@@ -551,7 +572,7 @@
 ]
 },
 {
-"n": 16,
+"n": 17,
 "id": "abterm",
 "kind": "term",
 "title": "An answer you read once. A tool you keep.",
@@ -570,7 +591,7 @@
 ]
 },
 {
-"n": 17,
+"n": 18,
 "id": "abmenu",
 "kind": "table",
 "title": "Six things to ask for today.",
@@ -604,7 +625,7 @@
 "chrome": []
 },
 {
-"n": 18,
+"n": 19,
 "id": "abcalc",
 "kind": "widget",
 "title": "Demo 1.2",
@@ -619,7 +640,7 @@
 "chrome": []
 },
 {
-"n": 19,
+"n": 20,
 "id": "abpp",
 "kind": "player",
 "title": "Demo 1.3 · playback",
@@ -698,7 +719,7 @@
 ]
 },
 {
-"n": 20,
+"n": 21,
 "id": "ablist",
 "kind": "list",
 "title": "Change it, check it, then share it.",
@@ -715,7 +736,7 @@
 "chrome": []
 },
 {
-"n": 21,
+"n": 22,
 "id": "abchk",
 "kind": "check",
 "title": "Quick check",
@@ -736,7 +757,7 @@
 ]
 },
 {
-"n": 22,
+"n": 23,
 "id": "abtask",
 "kind": "task",
 "title": "Your turn 1.3",
@@ -795,7 +816,7 @@
 ]
 },
 {
-"n": 23,
+"n": 24,
 "id": "l2story",
 "kind": "story",
 "title": "Layer 2 · Connectors",
@@ -814,7 +835,7 @@
 ]
 },
 {
-"n": 24,
+"n": 25,
 "id": "l2scene",
 "kind": "scene",
 "title": "A visitor badge opens some doors, not all.",
@@ -833,7 +854,7 @@
 "chrome": []
 },
 {
-"n": 25,
+"n": 26,
 "id": "l2term",
 "kind": "term",
 "title": "Claude reads the app. You hold the keys.",
@@ -852,7 +873,7 @@
 ]
 },
 {
-"n": 26,
+"n": 27,
 "id": "l2pp",
 "kind": "player",
 "title": "Demo 2.1 · playback",
@@ -928,7 +949,7 @@
 ]
 },
 {
-"n": 27,
+"n": 28,
 "id": "l2rules",
 "kind": "table",
 "title": "You decide what Claude may do.",
@@ -956,7 +977,7 @@
 "chrome": []
 },
 {
-"n": 28,
+"n": 29,
 "id": "l2sort",
 "kind": "sort",
 "title": "Green, amber or red? Tap a card.",
@@ -981,13 +1002,13 @@
 ]
 },
 {
-"n": 29,
+"n": 30,
 "id": "l2chk",
 "kind": "check",
 "title": "Quick check",
 "topic": "l2",
 "kit": [
-"Claude drafted the reply to Salem. You are in Manual mode. What happens next?",
+"You ask Claude to send the reply to Salem. You are in Manual mode. What happens before it goes?",
 "Claude sends it at once",
 "Claude asks you to allow or deny the send",
 "Salem sees it as a draft"
@@ -1002,7 +1023,7 @@
 ]
 },
 {
-"n": 30,
+"n": 31,
 "id": "l2task",
 "kind": "task",
 "title": "Your turn 2.1",
@@ -1015,7 +1036,7 @@
 "Ask Claude to find a free 30-minute slot next week for the Ramadan Iftar 2027 planning meeting. Approve the event only if it is real.",
 "misbah-inbox-and-calendar.pdf",
 "Connect only an account your organization approved for Claude. No approval, or donor or family emails in it? Attach misbah-inbox-and-calendar.pdf instead.",
-"Approved: click + › Connectors, turn on Gmail and Google Calendar and sign in. Run the brief for your next working day. Read only.",
+"Approved: + › Connectors, turn on Gmail and Calendar, sign in. Set the mode to Manual. Run the brief for your next working day, read only.",
 "Ask for one draft reply. Do not send it.",
 "Check two facts in the brief against the email or the calendar itself.",
 "The brief",
@@ -1054,7 +1075,7 @@
 ]
 },
 {
-"n": 31,
+"n": 32,
 "id": "l3story",
 "kind": "story",
 "title": "Layer 3 · Teach once",
@@ -1073,7 +1094,7 @@
 ]
 },
 {
-"n": 32,
+"n": 33,
 "id": "l3where",
 "kind": "table",
 "title": "Four places to teach Claude.",
@@ -1106,7 +1127,7 @@
 "chrome": []
 },
 {
-"n": 33,
+"n": 34,
 "id": "l3term",
 "kind": "term",
 "title": "One area of work. One Project.",
@@ -1125,7 +1146,7 @@
 ]
 },
 {
-"n": 34,
+"n": 35,
 "id": "l3pp",
 "kind": "player",
 "title": "Demo 3.1 · playback",
@@ -1202,7 +1223,7 @@
 ]
 },
 {
-"n": 35,
+"n": 36,
 "id": "l3chk",
 "kind": "check",
 "title": "Quick check",
@@ -1223,7 +1244,7 @@
 ]
 },
 {
-"n": 36,
+"n": 37,
 "id": "l3task",
 "kind": "task",
 "title": "Your turn 3.1",
@@ -1278,7 +1299,7 @@
 ]
 },
 {
-"n": 37,
+"n": 38,
 "id": "l3mem",
 "kind": "list",
 "title": "Memory: what Claude keeps between chats.",
@@ -1295,7 +1316,7 @@
 "chrome": []
 },
 {
-"n": 38,
+"n": 39,
 "id": "l3memchk",
 "kind": "check",
 "title": "Quick check",
@@ -1316,7 +1337,7 @@
 ]
 },
 {
-"n": 39,
+"n": 40,
 "id": "skstory",
 "kind": "story",
 "title": "Layer 3 · Skills",
@@ -1335,7 +1356,7 @@
 ]
 },
 {
-"n": 40,
+"n": 41,
 "id": "skscene",
 "kind": "scene",
 "title": "A recipe card in the kitchen drawer.",
@@ -1356,7 +1377,7 @@
 "chrome": []
 },
 {
-"n": 41,
+"n": 42,
 "id": "skterm",
 "kind": "term",
 "title": "Teach a method once.",
@@ -1375,7 +1396,7 @@
 ]
 },
 {
-"n": 42,
+"n": 43,
 "id": "skanat",
 "kind": "table",
 "title": "What is inside a Skill?",
@@ -1406,7 +1427,7 @@
 "chrome": []
 },
 {
-"n": 43,
+"n": 44,
 "id": "skpp",
 "kind": "player",
 "title": "Demo 3.2 · playback",
@@ -1479,7 +1500,7 @@
 ]
 },
 {
-"n": 44,
+"n": 45,
 "id": "skfind",
 "kind": "list",
 "title": "Search first. Build only what is missing.",
@@ -1496,7 +1517,7 @@
 "chrome": []
 },
 {
-"n": 45,
+"n": 46,
 "id": "skchk",
 "kind": "check",
 "title": "Quick check",
@@ -1517,7 +1538,7 @@
 ]
 },
 {
-"n": 46,
+"n": 47,
 "id": "sktask",
 "kind": "task",
 "title": "Your turn 3.2",
@@ -1569,7 +1590,7 @@
 ]
 },
 {
-"n": 47,
+"n": 48,
 "id": "l4story",
 "kind": "story",
 "title": "Layer 4 · Cowork",
@@ -1588,7 +1609,7 @@
 ]
 },
 {
-"n": 48,
+"n": 49,
 "id": "l4term",
 "kind": "term",
 "title": "Hand over a task, not a question.",
@@ -1607,7 +1628,7 @@
 ]
 },
 {
-"n": 49,
+"n": 50,
 "id": "l4pp",
 "kind": "player",
 "title": "Demo 4.1 · playback",
@@ -1681,7 +1702,7 @@
 ]
 },
 {
-"n": 50,
+"n": 51,
 "id": "l4plug",
 "kind": "table",
 "title": "Plugins: a starter kit for a role.",
@@ -1709,7 +1730,7 @@
 "chrome": []
 },
 {
-"n": 51,
+"n": 52,
 "id": "l4pchk",
 "kind": "check",
 "title": "Quick check",
@@ -1730,7 +1751,7 @@
 ]
 },
 {
-"n": 52,
+"n": 53,
 "id": "l4sched",
 "kind": "term",
 "title": "The same job, on a time you set.",
@@ -1749,7 +1770,7 @@
 ]
 },
 {
-"n": 53,
+"n": 54,
 "id": "l4schk",
 "kind": "check",
 "title": "Quick check",
@@ -1770,7 +1791,7 @@
 ]
 },
 {
-"n": 54,
+"n": 55,
 "id": "l4chk",
 "kind": "check",
 "title": "Quick check",
@@ -1791,7 +1812,7 @@
 ]
 },
 {
-"n": 55,
+"n": 56,
 "id": "l4task",
 "kind": "task",
 "title": "Your turn 4.1",
@@ -1801,7 +1822,7 @@
 "on your own",
 "Claude · Cowork",
 "One receipt has no campaign code. One receipt is in the folder twice.",
-"Put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin.",
+"In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin.",
 "misbah-receipts-nov-2026.zip",
 "Unzip misbah-receipts-nov-2026.zip on your laptop.",
 "Start a Cowork task in the Claude desktop app and add the folder. Choose Manual mode.",
@@ -1841,7 +1862,7 @@
 ]
 },
 {
-"n": 56,
+"n": 57,
 "id": "aestory",
 "kind": "story",
 "title": "Integration · Your first AI employee",
@@ -1860,7 +1881,7 @@
 ]
 },
 {
-"n": 57,
+"n": 58,
 "id": "aescene",
 "kind": "scene",
 "title": "Hire it like a person.",
@@ -1882,7 +1903,7 @@
 "chrome": []
 },
 {
-"n": 58,
+"n": 59,
 "id": "aetable",
 "kind": "table",
 "title": "Four AI employees for Misbah.",
@@ -1920,7 +1941,7 @@
 "chrome": []
 },
 {
-"n": 59,
+"n": 60,
 "id": "aepp",
 "kind": "player",
 "title": "Demo 4.2 · playback",
@@ -1996,7 +2017,7 @@
 ]
 },
 {
-"n": 60,
+"n": 61,
 "id": "aetask",
 "kind": "task",
 "title": "Your turn 4.2",
@@ -2054,7 +2075,7 @@
 ]
 },
 {
-"n": 61,
+"n": 62,
 "id": "aeshow",
 "kind": "timer",
 "title": "One minute each: meet your AI employee.",
@@ -2073,7 +2094,7 @@
 ]
 },
 {
-"n": 62,
+"n": 63,
 "id": "c6map",
 "kind": "map",
 "title": "MAP test · after",
@@ -2100,7 +2121,7 @@
 ]
 },
 {
-"n": 63,
+"n": 64,
 "id": "w1",
 "kind": "wrap",
 "title": "Wrap-up",
@@ -2125,7 +2146,7 @@
 ]
 },
 {
-"n": 64,
+"n": 65,
 "id": "explore",
 "kind": "list",
 "title": "Keep exploring on your own.",
@@ -2143,7 +2164,7 @@
 "chrome": []
 },
 {
-"n": 65,
+"n": 66,
 "id": "close1",
 "kind": "close",
 "title": "Close",
