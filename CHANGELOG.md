@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-24 · Shipped
+
+- QA round 6: 9.80 / 10, pass. Final survey published in the portal. Pushed to GitHub; Vercel project `coded-balagh-claude` deploys `main` to production.
+- Live checks: home 200, deck 200 (66 slides), /survey redirects to the portal, /staff locked until STAFF_PASSWORD is set, branded 404, noindex everywhere.
+
 ## 2026-11-24 · No MAP test (Aya's decision)
 
 - PRE and POST MAP removed: slides, links, answer key and portal drafts. Setup check at 09:00; Task 1.1 15 min; Task 4.2 20 min; show and tell 7 min; one survey QR slide at 12:50 (still 66 slides).
