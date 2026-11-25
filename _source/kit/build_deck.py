@@ -9,11 +9,11 @@ import content_demos as CD
 import data as D
 from data import kwd
 
-SECTIONS = {1: [("Opening", "g-mark", ["open"]), ("Layer 1", "g-code", ["l1", "l1b"]), ("Layer 2", "g-frame", ["l2"]),
-                ("Layer 3", "g-code", ["l3", "l3b"]), ("Layer 4", "g-impact", ["l4", "l5"]), ("Close", "g-progress", ["c6", "close"])]}
-FLOW = {1: (["Chat", "Artifacts", "Connectors", "Projects", "Skills", "Cowork", "AI employee"], {"l1": 0, "l1b": 1, "l2": 2, "l3": 3, "l3b": 4, "l4": 5, "l5": 6})}
+SECTIONS = {1: [("Opening", "g-mark", ["open"]), ("Layer 1", "g-code", ["l1", "l1c", "l1b"]), ("Layer 2", "g-frame", ["l2"]),
+                ("Layer 3", "g-code", ["l3", "l3b"]), ("Layer 4", "g-impact", ["l5"]), ("Close", "g-progress", ["c6", "close"])]}
+FLOW = {1: (["Chat", "Cowork", "Artifacts", "Connectors", "Projects", "Skills", "AI employee"], {"l1": 0, "l1c": 1, "l1b": 2, "l2": 3, "l3": 4, "l3b": 5, "l5": 6})}
 COVER_NOTES = {1: N(do="Welcome. Introduce yourself and CODED in one minute. Name the reason for today: Claude's features, in depth, with your hands on the keys.",
-                    more=["Housekeeping: coffee at 10:15, Dhuhr break at 11:40. Prayer room and toilets.",
+                    more=["Housekeeping: coffee at 10:30, Dhuhr break at 11:40. Prayer room and toilets.",
                           "Sign-in check: Claude desktop app open and signed in on every laptop. Help anyone who is still on the free plan or the web only."],
                     say="This morning is about Claude, not about prompting. You already write good prompts.",
                     silent="ask the General Manager which feature he most wants to see working today.")}
@@ -26,7 +26,7 @@ CLOSE = {1: {"big": "Claude drafts. <span class=\"hl\">You approve.</span>", "ne
              "n": N(do="Thank the room. Point to the take-home guide and the cheat sheet on the site.", more=["Ask the General Manager for one line of feedback before he leaves."],
                     say="Pick one layer you will switch on at work this week.")}}
 
-# ------------------------------------------------------------------ the artifact on the calculator slide (Demo 1.2): a working tool, built from data.py
+# ------------------------------------------------------------------ the artifact on the calculator slide (Demo 1.3): a working tool, built from data.py
 def _calc_html():
     rows = "".join(f'<tr data-u="{c}"><td><label><input type="checkbox" checked> {i}</label></td><td>{c:.3f}</td>'
                    f'<td><input class="mc-q" type="number" min="0" max="9" value="{q}" aria-label="{i} per family"></td><td class="mc-line">{c * q:.3f}</td></tr>' for i, c, q in D.KIT)
@@ -57,18 +57,6 @@ EXTRA_CSS = """
 .mc-out span{display:block;font-size:12px;font-family:var(--cd-font-mono);color:rgba(255,255,255,.72)}
 .mc-out b{font-size:26px;color:var(--cd-accent);font-variant-numeric:tabular-nums}
 .mc-out b.neg{color:#F84B4B}
-.ws-lbl.weak,.ws-lbl.strong,.ws-score .ws-sw.h,.ws-score .ws-ss.h,.ws-steps li[data-s="1"] em,.ws-steps li[data-s="2"] em,.ws-steps li[data-s="7"] em{color:transparent!important;position:relative}
-.ws-lbl.weak::after,.ws-lbl.strong::after{position:absolute;left:8px;top:3px;white-space:nowrap}
-.ws-score .ws-sw.h::after,.ws-score .ws-ss.h::after{position:absolute;left:18px;top:12px;white-space:nowrap}
-.ws-steps li em::after{position:absolute;left:0;top:0;white-space:nowrap;color:#fff}
-.ws-lbl.weak::after{content:"Plain chat";color:#FF8A8A}
-.ws-lbl.strong::after{content:"In the Project";color:#7FE0A8}
-.ws-score .ws-sw.h{position:relative}.ws-score .ws-ss.h{position:relative}
-.ws-score .ws-sw.h::after{content:"Plain chat";color:#FF8A8A}
-.ws-score .ws-ss.h::after{content:"In the Project";color:#7FE0A8}
-.ws-steps li[data-s="1"] em::after{content:"Plain chat"}
-.ws-steps li[data-s="2"] em::after{content:"Plain result"}
-.ws-steps li[data-s="7"] em::after{content:"Project result"}
 /* the final survey slide: text on the left, the portal QR on the right (no MAP test in this session) */
 #c6survey .cd-eyebrow,#c6survey .cd-h1,#c6survey .wk-lead,#c6survey .wk-map-timer{max-width:56%}
 #c6survey .wk-lead{position:relative}
@@ -99,31 +87,23 @@ def day1():
         "Open the Claude desktop app and sign in with your paid account. Open the workshop home and download the eight Misbah sample files. Keep the prompt sheet open in a browser tab.", 10,
         n=N(do="Start the timer. Walk the room and check every laptop: Claude signed in, the desktop app open, the files downloaded.", say="Everything today happens on your own laptop, so we set it up first.",
             fallback="If someone cannot sign in, pair them with a neighbor for the morning and fix the account at the break.", silent="open the workshop home on the screen and point to the sample files.",
-            more=["Check the plan on each laptop: Cowork, plugins and scheduled tasks need a paid plan."], time="09:00-09:10")),
-        story("o_story", "open", "Opener · the question", "Thursday 19 November, 08:30",
-        "Misbah's General Manager closes his laptop and asks the team: <b>“We use Claude every day. Why does it still feel like a chat box?”</b> Noura asks Claude for a winter post. She gets a nice post that could belong to any charity.",
-        "Same Claude. <span class=\"hl\">Different setups.</span>", "See what each layer adds, before you build them.",
-        n=N(do="Read the story. Ask: what did Noura's Claude not know?", expect="The brand voice, the rules, the languages.", silent="name one thing yourself: the campaign facts.", time="09:10-09:20")),
-        showcase("o_ws", "open", CD.SHOWCASE, n=N(do="Press → through the steps. Stop at each layer on the right and ask what it adds.",
-            more=["Steps 1 to 3: the same brief in a plain chat, and its post. Read the red flags aloud against the brand guide.", "Steps 4 to 7: the same words, sent inside the Project; then what the Project already holds.",
-                  "Step 8: the Project's post. Point at the one number, the two languages and the link at the end.", "Steps 9 and 10: the scorecard, then the lesson."],
-            silent="ask before step 4: would the General Manager publish the plain post?", say="I typed the same words both times, with the same file. Only the setup behind Claude changed.", time="6 min"))]
+            more=["Check the plan on each laptop: Cowork and scheduled tasks need a paid plan."], time="09:00-09:10"))]
     s = opening(1, opener=opener)
-    s.append(scene("o_layers", "open", "Opener · the roadmap", "Claude in <span class=\"hl\">four layers.</span>",
-        "Each layer gives Claude something a new colleague needs: the conversation, then keys to your apps, then training, then work it does on its own. Today you switch them on, one by one.",
-        "Chat · Connectors · Teach once · Cowork and schedules.",
+    s.append(scene("o_layers", "open", "Today · the roadmap", "Claude in <span class=\"hl\">four layers.</span>",
+        "Each layer gives Claude something a new colleague needs: the conversation and its own tasks, then keys to your apps, then training, then a shift of its own. Today you switch them on, one by one.",
+        "Chat and Cowork · Connectors · Teach once · Schedules.",
         [{"ground": 268}, {"laptop": (240, 268), "tone": "dim"}, {"person": (86, 268), "tone": "hot", "label": "You, the manager", "anim": "nod"},
-         {"pill": "1 · Chat and artifacts", "at": (240, 196), "tone": "hot", "delay": 0}, {"pill": "2 · Connectors", "at": (240, 152), "tone": "hot", "delay": 1.5},
-         {"pill": "3 · Memory, Projects, Skills", "at": (240, 108), "tone": "hot", "delay": 3}, {"pill": "4 · Cowork and schedules", "at": (240, 64), "tone": "hot", "delay": 4.5},
+         {"pill": "1 · Chat, Cowork, artifacts", "at": (240, 196), "tone": "hot", "delay": 0}, {"pill": "2 · Connectors", "at": (240, 152), "tone": "hot", "delay": 1.5},
+         {"pill": "3 · Memory, Projects, Skills", "at": (240, 108), "tone": "hot", "delay": 3}, {"pill": "4 · Scheduled tasks", "at": (240, 64), "tone": "hot", "delay": 4.5},
          {"pill": "Your AI employee", "at": (240, 22), "tone": "ok", "delay": 6}],
-        n=N(do="Point to each layer as it lights up. Then point to the top: the AI employee is where the morning ends.", expect="Nods. Someone asks about plugins: say they come in layer 4.",
+        n=N(do="Point to each layer as it lights up. Then point to the top: the AI employee is where the morning ends.", expect="Most people already use layer 1 every day.", time="09:10-09:13",
             silent="ask which layer they already use every day (layer 1).", say="Each layer is one block this morning. The AI employee at the top uses all four.")))
 
     # Layer 1 · Chat
     s.append(story("l1story", "l1", "Layer 1 · Chat", "Sunday 22 November, 09:10",
         "A donor in the US pledges <b>USD 5,000</b> to the winter campaign. Fahad asks Claude what that is in KWD. The answer comes in one second, <b>with a rate and no date.</b>",
         "Fast is not <span class=\"hl\">the same as current.</span>", "Choose web search or trained knowledge, and give Claude your files.",
-        n=N(do="Ask: would you put that amount on the donor's receipt?", expect="No, not without checking the rate.", silent="ask where they would check a rate today.", time="09:20-09:45")))
+        n=N(do="Ask: would you put that amount on the donor's receipt?", expect="No, not without checking the rate.", silent="ask where they would check a rate today.", time="09:13-09:38")))
     s.append(scene("l1scene", "l1", "Layer 1 · the picture", "A library book and <span class=\"hl\">today's newspaper.</span>",
         "A library book was printed on one date. It knows nothing after that. Today's newspaper knows this morning, and it names its sources.",
         "Trained knowledge = the book. Web search = the newspaper.",
@@ -156,11 +136,38 @@ def day1():
          ("A photo of her notes, sent later", 0, "That works for a document, not for a conversation.")]))
     s.append(task("l1task", "l1", "t11", n=N(do="Start the timer. Walk the room. Ask each person what they found so far.", time="15 min work. No share-out: as the next block starts, ask who found the two errors in the post.")))
 
+    # Layer 1 · Cowork, right after chat: see the difference
+    s.append(story("cwstory", "l1c", "Layer 1 · Cowork", "Thursday 26 November, 08:00",
+        "Before each board pack, Fahad sorts the month's receipts by campaign. <b>Fifteen files, one spreadsheet, the whole morning.</b> The board pack is due Monday at 12:00.",
+        "Hand over the task. <span class=\"hl\">Keep the decision.</span>", "Give Cowork a folder, then compare it with the chat you just used.",
+        n=N(do="Ask: what folder do you open every week to do the same thing?", expect="Receipts, invoices, reports.", silent="say Fahad's receipts are today's folder.", time="09:38-10:00")))
+    s.append(term("cwterm", "l1c", "Layer 1 · the idea", "Hand over a task, <span class=\"hl\">not a question.</span>", "Cowork",
+        "<b>Cowork</b> is Claude working through a task with several steps: it reads a folder, makes a plan, creates Excel, Word or slides, and asks you before risky steps. In the new Claude experience, chat and Cowork share one message box.",
+        "Chat: you ask, Claude answers…", "…Cowork: you hand over a task, <b>Claude delivers files</b>.", "Older accounts: select Cowork in the message box. New experience: ask in any chat.",
+        n=N(do="Show the message box on the presenting laptop: Chat and Cowork, or the merged box.", expect="Some have the new experience, some the toggle. Both work.",
+            more=["Cowork needs a paid plan. Local folders need the desktop app open."], silent="ask whose laptop shows the Cowork option.")))
+    s.append(tslide("cwdiff", "l1c", "Layer 1 · chat or Cowork", "The same files, <span class=\"hl\">two ways to work.</span>", ["", "Chat (Task 1.1)", "Cowork (Task 1.2)"],
+        [["<b>You give it</b>", "A question and a few files", "A task and a whole folder"],
+         ["<b>It works</b>", "One answer in the chat", "A plan, then every file, step by step"],
+         ["<b>You get</b>", "Text to read and copy", "A finished file: Excel, Word or slides"],
+         ["<b>You approve</b>", "You read the answer", "Risky steps, such as creating or deleting a file"],
+         ["<b>Best for</b>", "Questions and drafts", "Tasks with steps and many files"]],
+        "Chat answers. Cowork delivers. You stay the manager.",
+        n=N(do="Put Task 1.1 next to the receipts job. Ask: which one would you hand to a colleague and then walk away?", expect="The receipts job.",
+            silent="say: the chat was a question; the receipts are a task.", more=["In the new Claude experience, both start from the same message box."])))
+    s.append(player("cwpp", "l1c", "d41", n=N(time="3 min")))
+    s.append(check("cwchk", "l1c", "Fahad has a folder of receipts to sort into one Excel table. <b>He has never done it with Claude.</b> Where does he start?",
+        [("A scheduled task for every Thursday", 0, "Schedule only a job you have run and checked by hand."),
+         ("A chat, pasting each receipt one by one", 0, "That works for one file. A folder with steps is a Cowork task."),
+         ("A Cowork task on the folder, in Manual mode", 1, "Right. Run it once, check it, then schedule it.")]))
+    s.append(task("cwtask", "l1c", "t41", n=N(do="Start the timer. Walk the room. Ask each person what they found so far.", time="12 min work, then 2 min: the flags you found.")))
+
+
     # Layer 1 · Artifacts
     s.append(story("abstory", "l1b", "Layer 1 · Artifacts", "Monday 23 November, 11:00",
         "The board meets next Wednesday, 2 December. Noura needs <b>donations by campaign</b>, a <b>cost calculator</b> for the volunteers and <b>five slides</b>. Last month she copied numbers between three tools for a whole day.",
         "Ask for the tool, <span class=\"hl\">not the paragraph.</span>", "Turn a file or an idea into an artifact, check it and share it.",
-        n=N(do="Ask: which of the three would you still build by hand today?", expect="The slides, usually.", silent="say most teams still build the slides by hand.", time="09:45-10:15")))
+        n=N(do="Ask: which of the three would you still build by hand today?", expect="The slides, usually.", silent="say most teams still build the slides by hand.", time="10:00-10:30")))
     s.append(term("abterm", "l1b", "Layer 1 · the idea", "An answer you read once. <span class=\"hl\">A tool you keep.</span>", "Artifact",
         "An <b>artifact</b> is something Claude makes that you put in front of people: a dashboard, a calculator, a deck, a doc, even a small game. It opens beside the chat. You edit it and share it with a link.",
         "A chat answer…", "…becomes a <b>tool you keep</b> and share.", "Artifacts start private. You choose who sees them.",
@@ -171,7 +178,7 @@ def day1():
          ["<b>Document</b>", "A doc you edit and share", "The volunteer guide"], ["<b>Game or quiz</b>", "A small interactive tool", "A quiz for new volunteers"]],
         "Name the artifact and the source in the first line.",
         n=N(do="Ask each person which one they would use next week.", expect="The dashboard and the deck are the usual picks.", silent="pick the calculator and move to the next slide.")))
-    s.append(widget("abcalc", "l1b", "d12", "Demo 1.2 · a live artifact", "A calculator <span class=\"hl\">you can ask Claude for.</span>", CALC_HTML,
+    s.append(widget("abcalc", "l1b", "d12", "Demo 1.3 · a live artifact", "A calculator <span class=\"hl\">you can ask Claude for.</span>", CALC_HTML,
         "Ask for a tool, not a paragraph.",
         n=N(do="Change the families to 1200: the budget goes negative. Set it back to 1020. Untick the heater and watch the cost per family fall.",
             expect=f"{kwd(D.PER_FAMILY)} per family; {kwd(D.CAMPAIGN_COST)} in total; {kwd(D.LEFT)} left.", silent="ask what number the volunteers would change first.",
@@ -193,7 +200,7 @@ def day1():
     s.append(story("l2story", "l2", "Layer 2 · Connectors", "Tuesday 24 November, 07:50",
         "Hessa has a 09:00 meeting about the heater delivery. She opens <b>40 unread emails</b> and copies parts of them into Claude, one by one. At 08:55 she is still copying.",
         "Claude can read the inbox. <span class=\"hl\">You keep the send button.</span>", "Connect email and calendar, and keep every action under your approval.",
-        n=N(do="Ask: how much of your morning goes on reading email before meetings?", expect="Half an hour or more.", silent="say how long your own inbox takes on a Sunday.", time="10:25-10:55")))
+        n=N(do="Ask: how much of your morning goes on reading email before meetings?", expect="Half an hour or more.", silent="say how long your own inbox takes on a Sunday.", time="10:40-11:10")))
     s.append(scene("l2scene", "l2", "Layer 2 · the picture", "A visitor badge opens <span class=\"hl\">some doors, not all.</span>",
         "Reception gives a visitor a badge for the rooms they need. Some doors open at once. Some need a person to come down and say yes.",
         "A connector is a badge for Claude. You choose the doors.",
@@ -230,7 +237,7 @@ def day1():
     s.append(story("l3story", "l3", "Layer 3 · Teach once", "Wednesday 25 November, 10:00",
         "Every new chat, Noura pastes the same three paragraphs: who Misbah is, the brand voice, the campaign rules. <b>Last week she forgot the photo rule</b>, and a draft asked for a photo of a family at the door.",
         "Write the rules once. <span class=\"hl\">In the right place.</span>", "Put memory, instructions and a Project to work.",
-        n=N(do="Ask: what do you paste into Claude again and again?", expect="The organization, the tone, a template.", silent="say what Noura pastes: the brand voice.", time="10:55-11:15")))
+        n=N(do="Ask: what do you paste into Claude again and again?", expect="The organization, the tone, a template.", silent="say what Noura pastes: the brand voice.", time="11:10-11:40")))
     s.append(tslide("l3where", "l3", "Layer 3 · where it goes", "Four places <span class=\"hl\">to teach Claude.</span>", ["Place", "What goes there", "It applies to", "Misbah example"],
         [["<b>Memory</b>", "Facts Claude keeps from your chats; view and edit them", "Your chats", "I work in Misbah's marketing team"],
          ["<b>Instructions for Claude</b>", "How you like answers", "Every chat", "English first, then Arabic"],
@@ -250,7 +257,7 @@ def day1():
         [("Instructions for Claude, in Settings", 0, "That applies to every chat you start, not only the campaign."),
          ("The Project's knowledge", 1, "Right. Only chats in the Project use it."),
          ("Say it once in a chat, for memory", 0, "Memory keeps facts about you. Files belong in a Project.")]))
-    s.append(task("l3task", "l3", "t31", n=N(do="Start the timer. Walk the room. Ask each person what they found so far.", time="8 min work. No share-out: go straight on to memory.")))
+    s.append(task("l3task", "l3", "t31", n=N(do="Start the timer. Walk the room. Ask each person what they found so far.", time="15 min work, then 3 min: two people read their Project's post aloud.")))
     s.append(listslide("l3mem", "l3", "Layer 3 · memory", "Memory: what Claude <span class=\"hl\">keeps between chats.</span>",
         ["<b>See it:</b> Settings › Your Claude (older layout: Settings › Memory). Every topic Claude keeps is listed there.",
          "<b>Change it:</b> open a topic to edit or delete it. Or tell Claude “remember this”.",
@@ -269,7 +276,7 @@ def day1():
     s.append(story("skstory", "l3b", "Layer 3 · Skills", "Wednesday 25 November, 13:30",
         "Fahad writes <b>30 thank-you letters</b> to donors every week. Each one has the same five steps. A new volunteer wrote them last week and <b>missed every receipt number.</b>",
         "A method in your head <span class=\"hl\">is a method nobody else can follow.</span>", "Create a skill, install one, and find more.",
-        n=N(do="Ask: which method in your team lives in one person's head?", expect="Reports, letters, checklists.", silent="say Fahad's letters are the example for today.", time="11:15-11:40")))
+        n=N(do="Ask: which method in your team lives in one person's head?", expect="Reports, letters, checklists.", silent="say Fahad's letters are the example for today.", time="11:55-12:20")))
     s.append(scene("skscene", "l3b", "Layer 3 · the picture", "A recipe card <span class=\"hl\">in the kitchen drawer.</span>",
         "The cook does not read every recipe each morning. When a dish is ordered, the right card comes out of the drawer, with its steps and a photo of the result.",
         "A skill comes out only when its task comes up.",
@@ -300,73 +307,43 @@ def day1():
          ("A list of your passwords", 0, "Never put passwords in a skill, or anywhere in Claude.")]))
     s.append(task("sktask", "l3b", "t32", n=TASK_N))
 
-    # Layer 4 · Cowork, plugins and schedules
-    s.append(story("l4story", "l4", "Layer 4 · Cowork", "Thursday 26 November, 08:00",
-        "Before each board pack, Fahad sorts the month's receipts by campaign. <b>Fifteen files, one spreadsheet, the whole morning.</b> The board pack is due Monday at 12:00.",
-        "Hand over the task. <span class=\"hl\">Keep the decision.</span>", "Give Cowork a folder, add a plugin and schedule the weekly job.",
-        n=N(do="Ask: what folder do you open every week to do the same thing?", expect="Receipts, invoices, reports.", silent="say Fahad's receipts are today's folder.", time="11:55-12:15")))
-    s.append(term("l4term", "l4", "Layer 4 · the idea", "Hand over a task, <span class=\"hl\">not a question.</span>", "Cowork",
-        "<b>Cowork</b> is Claude working through a task with several steps: it reads a folder, makes a plan, creates Excel, Word or slides, and asks you before risky steps. In the new Claude experience, chat and Cowork share one message box.",
-        "Chat: you ask, Claude answers…", "…Cowork: you hand over a task, <b>Claude delivers files</b>.", "Older accounts: select Cowork in the message box. New experience: ask in any chat.",
-        n=N(do="Show the message box on the presenting laptop: Chat and Cowork, or the merged box.", expect="Some have the new experience, some the toggle. Both work.",
-            more=["Cowork needs a paid plan. Local folders need the desktop app open."], silent="ask whose laptop shows the Cowork option.")))
-    s.append(player("l4pp", "l4", "d41", n=N(time="3 min")))
-    s.append(tslide("l4plug", "l4", "Layer 4 · plugins", "Plugins: <span class=\"hl\">a starter kit for a role.</span>", ["Plugin", "What it bundles", "Try it on"],
-        [["<b>Marketing</b>", "/campaign-plan, /draft-content, /brand-review", "The Ramadan Iftar 2027 plan"],
-         ["<b>Finance</b>", "Reconciliation, statements, variance analysis", "The November donations"],
-         ["<b>Productivity</b>", "Tasks, your day, your calendar and email", "Sunday's plan"],
-         ["<b>Small business</b>", "Skills for finance, marketing, operations and hiring", "A first look at all of them"]],
-        "Plugins page: browse, then Add (older layout: Customize › Plugins). Then make it fit Misbah.",
-        n=N(do="Open the Plugins page and browse. Add the Marketing plugin live and type / to show its commands.", expect="The commands appear in the / menu.",
-            more=["A plugin bundles skills, commands and connectors. After you add it, open its Connectors tab and connect each one that is not connected yet, with your own account."],
-            silent="ask which role plugin they would add first.", fallback="If adding fails, show the plugin's page in the directory.")))
-    s.append(check("l4pchk", "l4", "Which need does <b>a plugin</b> meet best?",
-        [("One rule you want in every chat", 0, "That is Instructions for Claude, in Settings."),
-         ("Ready-made skills and commands for a whole role", 1, "Right. Add it, then make it fit your organization."),
-         ("The files for one campaign", 0, "Files for one area of work belong in a Project.")]))
-    s.append(term("l4sched", "l4", "Layer 4 · schedules", "The same job, <span class=\"hl\">on a time you set.</span>", "Scheduled task",
+    # Layer 4 · Scheduled tasks and your first AI employee
+    s.append(story("aestory", "l5", "Layer 4 · Your first AI employee", "Thursday 26 November, 12:15",
+        "The General Manager asks: <b>“Can Claude be our producer, our marketer, our designer and our accountant?”</b> Yes, if you set it up the way you set up a new hire.",
+        "An AI employee is <span class=\"hl\">the layers, set up for one job.</span>", "Hire one AI employee for one Misbah role, and test its first job.",
+        n=N(do="Turn to the General Manager: which role would save Al-Balagh the most time?", expect="Often the accountant or the marketer.", silent="suggest the accountant: the receipts are already in the room.", time="12:20-12:50")))
+    s.append(term("aesched", "l5", "Layer 4 · schedules", "The same job, <span class=\"hl\">on a time you set.</span>", "Scheduled task",
         "A <b>scheduled task</b> runs on its own at the time you choose, for example every Thursday at 08:00. It runs in the cloud with your connectors and the files saved to Claude, so your laptop can be off. Open Scheduled › New task, or describe the job in a chat and click Schedule.",
         "A reminder in your calendar…", "…a colleague who <b>does the job at that time</b> and leaves the result.", "Schedule only what you have run and checked by hand.",
         n=N(do="Open Scheduled › New task on the presenting laptop and show the form. Do not save it.", expect="Questions about approvals: nobody is there to answer a scheduled task. A tool set to ask first may wait for your answer, or the task finishes without it.", more=["A task on a laptop folder runs only while the laptop is awake and the desktop app is open (Require this computer). For a job that must run with the laptop closed, use Google Drive or files saved to Claude."],
             silent="ask which weekly job they would schedule first.")))
-    s.append(check("l4schk", "l4", "Fahad's weekly receipts job must run <b>even when his laptop is closed</b>. Where should it read the receipts from?",
+    s.append(check("aeschk", "l5", "Fahad's weekly receipts job must run <b>even when his laptop is closed</b>. Where should it read the receipts from?",
         [("The Downloads folder on his laptop", 0, "A laptop folder works only while the laptop is awake and the desktop app is open."),
          ("A pinned chat with the receipts pasted in", 0, "Pasting by hand is the job you wanted to stop doing."),
          ("A Google Drive folder, through the connector", 1, "Right. Connectors and files saved to Claude work when the laptop is off.")]))
-    s.append(check("l4chk", "l4", "Fahad has a folder of receipts to sort into one Excel table. <b>He has never done it with Claude.</b> Where does he start?",
-        [("A scheduled task for every Thursday", 0, "Schedule only a job you have run and checked by hand."),
-         ("A chat, pasting each receipt one by one", 0, "That works for one file. A folder with steps is a Cowork task."),
-         ("A Cowork task on the folder, in Manual mode", 1, "Right. Run it once, check it, then schedule it.")]))
-    s.append(task("l4task", "l4", "t41", n=TASK_N))
-
-    # Integration · Your first AI employee
-    s.append(story("aestory", "l5", "Integration · Your first AI employee", "Thursday 26 November, 12:15",
-        "The General Manager asks: <b>“Can Claude be our producer, our marketer, our designer and our accountant?”</b> Yes, if you set it up the way you set up a new hire.",
-        "An AI employee is <span class=\"hl\">the layers, set up for one job.</span>", "Hire one AI employee for one Misbah role, and test its first job.",
-        n=N(do="Turn to the General Manager: which role would save Al-Balagh the most time?", expect="Often the accountant or the marketer.", silent="suggest the accountant: the receipts are already in the room.", time="12:15-12:50")))
-    s.append(scene("aescene", "l5", "Integration · the recipe", "Hire it <span class=\"hl\">like a person.</span>",
-        "A new hire gets a job description, a binder, the team's procedures, keys, a shift and a manager. An AI employee needs the same things, plus a starter kit.",
-        "Job · binder · procedures · keys · starter kit · shift · manager.",
+    s.append(scene("aescene", "l5", "Layer 4 · the recipe", "Hire it <span class=\"hl\">like a person.</span>",
+        "A new hire gets a job description, a binder, the team's procedures, keys, a shift and a manager. An AI employee needs the same things.",
+        "Job · binder · procedures · keys · shift · manager.",
         [{"ground": 268}, {"person": (240, 268), "tone": "hot", "label": "AI accountant", "anim": "bob"},
          {"pill": "Job: instructions", "at": (120, 36), "delay": 0}, {"pill": "Binder: files", "at": (360, 36), "delay": 0.8},
          {"pill": "Procedures: Skills", "at": (120, 80), "delay": 1.6}, {"pill": "Keys: connectors", "at": (360, 80), "delay": 2.4},
-         {"pill": "Starter kit: plugin", "at": (120, 124), "delay": 3.2}, {"pill": "Shift: schedule", "at": (360, 124), "delay": 4},
-         {"pill": "Manager: you", "at": (240, 168), "tone": "ok", "delay": 4.8}],
+         {"pill": "Shift: schedule", "at": (240, 124), "delay": 3.2},
+         {"pill": "Manager: you", "at": (240, 168), "tone": "ok", "delay": 4}],
         n=N(do="Map each pill to a layer from the morning: instructions and files were layer 3, keys were layer 2, the shift was layer 4.",
             expect="The room sees that they already built every part.", silent="point to the manager pill and say: that one is always a person.")))
-    s.append(tslide("aetable", "l5", "Integration · four roles", "Four AI employees <span class=\"hl\">for Misbah.</span>", ["Role", "Its job", "Skills or plugin", "Connectors", "Shift"],
-        [["<b>Producer</b>", "Scripts and shot lists from the brief", "Marketing plugin, a video-script skill", "Google Drive", "Sunday: the content plan"],
-         ["<b>Marketer</b>", "Posts and captions in the brand voice", "Marketing plugin", "Google Drive, Gmail drafts", "Monday: the post plan"],
-         ["<b>Designer</b>", "Posts and posters as artifacts", "Marketing plugin (/brand-review)", "Google Drive", "Wednesday 09:00: the week's designs"],
-         ["<b>Accountant</b>", "Donations, receipts, a three-line note", "Finance plugin, thank-you skill", "Google Drive, Gmail to read", "Thursday 08:00"]],
+    s.append(tslide("aetable", "l5", "Layer 4 · four roles", "Four AI employees <span class=\"hl\">for Misbah.</span>", ["Role", "Its job", "Skill", "Connectors", "Shift"],
+        [["<b>Producer</b>", "Scripts and shot lists from the brief", "A video-script skill", "Google Drive", "Sunday: the content plan"],
+         ["<b>Marketer</b>", "Posts and captions in the brand voice", "A post-checklist skill", "Google Drive, Gmail drafts", "Monday: the post plan"],
+         ["<b>Designer</b>", "Posts and posters as artifacts", "A brand-check skill", "Google Drive", "Wednesday 09:00: the week's designs"],
+         ["<b>Accountant</b>", "Donations, receipts, a three-line note", "The donor thank-you skill", "Google Drive, Gmail to read", "Thursday 08:00"]],
         "Same recipe, four jobs. You stay the manager.", cls="tight",
-        n=N(do="Ask each person to choose a row for Task 4.2.", expect="Different roles across the room.", silent="assign the roles yourself, one each.")))
+        n=N(do="Ask each person to choose a row for Task 4.1.", expect="Different roles across the room.", silent="assign the roles yourself, one each.")))
     s.append(player("aepp", "l5", "d42", n=N(time="3 min")))
     s.append(task("aetask", "l5", "t42", n=TASK_N))
-    s.append(timer_slide("aeshow", "l5", "Show and tell · 12:43", "One minute each: <span class=\"hl\">meet your AI employee.</span>",
-        "Show its job description, its first output, and the one fact you checked.", 7,
-        n=N(do="One minute per person; with more than six people, pick six or give 30 seconds each. Ask each: what will it do next week, and what will you approve?", expect="Different roles across the room.", silent="show the accountant from the demo.",
-            fallback="If nobody finished, show the backup note from Demo 4.2.")))
+    s.append(timer_slide("aeshow", "l5", "Show and tell · 12:45", "One minute each: <span class=\"hl\">meet your AI employee.</span>",
+        "Show its job description, its first output, and the one fact you checked.", 5,
+        n=N(do="One minute per person; with more than five people, pick five or give 30 seconds each. Ask each: what will it do next week, and what will you approve?", expect="Different roles across the room.", silent="show the accountant from the demo.",
+            fallback="If nobody finished, show the backup note from Demo 4.1.")))
 
     # Close
     s.append(timer_slide("c6survey", "c6", "Final survey · 12:50", "Five minutes: <span class=\"hl\">tell us how it went.</span>", SURVEY_LEAD, 5,
@@ -374,19 +351,19 @@ def day1():
             fallback="Read out the short link: the site address, then /survey.", silent="give your own one-line answer to: which part was most useful?",
             more=["The same QR code is on the workshop home and the day page.", "Check the response count in the portal before you close."], time="12:50-12:55")))
     s.append(wrap("w1", "close", "Four layers, one morning: <span class=\"hl\">and you stay the manager.</span>",
-        [("You built", "Six things", "An artifact, a brief, a Project, a skill, a Cowork table and an AI employee."),
+        [("You built", "Six things", "A Cowork table, an artifact, a brief, a Project, a skill and an AI employee."),
          ("Between you, you caught", "5 planted problems", "2 errors in the post, 1 duplicate donation, 2 receipt flags."),
          ("The habit", "Claude drafts", "You check. You approve what goes out.")],
         "Your first week: one artifact, one Project, and your email in read mode in an approved account. Then one layer at a time.",
         n=N(do="Ask each person which layer they will switch on first at work.", expect="Connectors and Projects come up most.", silent="say which one you would start with: the Project.", time="12:55-13:00")))
     s.append(listslide("explore", "close", "After today · keep exploring", "Keep exploring <span class=\"hl\">on your own.</span>",
         ["<b>Claude Help Center:</b> support.claude.com explains every feature, step by step.", "<b>Claude Academy:</b> academy.claude.com has free short courses, such as Introduction to Claude Cowork.",
-         "<b>The Plugins page:</b> search ready-made skills, connectors and plugins before you build.", "<b>Your cheat sheet and take-home guide:</b> on the workshop site, with every prompt from today.",
+         "<b>The Plugins page:</b> search ready-made skills and connectors before you build.", "<b>Your cheat sheet and take-home guide:</b> on the workshop site, with every prompt from today.",
          "<b>The next layer:</b> Claude Code, where Claude builds tools and small apps with you."],
         "One new layer a week is enough.",
         n=N(do="Point to the site link on the cheat sheet. Mention Claude Code in one sentence only.", expect="Questions about a follow-up session: take them to Yousif.", silent="say the Help Center is where you check anything new.")))
     return s
 
-TOPICS = {1: {"open": "Opening", "l1": "Layer 1 · Chat", "l1b": "Layer 1 · Artifacts", "l2": "Layer 2 · Connectors", "l3": "Layer 3 · Memory, instructions, Projects",
-              "l3b": "Layer 3 · Skills", "l4": "Layer 4 · Cowork, plugins, schedules", "l5": "Integration · AI employee", "c6": "Final survey", "close": "Close"}}
+TOPICS = {1: {"open": "Opening", "l1": "Layer 1 · Chat", "l1c": "Layer 1 · Cowork", "l1b": "Layer 1 · Artifacts", "l2": "Layer 2 · Connectors", "l3": "Layer 3 · Memory, instructions, Projects",
+              "l3b": "Layer 3 · Skills", "l5": "Layer 4 · Schedules and AI employee", "c6": "Final survey", "close": "Close"}}
 DAYFN = {1: day1}

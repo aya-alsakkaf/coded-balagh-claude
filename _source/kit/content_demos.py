@@ -15,9 +15,8 @@ FILE_RECEIPTS = "misbah-receipts-nov-2026.zip"
 ALL_FILES = [FILE_REPORT, FILE_DON, FILE_POST, FILE_BRIEF, FILE_BRAND, FILE_INBOX, FILE_SKILL, FILE_RECEIPTS]
 
 # prompt sheet sections: sec -> (day, name)
-BLOCK = {1: (1, "Opener"), 2: (1, "Layer 1 · Chat: ask, attach, speak"), 3: (1, "Layer 1 · Artifacts"), 4: (1, "Layer 2 · Connectors"),
-         5: (1, "Layer 3 · Memory, instructions and Projects"), 6: (1, "Layer 3 · Skills"), 7: (1, "Layer 4 · Cowork, plugins and schedules"),
-         8: (1, "Integration · Your first AI employee")}
+BLOCK = {2: (1, "Layer 1 · Chat: ask, attach, speak"), 3: (1, "Layer 1 · Cowork"), 4: (1, "Layer 1 · Artifacts"), 5: (1, "Layer 2 · Connectors"),
+         6: (1, "Layer 3 · Memory, instructions and Projects"), 7: (1, "Layer 3 · Skills"), 8: (1, "Layer 4 · Schedules and AI employee")}
 
 DEMOS = {}
 def demo(did, **kw):
@@ -28,7 +27,7 @@ def tbl(head, rows): return ("table", [head] + [list(r) for r in rows])
 def joined(parts): return " ".join(v for _k, v in parts)
 CAMP_ROWS = [(c, str(D.EXPORT_ROWS[c]), kwd(D.EXPORT[c])) for c in D.CAMPAIGNS]
 
-# ===================================================================== the layered request (the opener and Demo 3.1)
+# ===================================================================== the layered request (Demo 3.1)
 WEAK_POST = "Write a post for our winter campaign."
 # the right-hand window: the same words, sent inside the campaign Project. The parts show what the Project already holds.
 POST_PARTS = [["Same request", WEAK_POST],
@@ -39,20 +38,6 @@ WEAK_ANSWER = [f"This winter, {D.FAMILIES:,} families need warmth. Only {kwd(D.P
                f"Help the needy stay warm. Donate now: {D.LINK}"]
 STRONG_POST = [f"This winter, {D.FAMILIES:,} families get a warm home kit, delivered by hand.", "(The same message in Arabic.)",
                f"#MisbahWinter and our Arabic hashtag. Give a kit: {D.LINK}"]
-
-# ===================================================================== OPENER
-demo("d10", day=1, skill="1.0", sec=1, title="One request, two setups", tool="Claude", files=[FILE_BRIEF], kind="showcase",
- setup=["[T] Before the session: build the Misbah Winter Campaign Project from Task 3.1 (its instructions, the brand guide and the brief).",
-        "[T] Open two windows: a plain new chat, and a new chat inside the Project. Attach the campaign brief in both.",
-        "[T] Type the same request in both. Compare the two posts against the brand guide."],
- prompts=[("Plain chat, brief attached", WEAK_POST), ("Inside the campaign Project, brief attached", WEAK_POST)],
- expected=f"Plain chat: the brief's facts, but three numbers, English only, no hashtags and the word “the needy”, which the brand guide does not allow. Inside the Project: one number ({D.FAMILIES:,} families), English then Arabic, both hashtags, and the link {D.LINK} at the end.",
- say="Same tool, same request. The only thing I changed is what Claude already knows and can reach.",
- point="The layers decide the answer. You still check it.",
- backup=[("h", "Plain chat: typical result"), ("p", "“" + " ".join(WEAK_ANSWER) + "”"),
-         ("h", "Inside the Project: typical result"), ("ul", STRONG_POST)],
- fallback="Play the opener in the deck; it shows both results.",
- hint="Compare both posts with the brand guide: how many numbers, which languages, which words?")
 
 # ===================================================================== LAYER 1 · CHAT
 RATE = [["Web search", "Search the web."],
@@ -87,14 +72,50 @@ demo("t11", day=1, skill="1.1", sec=2, title="One chat, the web and three files"
          ("h", "Donations by campaign (from the export, 1 to 24 November)"), tbl(["Campaign", "Rows", "Total"], CAMP_ROWS),
          ("note", f"The families figure ({D.FAMILIES:,}) is on pages 1 to 3, so accept any of them; page {D.PAGE_FAMILIES} is the registration count. Also accept extra findings against the rules on page {D.PAGE_RULES}: the post uses two numbers (one is allowed), and it ends with a hashtag, not the donation link."),
          ("h", "Prompt 1: the web"), ("p", "No fixed answer: rates change every day. Accept any rate that comes with its date and a link to an official or bank source, and a KWD amount that matches that rate."),
-         ("note", f"The export total is {kwd(D.TOTAL_EXPORT)} from {D.DON_ROWS} rows. Task 1.3 finds why it is {kwd(D.DIFF)} above the Control totals sheet.")],
+         ("note", f"The export total is {kwd(D.TOTAL_EXPORT)} from {D.DON_ROWS} rows. Task 1.4 finds why it is {kwd(D.DIFF)} above the Control totals sheet.")],
  deliverable="The KWD amount with the rate's date and link, and the 2 errors in the post with their pages.",
  fallback="If the PNG does not upload, the trainer shows misbah-post-screenshot.png on the screen; attach only the PDF.",
  hint="A rate with no date or link came from training. The post has 2 errors: a date and a number.",
  stretch=["Open the Claude app on your phone. Ask the PDF question by voice: tap the voice mode icon (the sound wave), not the microphone."])
 
+# ===================================================================== LAYER 1 · COWORK (right after chat, to show the difference)
+COWORK = [["Folder", "The misbah-receipts-nov-2026 folder: 15 receipt files and a README."],
+          ["Task", "Read every receipt. Build an Excel table: date, supplier, campaign code, amount in KWD. Add totals by campaign."],
+          ["Flag", "List any receipt with no campaign code, and any receipt that is in the folder twice."],
+          ["Mode", "Manual: ask me before you create or delete any file."]]
+RC_TABLE = [[D.CODE_NAME[c] + f" ({c})", kwd(D.RC_TOTAL[c])] for c in ("WW", "RI", "OS", "WL")]
+demo("d41", day=1, skill="1.2", sec=3, title="Hand Cowork the receipts folder", tool="Claude · Cowork", files=[FILE_RECEIPTS], kind="player",
+ setup=["Unzip misbah-receipts-nov-2026.zip into a folder.", "Start a Cowork task: select Cowork in the message box (in the new Claude experience, ask in the chat). Add the folder, or attach the files on the web.", "Set the mode to Manual. Paste the task and approve each step."],
+ prompts=[("The task", joined(COWORK[1:]))],
+ expected=f"An Excel file of the 14 receipts with a total for each campaign; the largest is Winter Warmth. Two flags: receipt {D.NO_CODE_NO:02d} has no campaign code, and receipt {D.DUP_RECEIPT_NO:02d} is in the folder twice.",
+ say="Chat answers a question. Cowork works through a task with steps and files, and asks you before risky steps.",
+ point="Chat for questions. Cowork for tasks with steps and files.",
+ backup=[("h", "Totals by campaign (14 receipts, the copy counted once)"), tbl(["Campaign", "Total"], RC_TABLE + [["Receipt 09, no code", kwd(D.RC_NOCODE)], ["<b>All receipts</b>", f"<b>{kwd(D.RC_ALL)}</b>"]]),
+         ("h", "Flags"), ("ul", [f"Receipt {D.NO_CODE_NO:02d}: food baskets, {kwd(D.RC_NOCODE)}, no campaign code. Ask Fahad which campaign.", f"Receipt {D.DUP_RECEIPT_NO:02d}: in the folder twice ({D.rc_file(4)} and {D.rc_file(4, True)}). Count it once."])],
+ fallback="Show the backup. If Cowork is not on the account, run the same task in chat with the 15 files attached.",
+ hint="Count the receipts: 15 receipt files (and a README), 14 different receipts.",
+ player={"parts": COWORK, "table": [["Campaign", "Total"]] + RC_TABLE, "best": 1,
+         "reco": ["<b>Flag 1:</b> one receipt has no campaign code.", "<b>Flag 2:</b> one receipt is in the folder twice. Counted once.", "<b>Made:</b> one Excel file in the folder, after your approval."],
+         "control": "Decide the campaign for the receipt with no code before the report goes to the board."})
+
+demo("t41", day=1, skill="1.2", sec=3, title="Hand Cowork a folder", tool="Claude · Cowork", files=[FILE_RECEIPTS], kind="task", hands_on=True, minutes=12, solo="on your own",
+ setup=["Unzip misbah-receipts-nov-2026.zip on your laptop.", "Start a Cowork task in the Claude desktop app and add the folder. Choose Manual mode.",
+        "Paste the task. Approve each step you agree with.", "Open the Excel file. Check the two flags against the receipts."],
+ prompts=[("The task", joined(COWORK[1:]))],
+ expected=f"An Excel table of 14 receipts with totals by campaign (Winter Warmth {kwd(D.RC_TOTAL['WW'])}), receipt {D.NO_CODE_NO:02d} flagged for no campaign code and receipt {D.DUP_RECEIPT_NO:02d} flagged as a duplicate.",
+ say="Hand over the task, stay in Manual mode, and approve the steps you agree with.",
+ point="Chat for questions. Cowork for tasks with steps and files.",
+ backup=[("h", "Totals by campaign"), tbl(["Campaign", "Total"], RC_TABLE)],
+ answer=[("h", "The two flags"), ("ul", [f"Receipt {D.NO_CODE_NO:02d} ({D.rc_no(D.NO_CODE_NO)}): Fresh Basket Foods, 100 food baskets, {kwd(D.RC_NOCODE)}, no campaign code.", f"Receipt {D.DUP_RECEIPT_NO:02d} ({D.rc_no(D.DUP_RECEIPT_NO)}): Little Coats Trading, {kwd(D.RC_DUP)}, in the folder twice; count it once."]),
+         ("h", "Totals (the copy counted once, receipt 09 on its own line)"), tbl(["Campaign", "Total"], RC_TABLE + [["No code (receipt 09)", kwd(D.RC_NOCODE)]])],
+ deliverable="The Excel table and the 2 flags, checked against the receipts.",
+ fallback="If Cowork is not on the account, attach the 15 files to a chat and run the same task there.",
+ hint="One receipt has no campaign code. One receipt is in the folder twice.",
+ stretch=["In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat."],
+ stretch_prompts=[("Schedule it", "Schedule a task for every Thursday at 08:00. Read the new receipts in our Misbah receipts folder on Google Drive, update the table by campaign, and list any receipt with no campaign code or a duplicate. Ask me before you change any file.")])
+
 # ===================================================================== LAYER 1 · ARTIFACTS
-demo("d12", day=1, skill="1.2", sec=3, title="The winter-kit cost calculator", tool="Claude · artifact", files=[FILE_BRIEF], kind="demo",
+demo("d12", day=1, skill="1.3", sec=4, title="The winter-kit cost calculator", tool="Claude · artifact", files=[FILE_BRIEF], kind="demo",
  setup=["[T] Use the calculator on the slide. Change the families to 1,200, then back to 1,020.", "[T] Untick the heater to show how the cost per family changes."],
  prompts=[("Ask for the calculator", f"Build an artifact: a winter-kit cost calculator from the attached campaign brief. Inputs: the number of families and the items in one kit. Show the cost per family, the total in KWD and the gap to the budget of {kwd(D.BUDGET)}.")],
  expected=f"Cost per family {kwd(D.PER_FAMILY)}; {D.FAMILIES:,} families cost {kwd(D.CAMPAIGN_COST)}, which leaves {kwd(D.LEFT)} of the budget. At {D.FAMILIES_WRONG:,} families the cost is {kwd(D.PER_FAMILY * D.FAMILIES_WRONG)}, over the budget.",
@@ -108,7 +129,7 @@ DASH = [["Output", "Build an artifact: a dashboard I can share with the board."]
         ["Source", f"Use code on the attached donations file, 1 to {D.DON_LAST} November 2026."],
         ["Show", "Donations by campaign and by channel, one chart each, then three lines of summary."],
         ["Check", "Show the number of rows and the total, so I can match them to the Control totals sheet."]]
-demo("d13", day=1, skill="1.3", sec=3, title="A donations dashboard from the Excel file", tool="Claude · artifact", files=[FILE_DON], kind="player",
+demo("d13", day=1, skill="1.4", sec=4, title="A donations dashboard from the Excel file", tool="Claude · artifact", files=[FILE_DON], kind="player",
  setup=["Attach misbah-donations-nov-2026.xlsx to a new chat.", "Paste the prompt below. Compare the total with the Control totals sheet in the same file."],
  prompts=[("Dashboard", joined(DASH))],
  expected=f"Two charts and three summary lines. Rows: {D.DON_ROWS}; total {kwd(D.TOTAL_EXPORT)}. The Control totals sheet says {kwd(D.TOTAL_CONTROL)}: {kwd(D.DIFF)} more in Winter Warmth.",
@@ -129,7 +150,7 @@ ART_PROMPTS = [("A · Calculator · brief", "Build a cost calculator artifact fr
                ("C · Quiz game · report", "Build a 6-question quiz game artifact for new volunteers from the attached report."),
                ("D · Board deck · report", "Make a 5-slide board deck from the attached report: goal, families, kit, budget."),
                ("E · Document · report", "Write a one-page volunteer guide as a doc from the attached report.")]
-demo("t13", day=1, skill="1.3", sec=3, title="Build one artifact for Misbah", tool="Claude · artifacts", files=[FILE_BRIEF, FILE_DON, FILE_REPORT], kind="task", hands_on=True, minutes=15, solo="on your own",
+demo("t13", day=1, skill="1.4", sec=4, title="Build one artifact for Misbah", tool="Claude · artifacts", files=[FILE_BRIEF, FILE_DON, FILE_REPORT], kind="task", hands_on=True, minutes=15, solo="on your own",
  setup=["Choose A to E. Attach its file and paste its prompt.", "Ask for one change. Then check one number against the file.",
         "Open Share and copy the link (private is fine)."],
  prompts=ART_PROMPTS,
@@ -152,7 +173,7 @@ BRIEF = [["Connectors", "Gmail and Google Calendar are on, from the + menu."],
          ["Ask", f"Brief me for {D.BRIEF_DAY.rsplit(' ', 1)[0]}: each meeting, who attends, and the latest email about it."],
          ["Limit", "Read only. Draft a reply to anything urgent, but do not send it."],
          ["Format", "A table: time, meeting, what to prepare, the email to answer."]]
-demo("d21", day=1, skill="2.1", sec=4, title="Sunday's brief from email and calendar", tool="Claude · Gmail and Google Calendar", files=[FILE_INBOX], kind="player",
+demo("d21", day=1, skill="2.1", sec=5, title="Sunday's brief from email and calendar", tool="Claude · Gmail and Google Calendar", files=[FILE_INBOX], kind="player",
  setup=["Watch only: the trainer runs this on the CODED training account. You connect an approved account, or use the fictional inbox file, in Task 2.1.",
         "[T] Click + › Connectors, turn on Gmail and Google Calendar, paste the prompt, then check one meeting and one email against the source."],
  prompts=[("Sunday's brief", joined(BRIEF[1:]))],
@@ -171,7 +192,7 @@ SORT = [("Rewrite a public post about the winter campaign", "green"), ("Practice
         ("Search your work inbox for the heater emails, in your organization's approved account", "amber"), ("Draft a reply to a supplier and save it as a draft for you", "amber"),
         ("Upload the donor list with names, phone numbers and amounts", "red"), ("Paste a family's case file with civil ID and income", "red"),
         ("Let Claude send emails to donors without your approval", "red"), ("Summarize a public news article about the weather this winter", "green")]
-demo("t21", day=1, skill="2.1", sec=4, title="Connect your email and calendar, then get Sunday's brief", tool="Claude · Gmail and Google Calendar", files=[FILE_INBOX], kind="task", hands_on=True, minutes=15, solo="on your own",
+demo("t21", day=1, skill="2.1", sec=5, title="Connect your email and calendar, then get Sunday's brief", tool="Claude · Gmail and Google Calendar", files=[FILE_INBOX], kind="task", hands_on=True, minutes=15, solo="on your own",
  setup=["Connect only an account your organization approved for Claude. No approval, or donor or family emails in it? Attach misbah-inbox-and-calendar.pdf instead.",
         "Approved: + › Connectors, turn on Gmail and Calendar, sign in. Set the mode to Manual. Run the brief for your next working day, read only.",
         "Ask for one draft reply. Do not send it.", "Check two facts in the brief against the email or the calendar itself."],
@@ -196,7 +217,7 @@ PROJ = [["Project", "Create a Project named Misbah Winter Campaign."],
         ["Knowledge", f"Add {FILE_BRAND} and {FILE_BRIEF} to the Project."],
         ["Ask", "Write three Instagram captions for the delivery week."]]
 INSTR = PROJ[1][1]
-demo("d31", day=1, skill="3.1", sec=5, title="The Misbah Winter Campaign Project", tool="Claude · Projects", files=[FILE_BRAND, FILE_BRIEF], kind="player",
+demo("d31", day=1, skill="3.1", sec=6, title="The Misbah Winter Campaign Project", tool="Claude · Projects", files=[FILE_BRAND, FILE_BRIEF], kind="player",
  setup=["Open Projects and create Misbah Winter Campaign.", "Paste the instructions below. Add the brand guide and the brief to the Project knowledge.", "Start a chat in the Project and ask for three captions."],
  prompts=[("Project instructions", INSTR), ("First chat in the Project", PROJ[3][1])],
  expected=f"Three short captions, English then Arabic, each with one checked number ({D.FAMILIES:,} families, {D.VOLUNTEERS} volunteers or {kwd(D.PER_FAMILY)} per kit), both hashtags, no faces or family names, each ending with {D.LINK}.",
@@ -209,7 +230,7 @@ demo("d31", day=1, skill="3.1", sec=5, title="The Misbah Winter Campaign Project
          "reco": ["<b>Brand voice:</b> warm and clear, English then Arabic.", "<b>Rules kept:</b> no faces, no family names.", "<b>Next chat:</b> the rules and files are already there."],
          "control": "Check each number against the brief before you post."})
 
-demo("t31", day=1, skill="3.1", sec=5, title="Set your instructions and build the campaign Project", tool="Claude · Projects", files=[FILE_BRAND, FILE_BRIEF], kind="task", hands_on=True, minutes=8, solo="on your own",
+demo("t31", day=1, skill="3.1", sec=6, title="Set your instructions and build the campaign Project", tool="Claude · Projects", files=[FILE_BRAND, FILE_BRIEF], kind="task", hands_on=True, minutes=18, solo="on your own",
  setup=["Settings › Your Claude › Instructions (older layout: Settings › Account): add two lines about how you like answers.",
         "Create a Project named Misbah Winter Campaign. Paste its instructions from your prompt sheet.", "Add the brand guide and the brief to the Project knowledge.",
         "Start a chat in the Project and run the request. Check one caption against the brand guide."],
@@ -234,7 +255,7 @@ MAKE = [["Ask", "Help me create a skill for donor thank-you letters."],
         ["Method", "Five steps: greeting, campaign and amount in KWD, what it paid for, a line of thanks, the receipt number. Under 120 words."],
         ["Example", f"Here is one good letter: “Dear supporter, thank you for your gift of {kwd(D.EXAMPLE_GIFT['amount'])} to Winter Warmth. It pays for about two winter kits. Receipt: {D.EXAMPLE_GIFT['receipt']}. With thanks, Misbah Charity Society.” Copy its tone, not its numbers."],
         ["Save", "Package it as a skill named donor-thank-you. I will test it with /."]]
-demo("d32", day=1, skill="3.2", sec=6, title="Create the donor thank-you skill with Claude", tool="Claude · Skills", files=[], kind="player",
+demo("d32", day=1, skill="3.2", sec=7, title="Create the donor thank-you skill with Claude", tool="Claude · Skills", files=[], kind="player",
  setup=["Check Settings › Capabilities: Create and edit files is on.", "In a new chat, paste the prompt below and answer Claude's questions.", "Watch only: do not save this skill. You install the starter skill, which has the same name, in Task 3.2."],
  prompts=[("Create the skill", joined(MAKE))],
  expected="Claude asks one or two questions, then offers a skill with a name, a description of when to use it, the five steps and an example. Saved, it shows in the / menu.",
@@ -247,7 +268,7 @@ demo("d32", day=1, skill="3.2", sec=6, title="Create the donor thank-you skill w
          "reco": ["<b>Use it:</b> type / and choose donor-thank-you.", "<b>Share it:</b> on Team and Enterprise plans, share it from the skill; otherwise send the .zip.", "<b>Edit it:</b> change a step any time; every letter after that follows it."],
          "control": "Test the skill on one letter and check all five parts."})
 
-demo("t32", day=1, skill="3.2", sec=6, title="Install the starter skill, test it, make it yours", tool="Claude · Skills", files=[FILE_SKILL], kind="task", hands_on=True, minutes=12, solo="on your own",
+demo("t32", day=1, skill="3.2", sec=7, title="Install the starter skill, test it, make it yours", tool="Claude · Skills", files=[FILE_SKILL], kind="task", hands_on=True, minutes=12, solo="on your own",
  setup=["Upload the .zip (do not unzip it): Plugins page, Add, then upload (older layout: Customize › Skills › + › Create skill › Upload a skill). Check that its switch is on.", "Start a new chat. Type / and choose donor-thank-you, then paste the test request.",
         "Check the letter: all five parts, under 120 words.", "Make it yours: ask Claude to change one step, then test again."],
  prompts=[("Test the skill", f"Write a thank-you letter for donor {D.THANKS['donor']}: {kwd(D.THANKS['amount'])} to {D.THANKS['campaign']}, receipt {D.THANKS['receipt']}."),
@@ -262,43 +283,7 @@ demo("t32", day=1, skill="3.2", sec=6, title="Install the starter skill, test it
  hint="The receipt number is the step people forget. Check it first.",
  stretch=["Open the Plugins page (Customize on some accounts), filter by skills and add one skill you would use at work."])
 
-# ===================================================================== LAYER 4 · COWORK, PLUGINS, SCHEDULES
-COWORK = [["Folder", "The misbah-receipts-nov-2026 folder: 15 receipt files and a README."],
-          ["Task", "Read every receipt. Build an Excel table: date, supplier, campaign code, amount in KWD. Add totals by campaign."],
-          ["Flag", "List any receipt with no campaign code, and any receipt that is in the folder twice."],
-          ["Mode", "Manual: ask me before you create or delete any file."]]
-RC_TABLE = [[D.CODE_NAME[c] + f" ({c})", kwd(D.RC_TOTAL[c])] for c in ("WW", "RI", "OS", "WL")]
-demo("d41", day=1, skill="4.1", sec=7, title="Hand Cowork the receipts folder", tool="Claude · Cowork", files=[FILE_RECEIPTS], kind="player",
- setup=["Unzip misbah-receipts-nov-2026.zip into a folder.", "Start a Cowork task: select Cowork in the message box (in the new Claude experience, ask in the chat). Add the folder, or attach the files on the web.", "Set the mode to Manual. Paste the task and approve each step."],
- prompts=[("The task", joined(COWORK[1:]))],
- expected=f"An Excel file of the 14 receipts with a total for each campaign; the largest is Winter Warmth. Two flags: receipt {D.NO_CODE_NO:02d} has no campaign code, and receipt {D.DUP_RECEIPT_NO:02d} is in the folder twice.",
- say="Chat answers a question. Cowork works through a task with steps and files, and asks you before risky steps.",
- point="Chat for questions. Cowork for tasks with steps and files.",
- backup=[("h", "Totals by campaign (14 receipts, the copy counted once)"), tbl(["Campaign", "Total"], RC_TABLE + [["Receipt 09, no code", kwd(D.RC_NOCODE)], ["<b>All receipts</b>", f"<b>{kwd(D.RC_ALL)}</b>"]]),
-         ("h", "Flags"), ("ul", [f"Receipt {D.NO_CODE_NO:02d}: food baskets, {kwd(D.RC_NOCODE)}, no campaign code. Ask Fahad which campaign.", f"Receipt {D.DUP_RECEIPT_NO:02d}: in the folder twice ({D.rc_file(4)} and {D.rc_file(4, True)}). Count it once."])],
- fallback="Show the backup. If Cowork is not on the account, run the same task in chat with the 15 files attached.",
- hint="Count the receipts: 15 receipt files (and a README), 14 different receipts.",
- player={"parts": COWORK, "table": [["Campaign", "Total"]] + RC_TABLE, "best": 1,
-         "reco": ["<b>Flag 1:</b> one receipt has no campaign code.", "<b>Flag 2:</b> one receipt is in the folder twice. Counted once.", "<b>Made:</b> one Excel file in the folder, after your approval."],
-         "control": "Decide the campaign for the receipt with no code before the report goes to the board."})
-
-demo("t41", day=1, skill="4.1", sec=7, title="Hand Cowork a folder", tool="Claude · Cowork", files=[FILE_RECEIPTS], kind="task", hands_on=True, minutes=8, solo="on your own",
- setup=["Unzip misbah-receipts-nov-2026.zip on your laptop.", "Start a Cowork task in the Claude desktop app and add the folder. Choose Manual mode.",
-        "Paste the task. Approve each step you agree with.", "Open the Excel file. Check the two flags against the receipts."],
- prompts=[("The task", joined(COWORK[1:]))],
- expected=f"An Excel table of 14 receipts with totals by campaign (Winter Warmth {kwd(D.RC_TOTAL['WW'])}), receipt {D.NO_CODE_NO:02d} flagged for no campaign code and receipt {D.DUP_RECEIPT_NO:02d} flagged as a duplicate.",
- say="Hand over the task, stay in Manual mode, and approve the steps you agree with.",
- point="Chat for questions. Cowork for tasks with steps and files.",
- backup=[("h", "Totals by campaign"), tbl(["Campaign", "Total"], RC_TABLE)],
- answer=[("h", "The two flags"), ("ul", [f"Receipt {D.NO_CODE_NO:02d} ({D.rc_no(D.NO_CODE_NO)}): Fresh Basket Foods, 100 food baskets, {kwd(D.RC_NOCODE)}, no campaign code.", f"Receipt {D.DUP_RECEIPT_NO:02d} ({D.rc_no(D.DUP_RECEIPT_NO)}): Little Coats Trading, {kwd(D.RC_DUP)}, in the folder twice; count it once."]),
-         ("h", "Totals (the copy counted once, receipt 09 on its own line)"), tbl(["Campaign", "Total"], RC_TABLE + [["No code (receipt 09)", kwd(D.RC_NOCODE)]])],
- deliverable="The Excel table and the 2 flags, checked against the receipts.",
- fallback="If Cowork is not on the account, attach the 15 files to a chat and run the same task there.",
- hint="One receipt has no campaign code. One receipt is in the folder twice.",
- stretch=["In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin."],
- stretch_prompts=[("Schedule it", "Schedule a task for every Thursday at 08:00. Read the new receipts in our Misbah receipts folder on Google Drive, update the table by campaign, and list any receipt with no campaign code or a duplicate. Ask me before you change any file.")])
-
-# ===================================================================== INTEGRATION · YOUR FIRST AI EMPLOYEE
+# ===================================================================== LAYER 4 · SCHEDULES AND YOUR FIRST AI EMPLOYEE
 def job(role, jobs, files, rules=f"{D.PHOTO_RULE} Never send, publish or pay: draft only and wait for my approval."):
     return f"You are Misbah Charity Society's AI {role}. Your jobs: {jobs} Use the files in this Project. End every answer with what you checked and what I must check. Rules: {rules}"
 ROLES = [("Producer", "write 60-second video scripts and shot lists for our campaigns, and a weekly content plan.", FILE_BRIEF,
@@ -307,15 +292,15 @@ ROLES = [("Producer", "write 60-second video scripts and shot lists for our camp
           "Plan five posts for the delivery week, one checked number in each."),
          ("Designer", "design posts and posters as artifacts in our brand colors, and check text against the brand guide.", FILE_BRAND,
           "Design one Instagram post for the first delivery day, as an artifact."),
-         ("Accountant", "check donations and receipts, total them by campaign, flag problems, and write a three-line note.", f"{FILE_DON}, the receipts table from Task 4.1",
+         ("Accountant", "check donations and receipts, total them by campaign, flag problems, and write a three-line note.", f"{FILE_DON}, the receipts table from Task 1.2",
           "Total donations by campaign, flag any duplicate, and write a three-line note.")]
-ROLE_LABEL = {"Producer": "brief · Marketing plugin", "Marketer": "brief, brand guide · Marketing plugin", "Designer": "brand guide · Marketing plugin", "Accountant": "donations, Task 4.1 table · Finance plugin"}
-ACC = [["Project", "Misbah AI Accountant: its job description, the donations file and the receipts table from Task 4.1."],
-       ["Skills", "The Finance plugin for reconciliation; the donor thank-you skill for letters."],
+ROLE_LABEL = {"Producer": "the campaign brief", "Marketer": "the brief and the brand guide", "Designer": "the brand guide", "Accountant": "donations and the Task 1.2 table"}
+ACC = [["Project", "Misbah AI Accountant: its job description, the donations file and the receipts table from Task 1.2."],
+       ["Skills", "The donor thank-you skill for letters."],
        ["Connectors", "Google Drive for the receipts folder; Gmail to read only."],
        ["Schedule", "Every Thursday at 08:00: the receipts table and a three-line note. Wait for my approval before anything is sent."]]
-demo("d42", day=1, skill="4.2", sec=8, title="The AI accountant, hired", tool="Claude · Project, plugin, schedule", files=[FILE_DON], kind="player",
- setup=["Create a Project for the role. Paste its job description below.", "Add the role's files. Add the plugin or skill it needs.", "Give it the first job. Check the result. Then schedule the weekly job."],
+demo("d42", day=1, skill="4.1", sec=8, title="The AI accountant, hired", tool="Claude · Project, skill, schedule", files=[FILE_DON], kind="player",
+ setup=["Create a Project for the role. Paste its job description below.", "Add the role's files, and the skill it needs.", "Give it the first job. Check the result. Then schedule the weekly job."],
  prompts=[(f"Job description · AI {r}", job(r.lower(), j, f)) for r, j, f, _first in ROLES],
  expected=f"The accountant Project returns donations by campaign ({kwd(D.TOTAL_CONTROL)} after the duplicate {D.DUP_RECEIPT} is removed), flags the duplicate, and writes a three-line note. The weekly task is scheduled for Thursday 08:00.",
  say="An AI employee is the same layers, set up for one job. You stay the manager.",
@@ -324,37 +309,23 @@ demo("d42", day=1, skill="4.2", sec=8, title="The AI accountant, hired", tool="C
  fallback="Show the backup note. Build the Project live if the room has time.",
  hint="Every job description ends with a rule: draft only, wait for approval.",
  player={"parts": ACC, "table": [["Weekly output", "From", "Who approves"], ["Donations by campaign", FILE_DON, "Fahad"], ["Receipts table and flags", "the receipts folder", "Fahad"], ["Three-line note", "both files", "General Manager"]], "best": 2,
-         "reco": ["<b>Job:</b> Project instructions. <b>Binder:</b> its files.", "<b>Procedures:</b> skills and the plugin. <b>Keys:</b> connectors.", "<b>Shift:</b> Thursday 08:00. <b>Manager:</b> you."],
+         "reco": ["<b>Job:</b> Project instructions. <b>Binder:</b> its files.", "<b>Procedures:</b> skills. <b>Keys:</b> connectors.", "<b>Shift:</b> Thursday 08:00. <b>Manager:</b> you."],
          "control": "Nothing is sent or paid until a person approves it."})
 
-demo("t42", day=1, skill="4.2", sec=8, title="Hire one AI employee", tool="Claude · Projects, skills, plugins", files=[FILE_BRIEF, FILE_BRAND, FILE_DON], kind="task", hands_on=True, minutes=20, solo="on your own",
- setup=["Choose a role. Create a Project named for it, for example Misbah AI Accountant.", "Paste its job description (Demo 4.2 on your prompt sheet) and add its files.",
-        "Add the role's plugin from the Plugins page. Run its first job from your prompt sheet.", "Check one fact. Write the employee card: role, tools, schedule, approvals."],
+demo("t42", day=1, skill="4.1", sec=8, title="Hire one AI employee", tool="Claude · Projects, skills, schedules", files=[FILE_BRIEF, FILE_BRAND, FILE_DON], kind="task", hands_on=True, minutes=15, solo="on your own",
+ setup=["Choose a role. Create a Project named for it, for example Misbah AI Accountant.", "Paste its job description (Demo 4.1 on your prompt sheet) and add its files.",
+        "Run its first job from your prompt sheet.", "Check one fact. Write the employee card: role, files, skills, shift, approvals."],
  prompts=[(f"{r} · {ROLE_LABEL[r]}", first) for r, _j, _f, first in ROLES],
- expected="One working AI employee Project with a job description, its files and one skill or plugin; a first output with one fact checked; an employee card.",
+ expected="One working AI employee Project with a job description and its files; a first output with one fact checked; an employee card.",
  say="Same recipe, four jobs. Which job would save your team the most time?",
  point="Hire it like a person: a job, a binder, procedures, keys, a shift and a manager.",
- backup=[("h", "The four role cards (also on the slide and the prompt sheet)"), tbl(["Role", "Files and plugin", "First job"], [(r, ROLE_LABEL[r], first) for r, _j, _f, first in ROLES])],
- answer=[("h", "What a finished AI employee has"), ("ul", ["A Project with the role's job description (with the approval rule).", "The role's files in the Project knowledge.", "The role's plugin added (Marketing, or Finance for the accountant), and one of its commands or skills used.", "A first output with one fact checked.", "An employee card: role, tools, schedule, what a person approves."]),
+ backup=[("h", "The four role cards (also on the slide and the prompt sheet)"), tbl(["Role", "Files", "First job"], [(r, ROLE_LABEL[r], first) for r, _j, _f, first in ROLES])],
+ answer=[("h", "What a finished AI employee has"), ("ul", ["A Project with the role's job description (with the approval rule).", "The role's files in the Project knowledge.", "The skill it needs, if any (the accountant: the donor thank-you skill).", "A first output with one fact checked.", "An employee card: role, tools, schedule, what a person approves."]),
          ("h", "The first job, for each role"), tbl(["Role", "First job", "Check"], [("Producer", ROLES[0][3], "The script uses the delivery start date and shows no faces"), ("Marketer", ROLES[1][3], f"Each post ends with {D.LINK}"), ("Designer", ROLES[2][3], "The colors match the brand guide"), ("Accountant", ROLES[3][3], f"{kwd(D.TOTAL_CONTROL)} and the duplicate {D.DUP_RECEIPT}; also accept receipt {D.DUP_RECEIPT_NO:02d} in the folder twice and receipt {D.NO_CODE_NO:02d} with no code")])],
  deliverable="A working AI employee Project, its first output checked, and its employee card.",
  fallback="Anyone short of time builds the accountant from the demo and runs its first job.",
  hint="The job description must end with the approval rule.",
  stretch=["Add the role's weekly job as a scheduled task (Scheduled › New task, or ask in the chat), set to wait for your approval."],
  stretch_prompts=[("Weekly job", "Schedule a task on this role's shift from the Four AI employees slide. Do its weekly job with the latest files in this Project. Save the result as a draft and wait for my approval.")])
-
-# ===================================================================== the opener (weak and strong)
-SHOWCASE = {
- "eyebrow": "Opener · the same request", "title": "Same tool. Same request. <span class=\"hl\">Two setups.</span>", "tool": "Claude", "file": FILE_BRIEF,
- "weak": WEAK_POST,
- "weak_answer": WEAK_ANSWER,
- "weak_flags": ["Three numbers", "Says “the needy”", "English only"],
- "parts": POST_PARTS,
- "table": [["Brand rule", "Plain chat", "In the Project"], ["One number", "Three", f"One: {D.FAMILIES:,} families"], ["Languages", "English only", "English, then Arabic"], ["Hashtags", "None", "Both"]],
- "strong_answer": [f"<b>This winter, {D.FAMILIES:,} families</b> get a warm home kit, delivered by hand.", "<i>(The same message in Arabic.)</i>", f"#MisbahWinter and our Arabic hashtag. <b>Give a kit:</b> {D.LINK}"],
- "strong_flags": ["Brand voice", "One checked number", "Both languages"],
- "score": [["Follows the brand guide?", "No", "Yes"], ["Numbers to check", "Three", "One"], ["Ready to post?", "Rewrite it", "After one check"]],
- "punch": "The layers decide the answer.", "punch_sub": "Same tool, same request, same file. What changed is what Claude already knows.",
-}
 
 AI_DEMOS = [k for k, v in DEMOS.items() if v.get("kind") in ("player", "showcase")]

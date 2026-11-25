@@ -64,7 +64,7 @@ def doc(name, title, blocks):
 KIT_ROWS = [["Item", "Unit cost (KWD)", "Per family", "Cost per family (KWD)"]] + [[i, f"{c:.3f}", str(q), f"{c * q:.3f}"] for i, c, q in D.KIT] + \
            [["Delivery", f"{D.DELIVERY_COST:.3f}", "1", f"{D.DELIVERY_COST:.3f}"], ["Total per family", "", "", f"{D.PER_FAMILY:.3f}"]]
 
-# ------------------------------------------------------------------ 1 · the winter campaign report (the source: Task 1.1, 1.3, Demo 1.2)
+# ------------------------------------------------------------------ 1 · the winter campaign report (the source: Task 1.1, 1.4, Demo 1.3)
 pdf(os.path.join(OUT, FILE_REPORT), "Winter Warmth 2026: campaign report (fictional)", [
     [Paragraph(f"{D.ORG}", B), Paragraph("Winter Warmth 2026: campaign report", T), Paragraph(f"Status at 24 November 2026 · Prepared by {D.HESSA}", B), Spacer(1, 6),
      Paragraph("1. Summary", H),
@@ -151,7 +151,7 @@ for i, line in enumerate(cap):
 dr.rectangle([0, H_ - 70, W_, H_], fill="#FFF4D6"); dr.text((W_ // 2, H_ - 35), "DRAFT · fictional training file · Misbah Charity Society is not real", font=F(20, True), fill="#7A5A00", anchor="mm")
 im.save(os.path.join(OUT, FILE_POST), optimize=True)
 
-# ------------------------------------------------------------------ 4 · the campaign brief (Project knowledge, Task 1.3 A, 3.1, 4.2)
+# ------------------------------------------------------------------ 4 · the campaign brief (Project knowledge, Task 1.4 A, 3.1, 4.1)
 doc(FILE_BRIEF, "Winter Warmth 2026 · campaign brief", [
     ("p", f"Owner: {D.NOURA}. Status: approved by the General Manager, 2 November 2026."),
     ("h", "Goal"), ("p", f"One warm home kit for each of the {D.FAMILIES:,} registered families, delivered by hand between {D.DELIVERY_START} and {D.DELIVERY_END}."),
@@ -237,7 +237,7 @@ def zwrite(path, members):
             z.writestr(zi, data)
 zwrite(os.path.join(OUT, FILE_SKILL), [("donor-thank-you/SKILL.md", SKILL_MD), ("donor-thank-you/template.md", TEMPLATE_MD)])
 
-# ------------------------------------------------------------------ 8 · the receipts folder: 14 receipts and 1 copy (Demo 4.1, Task 4.1)
+# ------------------------------------------------------------------ 8 · the receipts folder: 14 receipts and 1 copy (Demo 1.2, Task 1.2)
 def receipt_pdf(r):
     n, sup, what, qty, unit, code = r
     buf = io.BytesIO()

@@ -318,3 +318,10 @@ Aya: "No need for a map test. Omit it." This replaces every MAP item above (sect
 - New run of show: 09:00-09:10 welcome and setup check (a timer slide: sign in, download the sample files, open the prompt sheet) · 09:10-09:20 opener · 09:20-09:45 Layer 1 chat (Task 1.1 now 15 min) · unchanged to 12:15 · 12:15-12:50 integration (Task 4.2 now 20 min, show and tell 7 min) · 12:50-12:55 final survey (one QR slide) · 12:55-13:00 wrap and close.
 - Still 66 slides: the pre-MAP and post-MAP slides are replaced by the setup slide and the survey slide.
 - One logged engine change (CLAUDE.md decision 18, PLUGIN-FEEDBACK.md #7) so the hub and the trainer pages carry no MAP wording.
+
+## Change after the approval: restructure (25 November 2026, Aya)
+
+Aya: remove the opener slide ("Same tool. Same request. Two setups."), start with the layers directly, move Cowork right after the regular chat to show the difference, and leave plugins out for now.
+- Run of show: 09:00-09:10 setup check · 09:10-09:13 the four layers · 09:13-09:38 chat (Task 1.1) · 09:38-10:00 Cowork (Demo and Task 1.2, a "chat or Cowork" slide) · 10:00-10:30 artifacts (Demos 1.3 and 1.4, Task 1.4) · 10:30-10:40 coffee · 10:40-11:10 connectors · 11:10-11:40 memory and Projects (Task 3.1, 18 min with a share-out) · 11:40-11:55 Dhuhr · 11:55-12:20 Skills · 12:20-12:50 scheduled tasks and the AI employee (Demo and Task 4.1) · 12:50 survey · 12:55 wrap.
+- Plugins out: the plugin slide and its quick check, the plugin step in the AI employee task, the "starter kit" in the recipe, the plugin rows on the cheat sheet and in the guide. The final survey's outcome item no longer says "and plugins".
+- 63 slides (was 66). Task and demo numbers follow the new order.

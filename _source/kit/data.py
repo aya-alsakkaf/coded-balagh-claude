@@ -120,7 +120,7 @@ EMAILS = [  # (from, subject, received, gist, needs a reply)
 ]
 URGENT = EMAILS[0]
 
-# ------------------------------------------------------------------ the receipts folder (Demo 4.1, Task 4.1): (no., supplier, what, qty, unit, campaign code or "")
+# ------------------------------------------------------------------ the receipts folder (Demo 1.2, Task 1.2): (no., supplier, what, qty, unit, campaign code or "")
 RECEIPTS = [
     (1, "Sadu Textiles", "Blankets", 400, 4.750, "WW"),
     (2, "Al-Rayyan Heaters Co.", "Heaters", 180, 13.500, "WW"),

@@ -12,7 +12,7 @@ Live: https://coded-balagh-claude.vercel.app
 |---|---|---|
 | `/` → `/coded-balagh-claude` | Workshop home | Everyone |
 | `/day1` → `/coded-balagh-claude-day-1` | The day: run of show, files, survey QR code | Everyone |
-| `/slides1` → `/coded-balagh-claude-day-1-deck` | The deck (66 slides, no notes) | Everyone |
+| `/slides1` → `/coded-balagh-claude-day-1-deck` | The deck (63 slides, no notes) | Everyone |
 | `/coded-balagh-claude-prompt-sheet-day-1` | Every prompt, with COPY | Everyone |
 | `/coded-balagh-claude-lab-day-1` | Browser lab: check the dashboard | Everyone |
 | `/coded-balagh-claude-cheat-sheet`, `-safe-use-card`, `-take-home-guide` | Take-aways | Everyone |

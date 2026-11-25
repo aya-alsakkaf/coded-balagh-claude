@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-25 · Restructure (Aya)
+
+- Opener removed; the day starts with the four layers. Cowork moved right after chat, with a new "chat or Cowork" slide. Plugins left out for now. 63 slides.
+- New timing: coffee 10:30; Task 1.2 (Cowork) 12 min, Task 3.1 18 min, Task 4.1 15 min. Tasks and demos renumbered to the new order. Final survey item q_can4 updated in the portal.
+
 ## 2026-11-24 · Shipped
 
 - QA round 6: 9.80 / 10, pass. Final survey published in the portal. Pushed to GitHub; Vercel project `coded-balagh-claude` deploys `main` to production.

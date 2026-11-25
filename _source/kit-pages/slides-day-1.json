@@ -45,106 +45,6 @@
 },
 {
 "n": 3,
-"id": "o_story",
-"kind": "story",
-"title": "Opener · the question",
-"topic": "open",
-"kit": [
-"Opener · the question",
-"Thursday 19 November, 08:30",
-"Misbah's General Manager closes his laptop and asks the team: “We use Claude every day. Why does it still feel like a chat box?” Noura asks Claude for a winter post. She gets a nice post that could belong to any charity.",
-"Same Claude. Different setups.",
-"See what each layer adds, before you build them.",
-"·"
-],
-"chrome": [
-"The starting point",
-"By the end of this block:"
-]
-},
-{
-"n": 4,
-"id": "o_ws",
-"kind": "showcase",
-"title": "Opener · weak and strong prompt",
-"topic": "open",
-"kit": [
-"Opener · the same request",
-"Same tool. Same request. Two setups.",
-"misbah-campaign-brief.docx",
-"Write a post for our winter campaign.",
-"Claude",
-"The layers decide the answer.",
-"Same tool, same request, same file. What changed is what Claude already knows.",
-"This winter, 1,020 families need warmth. Only KWD 46.500 buys a winter kit, and 64 volunteers deliver them.",
-"Help the needy stay warm. Donate now: misbah-charity.example/give",
-"Three numbers",
-"Says “the needy”",
-"English only",
-"Same request",
-"Write a post for our winter campaign.",
-"Project",
-"Sent inside the Misbah Winter Campaign Project.",
-"Instructions",
-"Already in the Project: our voice, English then Arabic, one checked number, end with the link.",
-"Knowledge",
-"Already in the Project: the brand guide and the campaign brief.",
-"Brand rule",
-"Plain chat",
-"In the Project",
-"One number",
-"Three",
-"One: 1,020 families",
-"Languages",
-"English only",
-"English, then Arabic",
-"Hashtags",
-"None",
-"Both",
-"This winter, 1,020 families get a warm home kit, delivered by hand.",
-"(The same message in Arabic.)",
-"#MisbahWinter and our Arabic hashtag. Give a kit: misbah-charity.example/give",
-"Brand voice",
-"One checked number",
-"Both languages",
-"Follows the brand guide?",
-"No",
-"Yes",
-"Numbers to check",
-"Three",
-"One",
-"Ready to post?",
-"Rewrite it",
-"After one check"
-],
-"chrome": [
-"Same file",
-"Weak prompt",
-"Weak result",
-"Strong result",
-"Compare",
-"The lesson",
-"Strong prompt",
-"Weak",
-"Strong",
-"Message",
-"next",
-"back",
-"replay",
-"Space",
-"Enter",
-"R",
-"Example",
-"typical result",
-"Fictional training data from",
-"W",
-"X",
-"P",
-"PDF"
-]
-},
-{
-"n": 5,
 "id": "outcomes1",
 "kind": "outcomes",
 "title": "Outcomes",
@@ -153,7 +53,7 @@
 "Choose between trained knowledge and web search, and give Claude files to work from.",
 "Turn a spreadsheet or an idea into an artifact you can share.",
 "Connect email and calendar, with every send under your approval.",
-"Teach Claude once with memory, instructions, a Project and a Skill, and find ready-made skills and plugins.",
+"Teach Claude once with memory, instructions, a Project and a Skill, and find ready-made skills.",
 "Explain Cowork and scheduled tasks, and set up one AI employee for a role."
 ],
 "chrome": [
@@ -163,7 +63,7 @@
 ]
 },
 {
-"n": 6,
+"n": 4,
 "id": "road1",
 "kind": "road",
 "title": "Today's map",
@@ -174,30 +74,30 @@
 "09:00-09:10",
 "Welcome and setup check",
 "Claude open and signed in; the sample files downloaded",
-"09:10-09:20",
-"Opener: one request, two setups",
-"The roadmap: Claude in four layers",
-"09:20-09:45",
+"09:10-09:13",
+"The four layers",
+"Today's map: Claude in four layers",
+"09:13-09:38",
 "Layer 1 · Chat: ask, attach, speak",
 "Web search, files, voice · Task 1.1",
-"09:45-10:15",
+"09:38-10:00",
+"Layer 1 · Cowork: hand Claude a folder",
+"Chat or Cowork: see the difference · Task 1.2",
+"10:00-10:30",
 "Layer 1 · Artifacts: from an answer to a tool",
-"Calculator, dashboard, deck, doc, game · Task 1.3",
-"10:25-10:55",
+"Calculator, dashboard, deck, doc, game · Task 1.4",
+"10:40-11:10",
 "Layer 2 · Connectors: your email and calendar",
 "Gmail, Google Calendar, approvals, safe use · Task 2.1",
-"10:55-11:15",
+"11:10-11:40",
 "Layer 3 · Memory, instructions and Projects",
 "Where to teach Claude what · Task 3.1",
-"11:15-11:40",
+"11:55-12:20",
 "Layer 3 · Skills: teach Claude a task once",
 "Create, upload, find, use with / · Task 3.2",
-"11:55-12:15",
-"Layer 4 · Cowork, plugins and scheduled tasks",
-"Hand Claude a folder; role plugins; scheduled tasks · Task 4.1",
-"12:15-12:50",
-"Integration · Hire your first AI employee",
-"Producer, marketer, designer or accountant · Task 4.2",
+"12:20-12:50",
+"Layer 4 · Scheduled tasks and your first AI employee",
+"Producer, marketer, designer or accountant · Task 4.1",
 "12:50-12:55",
 "Final survey",
 "One QR code · 5 minutes",
@@ -210,27 +110,27 @@
 ]
 },
 {
-"n": 7,
+"n": 5,
 "id": "o_layers",
 "kind": "scene",
 "title": "Claude in four layers.",
 "topic": "open",
 "kit": [
-"Opener · the roadmap",
+"Today · the roadmap",
 "Claude in four layers.",
-"Each layer gives Claude something a new colleague needs: the conversation, then keys to your apps, then training, then work it does on its own. Today you switch them on, one by one.",
-"Chat · Connectors · Teach once · Cowork and schedules.",
+"Each layer gives Claude something a new colleague needs: the conversation and its own tasks, then keys to your apps, then training, then a shift of its own. Today you switch them on, one by one.",
+"Chat and Cowork · Connectors · Teach once · Schedules.",
 "You, the manager",
-"1 · Chat and artifacts",
+"1 · Chat, Cowork, artifacts",
 "2 · Connectors",
 "3 · Memory, Projects, Skills",
-"4 · Cowork and schedules",
+"4 · Scheduled tasks",
 "Your AI employee"
 ],
 "chrome": []
 },
 {
-"n": 8,
+"n": 6,
 "id": "l1story",
 "kind": "story",
 "title": "Layer 1 · Chat",
@@ -249,7 +149,7 @@
 ]
 },
 {
-"n": 9,
+"n": 7,
 "id": "l1scene",
 "kind": "scene",
 "title": "A library book and today's newspaper.",
@@ -268,7 +168,7 @@
 "chrome": []
 },
 {
-"n": 10,
+"n": 8,
 "id": "l1llm",
 "kind": "llm",
 "title": "Trained knowledge is a prediction.",
@@ -334,7 +234,7 @@
 ]
 },
 {
-"n": 11,
+"n": 9,
 "id": "l1pp",
 "kind": "player",
 "title": "Demo 1.1 · playback",
@@ -408,7 +308,7 @@
 ]
 },
 {
-"n": 12,
+"n": 10,
 "id": "l1files",
 "kind": "table",
 "title": "Give Claude the source, not a summary of it.",
@@ -445,7 +345,7 @@
 "chrome": []
 },
 {
-"n": 13,
+"n": 11,
 "id": "l1chk",
 "kind": "check",
 "title": "Quick check",
@@ -466,7 +366,7 @@
 ]
 },
 {
-"n": 14,
+"n": 12,
 "id": "l1fchk",
 "kind": "check",
 "title": "Quick check",
@@ -487,7 +387,7 @@
 ]
 },
 {
-"n": 15,
+"n": 13,
 "id": "l1task",
 "kind": "task",
 "title": "Your turn 1.1",
@@ -535,16 +435,229 @@
 "If the tool is slow, continue from the backup on the screen.",
 "Where we are",
 "Chat",
+"Cowork",
 "Artifacts",
 "Connectors",
 "Projects",
 "Skills",
-"Cowork",
 "AI employee"
 ]
 },
 {
+"n": 14,
+"id": "cwstory",
+"kind": "story",
+"title": "Layer 1 · Cowork",
+"topic": "l1c",
+"kit": [
+"Layer 1 · Cowork",
+"Thursday 26 November, 08:00",
+"Before each board pack, Fahad sorts the month's receipts by campaign. Fifteen files, one spreadsheet, the whole morning. The board pack is due Monday at 12:00.",
+"Hand over the task. Keep the decision.",
+"Give Cowork a folder, then compare it with the chat you just used.",
+"01"
+],
+"chrome": [
+"The starting point",
+"By the end of this block:"
+]
+},
+{
+"n": 15,
+"id": "cwterm",
+"kind": "term",
+"title": "Hand over a task, not a question.",
+"topic": "l1c",
+"kit": [
+"Layer 1 · the idea",
+"Hand over a task, not a question.",
+"Cowork",
+"Cowork is Claude working through a task with several steps: it reads a folder, makes a plan, creates Excel, Word or slides, and asks you before risky steps. In the new Claude experience, chat and Cowork share one message box.",
+"Chat: you ask, Claude answers…",
+"…Cowork: you hand over a task, Claude delivers files.",
+"Older accounts: select Cowork in the message box. New experience: ask in any chat."
+],
+"chrome": [
+"The idea"
+]
+},
+{
 "n": 16,
+"id": "cwdiff",
+"kind": "table",
+"title": "The same files, two ways to work.",
+"topic": "l1c",
+"kit": [
+"Layer 1 · chat or Cowork",
+"The same files, two ways to work.",
+"Chat answers. Cowork delivers. You stay the manager.",
+"Chat (Task 1.1)",
+"Cowork (Task 1.2)",
+"You give it",
+"A question and a few files",
+"A task and a whole folder",
+"It works",
+"One answer in the chat",
+"A plan, then every file, step by step",
+"You get",
+"Text to read and copy",
+"A finished file: Excel, Word or slides",
+"You approve",
+"You read the answer",
+"Risky steps, such as creating or deleting a file",
+"Best for",
+"Questions and drafts",
+"Tasks with steps and many files"
+],
+"chrome": []
+},
+{
+"n": 17,
+"id": "cwpp",
+"kind": "player",
+"title": "Demo 1.2 · playback",
+"topic": "l1c",
+"kit": [
+"Demo 1.2",
+"Hand Cowork the receipts folder",
+"Claude",
+"Decide the campaign for the receipt with no code before the report goes to the board.",
+"Folder",
+"The misbah-receipts-nov-2026 folder: 15 receipt files and a README.",
+"Task",
+"Read every receipt. Build an Excel table: date, supplier, campaign code, amount in KWD. Add totals by campaign.",
+"Flag",
+"List any receipt with no campaign code, and any receipt that is in the folder twice.",
+"Mode",
+"Manual: ask me before you create or delete any file.",
+"Campaign",
+"Total",
+"Winter Warmth (WW)",
+"KWD 11,987.500",
+"Ramadan Iftar 2027 (RI)",
+"KWD 150.000",
+"Orphan Sponsorship (OS)",
+"KWD 435.000",
+"Water Wells (WL)",
+"KWD 1,500.000",
+"Flag 1: one receipt has no campaign code.",
+"Flag 2: one receipt is in the folder twice. Counted once.",
+"Made: one Excel file in the folder, after your approval.",
+"misbah-receipts-nov-2026.zip"
+],
+"chrome": [
+"Prompt playback",
+"Example",
+"typical result",
+"the perfect run",
+"fictional data",
+"Press",
+"to build the prompt, one part at a time",
+"file attached",
+"files attached",
+"Message",
+"The formula",
+"Send",
+"Result",
+"Decision",
+"Back",
+"Replay",
+"Next",
+"next step",
+"back",
+"replay",
+"Space",
+"Enter",
+"R",
+"Playback of the ideal run. The live tool may word it differently. All figures are fictional training data.",
+"Word",
+"Excel",
+"PowerPoint",
+"PDF",
+"Email",
+"Text",
+"file",
+"W",
+"X",
+"P",
+"CSV",
+"T",
+"F"
+]
+},
+{
+"n": 18,
+"id": "cwchk",
+"kind": "check",
+"title": "Quick check",
+"topic": "l1c",
+"kit": [
+"Fahad has a folder of receipts to sort into one Excel table. He has never done it with Claude. Where does he start?",
+"A scheduled task for every Thursday",
+"A chat, pasting each receipt one by one",
+"A Cowork task on the folder, in Manual mode"
+],
+"chrome": [
+"Quick check",
+"A",
+"B",
+"C",
+"Correct",
+"Not quite"
+]
+},
+{
+"n": 19,
+"id": "cwtask",
+"kind": "task",
+"title": "Your turn 1.2",
+"topic": "l1c",
+"kit": [
+"Task 1.2",
+"on your own",
+"Claude · Cowork",
+"One receipt has no campaign code. One receipt is in the folder twice.",
+"In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat.",
+"misbah-receipts-nov-2026.zip",
+"Unzip misbah-receipts-nov-2026.zip on your laptop.",
+"Start a Cowork task in the Claude desktop app and add the folder. Choose Manual mode.",
+"Paste the task. Approve each step you agree with.",
+"Open the Excel file. Check the two flags against the receipts.",
+"The task",
+"Read every receipt. Build an Excel table: date, supplier, campaign code, amount in KWD. Add totals by campaign. List any receipt with no campaign code, and any receipt that is in the folder twice. Manual: ask me before you create or delete any file.",
+"Claude slow, or a feature missing on your account? Continue from the backup.",
+"Your turn: hand Cowork a folder.",
+"Layer 1 · Cowork"
+],
+"chrome": [
+"Your turn",
+"Finished early?",
+"What to look for",
+"Weak prompt",
+"Your rewrite",
+"points",
+"+1 min",
+"Reset",
+"Your time",
+"min",
+"Time",
+"Copy",
+"copy, paste, then check",
+"is on your",
+"prompt sheet",
+"If the tool is slow, continue from the backup on the screen.",
+"Where we are",
+"Chat",
+"Cowork",
+"Artifacts",
+"Connectors",
+"Projects",
+"Skills",
+"AI employee"
+]
+},
+{
+"n": 20,
 "id": "abstory",
 "kind": "story",
 "title": "Layer 1 · Artifacts",
@@ -563,7 +676,7 @@
 ]
 },
 {
-"n": 17,
+"n": 21,
 "id": "abterm",
 "kind": "term",
 "title": "An answer you read once. A tool you keep.",
@@ -582,7 +695,7 @@
 ]
 },
 {
-"n": 18,
+"n": 22,
 "id": "abmenu",
 "kind": "table",
 "title": "Six things to ask for today.",
@@ -616,13 +729,13 @@
 "chrome": []
 },
 {
-"n": 19,
+"n": 23,
 "id": "abcalc",
 "kind": "widget",
-"title": "Demo 1.2",
+"title": "Demo 1.3",
 "topic": "l1b",
 "kit": [
-"Demo 1.2 · a live artifact",
+"Demo 1.3 · a live artifact",
 "A calculator you can ask Claude for.",
 "Ask for a tool, not a paragraph.",
 "Claude · artifact",
@@ -631,13 +744,13 @@
 "chrome": []
 },
 {
-"n": 20,
+"n": 24,
 "id": "abpp",
 "kind": "player",
-"title": "Demo 1.3 · playback",
+"title": "Demo 1.4 · playback",
 "topic": "l1b",
 "kit": [
-"Demo 1.3",
+"Demo 1.4",
 "A donations dashboard from the Excel file",
 "Claude",
 "The totals do not match. Find the difference before you share.",
@@ -710,7 +823,7 @@
 ]
 },
 {
-"n": 21,
+"n": 25,
 "id": "ablist",
 "kind": "list",
 "title": "Change it, check it, then share it.",
@@ -727,7 +840,7 @@
 "chrome": []
 },
 {
-"n": 22,
+"n": 26,
 "id": "abchk",
 "kind": "check",
 "title": "Quick check",
@@ -748,13 +861,13 @@
 ]
 },
 {
-"n": 23,
+"n": 27,
 "id": "abtask",
 "kind": "task",
-"title": "Your turn 1.3",
+"title": "Your turn 1.4",
 "topic": "l1b",
 "kit": [
-"Task 1.3",
+"Task 1.4",
 "on your own",
 "Claude · artifacts",
 "A total that is too high often hides a row counted twice.",
@@ -798,16 +911,16 @@
 "If the tool is slow, continue from the backup on the screen.",
 "Where we are",
 "Chat",
+"Cowork",
 "Artifacts",
 "Connectors",
 "Projects",
 "Skills",
-"Cowork",
 "AI employee"
 ]
 },
 {
-"n": 24,
+"n": 28,
 "id": "l2story",
 "kind": "story",
 "title": "Layer 2 · Connectors",
@@ -826,7 +939,7 @@
 ]
 },
 {
-"n": 25,
+"n": 29,
 "id": "l2scene",
 "kind": "scene",
 "title": "A visitor badge opens some doors, not all.",
@@ -845,7 +958,7 @@
 "chrome": []
 },
 {
-"n": 26,
+"n": 30,
 "id": "l2term",
 "kind": "term",
 "title": "Claude reads the app. You hold the keys.",
@@ -864,7 +977,7 @@
 ]
 },
 {
-"n": 27,
+"n": 31,
 "id": "l2pp",
 "kind": "player",
 "title": "Demo 2.1 · playback",
@@ -940,7 +1053,7 @@
 ]
 },
 {
-"n": 28,
+"n": 32,
 "id": "l2rules",
 "kind": "table",
 "title": "You decide what Claude may do.",
@@ -968,7 +1081,7 @@
 "chrome": []
 },
 {
-"n": 29,
+"n": 33,
 "id": "l2sort",
 "kind": "sort",
 "title": "Green, amber or red? Tap a card.",
@@ -993,7 +1106,7 @@
 ]
 },
 {
-"n": 30,
+"n": 34,
 "id": "l2chk",
 "kind": "check",
 "title": "Quick check",
@@ -1014,7 +1127,7 @@
 ]
 },
 {
-"n": 31,
+"n": 35,
 "id": "l2task",
 "kind": "task",
 "title": "Your turn 2.1",
@@ -1057,16 +1170,16 @@
 "If the tool is slow, continue from the backup on the screen.",
 "Where we are",
 "Chat",
+"Cowork",
 "Artifacts",
 "Connectors",
 "Projects",
 "Skills",
-"Cowork",
 "AI employee"
 ]
 },
 {
-"n": 32,
+"n": 36,
 "id": "l3story",
 "kind": "story",
 "title": "Layer 3 · Teach once",
@@ -1085,7 +1198,7 @@
 ]
 },
 {
-"n": 33,
+"n": 37,
 "id": "l3where",
 "kind": "table",
 "title": "Four places to teach Claude.",
@@ -1118,7 +1231,7 @@
 "chrome": []
 },
 {
-"n": 34,
+"n": 38,
 "id": "l3term",
 "kind": "term",
 "title": "One area of work. One Project.",
@@ -1137,7 +1250,7 @@
 ]
 },
 {
-"n": 35,
+"n": 39,
 "id": "l3pp",
 "kind": "player",
 "title": "Demo 3.1 · playback",
@@ -1214,7 +1327,7 @@
 ]
 },
 {
-"n": 36,
+"n": 40,
 "id": "l3chk",
 "kind": "check",
 "title": "Quick check",
@@ -1235,7 +1348,7 @@
 ]
 },
 {
-"n": 37,
+"n": 41,
 "id": "l3task",
 "kind": "task",
 "title": "Your turn 3.1",
@@ -1281,16 +1394,16 @@
 "If the tool is slow, continue from the backup on the screen.",
 "Where we are",
 "Chat",
+"Cowork",
 "Artifacts",
 "Connectors",
 "Projects",
 "Skills",
-"Cowork",
 "AI employee"
 ]
 },
 {
-"n": 38,
+"n": 42,
 "id": "l3mem",
 "kind": "list",
 "title": "Memory: what Claude keeps between chats.",
@@ -1307,7 +1420,7 @@
 "chrome": []
 },
 {
-"n": 39,
+"n": 43,
 "id": "l3memchk",
 "kind": "check",
 "title": "Quick check",
@@ -1328,7 +1441,7 @@
 ]
 },
 {
-"n": 40,
+"n": 44,
 "id": "skstory",
 "kind": "story",
 "title": "Layer 3 · Skills",
@@ -1347,7 +1460,7 @@
 ]
 },
 {
-"n": 41,
+"n": 45,
 "id": "skscene",
 "kind": "scene",
 "title": "A recipe card in the kitchen drawer.",
@@ -1368,7 +1481,7 @@
 "chrome": []
 },
 {
-"n": 42,
+"n": 46,
 "id": "skterm",
 "kind": "term",
 "title": "Teach a method once.",
@@ -1387,7 +1500,7 @@
 ]
 },
 {
-"n": 43,
+"n": 47,
 "id": "skanat",
 "kind": "table",
 "title": "What is inside a Skill?",
@@ -1418,7 +1531,7 @@
 "chrome": []
 },
 {
-"n": 44,
+"n": 48,
 "id": "skpp",
 "kind": "player",
 "title": "Demo 3.2 · playback",
@@ -1491,7 +1604,7 @@
 ]
 },
 {
-"n": 45,
+"n": 49,
 "id": "skfind",
 "kind": "list",
 "title": "Search first. Build only what is missing.",
@@ -1508,7 +1621,7 @@
 "chrome": []
 },
 {
-"n": 46,
+"n": 50,
 "id": "skchk",
 "kind": "check",
 "title": "Quick check",
@@ -1529,7 +1642,7 @@
 ]
 },
 {
-"n": 47,
+"n": 51,
 "id": "sktask",
 "kind": "task",
 "title": "Your turn 3.2",
@@ -1572,26 +1685,26 @@
 "If the tool is slow, continue from the backup on the screen.",
 "Where we are",
 "Chat",
+"Cowork",
 "Artifacts",
 "Connectors",
 "Projects",
 "Skills",
-"Cowork",
 "AI employee"
 ]
 },
 {
-"n": 48,
-"id": "l4story",
+"n": 52,
+"id": "aestory",
 "kind": "story",
-"title": "Layer 4 · Cowork",
-"topic": "l4",
+"title": "Layer 4 · Your first AI employee",
+"topic": "l5",
 "kit": [
-"Layer 4 · Cowork",
-"Thursday 26 November, 08:00",
-"Before each board pack, Fahad sorts the month's receipts by campaign. Fifteen files, one spreadsheet, the whole morning. The board pack is due Monday at 12:00.",
-"Hand over the task. Keep the decision.",
-"Give Cowork a folder, add a plugin and schedule the weekly job.",
+"Layer 4 · Your first AI employee",
+"Thursday 26 November, 12:15",
+"The General Manager asks: “Can Claude be our producer, our marketer, our designer and our accountant?” Yes, if you set it up the way you set up a new hire.",
+"An AI employee is the layers, set up for one job.",
+"Hire one AI employee for one Misbah role, and test its first job.",
 "04"
 ],
 "chrome": [
@@ -1600,153 +1713,11 @@
 ]
 },
 {
-"n": 49,
-"id": "l4term",
-"kind": "term",
-"title": "Hand over a task, not a question.",
-"topic": "l4",
-"kit": [
-"Layer 4 · the idea",
-"Hand over a task, not a question.",
-"Cowork",
-"Cowork is Claude working through a task with several steps: it reads a folder, makes a plan, creates Excel, Word or slides, and asks you before risky steps. In the new Claude experience, chat and Cowork share one message box.",
-"Chat: you ask, Claude answers…",
-"…Cowork: you hand over a task, Claude delivers files.",
-"Older accounts: select Cowork in the message box. New experience: ask in any chat."
-],
-"chrome": [
-"The idea"
-]
-},
-{
-"n": 50,
-"id": "l4pp",
-"kind": "player",
-"title": "Demo 4.1 · playback",
-"topic": "l4",
-"kit": [
-"Demo 4.1",
-"Hand Cowork the receipts folder",
-"Claude",
-"Decide the campaign for the receipt with no code before the report goes to the board.",
-"Folder",
-"The misbah-receipts-nov-2026 folder: 15 receipt files and a README.",
-"Task",
-"Read every receipt. Build an Excel table: date, supplier, campaign code, amount in KWD. Add totals by campaign.",
-"Flag",
-"List any receipt with no campaign code, and any receipt that is in the folder twice.",
-"Mode",
-"Manual: ask me before you create or delete any file.",
-"Campaign",
-"Total",
-"Winter Warmth (WW)",
-"KWD 11,987.500",
-"Ramadan Iftar 2027 (RI)",
-"KWD 150.000",
-"Orphan Sponsorship (OS)",
-"KWD 435.000",
-"Water Wells (WL)",
-"KWD 1,500.000",
-"Flag 1: one receipt has no campaign code.",
-"Flag 2: one receipt is in the folder twice. Counted once.",
-"Made: one Excel file in the folder, after your approval.",
-"misbah-receipts-nov-2026.zip"
-],
-"chrome": [
-"Prompt playback",
-"Example",
-"typical result",
-"the perfect run",
-"fictional data",
-"Press",
-"to build the prompt, one part at a time",
-"file attached",
-"files attached",
-"Message",
-"The formula",
-"Send",
-"Result",
-"Decision",
-"Back",
-"Replay",
-"Next",
-"next step",
-"back",
-"replay",
-"Space",
-"Enter",
-"R",
-"Playback of the ideal run. The live tool may word it differently. All figures are fictional training data.",
-"Word",
-"Excel",
-"PowerPoint",
-"PDF",
-"Email",
-"Text",
-"file",
-"W",
-"X",
-"P",
-"CSV",
-"T",
-"F"
-]
-},
-{
-"n": 51,
-"id": "l4plug",
-"kind": "table",
-"title": "Plugins: a starter kit for a role.",
-"topic": "l4",
-"kit": [
-"Layer 4 · plugins",
-"Plugins: a starter kit for a role.",
-"Plugins page: browse, then Add (older layout: Customize › Plugins). Then make it fit Misbah.",
-"Plugin",
-"What it bundles",
-"Try it on",
-"Marketing",
-"/campaign-plan, /draft-content, /brand-review",
-"The Ramadan Iftar 2027 plan",
-"Finance",
-"Reconciliation, statements, variance analysis",
-"The November donations",
-"Productivity",
-"Tasks, your day, your calendar and email",
-"Sunday's plan",
-"Small business",
-"Skills for finance, marketing, operations and hiring",
-"A first look at all of them"
-],
-"chrome": []
-},
-{
-"n": 52,
-"id": "l4pchk",
-"kind": "check",
-"title": "Quick check",
-"topic": "l4",
-"kit": [
-"Which need does a plugin meet best?",
-"One rule you want in every chat",
-"Ready-made skills and commands for a whole role",
-"The files for one campaign"
-],
-"chrome": [
-"Quick check",
-"A",
-"B",
-"C",
-"Correct",
-"Not quite"
-]
-},
-{
 "n": 53,
-"id": "l4sched",
+"id": "aesched",
 "kind": "term",
 "title": "The same job, on a time you set.",
-"topic": "l4",
+"topic": "l5",
 "kit": [
 "Layer 4 · schedules",
 "The same job, on a time you set.",
@@ -1762,10 +1733,10 @@
 },
 {
 "n": 54,
-"id": "l4schk",
+"id": "aeschk",
 "kind": "check",
 "title": "Quick check",
-"topic": "l4",
+"topic": "l5",
 "kit": [
 "Fahad's weekly receipts job must run even when his laptop is closed. Where should it read the receipts from?",
 "The Downloads folder on his laptop",
@@ -1783,169 +1754,78 @@
 },
 {
 "n": 55,
-"id": "l4chk",
-"kind": "check",
-"title": "Quick check",
-"topic": "l4",
-"kit": [
-"Fahad has a folder of receipts to sort into one Excel table. He has never done it with Claude. Where does he start?",
-"A scheduled task for every Thursday",
-"A chat, pasting each receipt one by one",
-"A Cowork task on the folder, in Manual mode"
-],
-"chrome": [
-"Quick check",
-"A",
-"B",
-"C",
-"Correct",
-"Not quite"
-]
-},
-{
-"n": 56,
-"id": "l4task",
-"kind": "task",
-"title": "Your turn 4.1",
-"topic": "l4",
-"kit": [
-"Task 4.1",
-"on your own",
-"Claude · Cowork",
-"One receipt has no campaign code. One receipt is in the folder twice.",
-"In an account your organization approved, put the unzipped folder on Google Drive and turn on Google Drive in + › Connectors. Then schedule the job for every Thursday at 08:00: Scheduled › New task, or ask in the chat. Or add the Finance plugin.",
-"misbah-receipts-nov-2026.zip",
-"Unzip misbah-receipts-nov-2026.zip on your laptop.",
-"Start a Cowork task in the Claude desktop app and add the folder. Choose Manual mode.",
-"Paste the task. Approve each step you agree with.",
-"Open the Excel file. Check the two flags against the receipts.",
-"The task",
-"Read every receipt. Build an Excel table: date, supplier, campaign code, amount in KWD. Add totals by campaign. List any receipt with no campaign code, and any receipt that is in the folder twice. Manual: ask me before you create or delete any file.",
-"Claude slow, or a feature missing on your account? Continue from the backup.",
-"Your turn: hand Cowork a folder.",
-"Layer 4 · Cowork, plugins, schedules"
-],
-"chrome": [
-"Your turn",
-"Finished early?",
-"What to look for",
-"Weak prompt",
-"Your rewrite",
-"points",
-"+1 min",
-"Reset",
-"Your time",
-"min",
-"Time",
-"Copy",
-"copy, paste, then check",
-"is on your",
-"prompt sheet",
-"If the tool is slow, continue from the backup on the screen.",
-"Where we are",
-"Chat",
-"Artifacts",
-"Connectors",
-"Projects",
-"Skills",
-"Cowork",
-"AI employee"
-]
-},
-{
-"n": 57,
-"id": "aestory",
-"kind": "story",
-"title": "Integration · Your first AI employee",
-"topic": "l5",
-"kit": [
-"Integration · Your first AI employee",
-"Thursday 26 November, 12:15",
-"The General Manager asks: “Can Claude be our producer, our marketer, our designer and our accountant?” Yes, if you set it up the way you set up a new hire.",
-"An AI employee is the layers, set up for one job.",
-"Hire one AI employee for one Misbah role, and test its first job.",
-"·"
-],
-"chrome": [
-"The starting point",
-"By the end of this block:"
-]
-},
-{
-"n": 58,
 "id": "aescene",
 "kind": "scene",
 "title": "Hire it like a person.",
 "topic": "l5",
 "kit": [
-"Integration · the recipe",
+"Layer 4 · the recipe",
 "Hire it like a person.",
-"A new hire gets a job description, a binder, the team's procedures, keys, a shift and a manager. An AI employee needs the same things, plus a starter kit.",
-"Job · binder · procedures · keys · starter kit · shift · manager.",
+"A new hire gets a job description, a binder, the team's procedures, keys, a shift and a manager. An AI employee needs the same things.",
+"Job · binder · procedures · keys · shift · manager.",
 "AI accountant",
 "Job: instructions",
 "Binder: files",
 "Procedures: Skills",
 "Keys: connectors",
-"Starter kit: plugin",
 "Shift: schedule",
 "Manager: you"
 ],
 "chrome": []
 },
 {
-"n": 59,
+"n": 56,
 "id": "aetable",
 "kind": "table",
 "title": "Four AI employees for Misbah.",
 "topic": "l5",
 "kit": [
-"Integration · four roles",
+"Layer 4 · four roles",
 "Four AI employees for Misbah.",
 "Same recipe, four jobs. You stay the manager.",
 "Role",
 "Its job",
-"Skills or plugin",
+"Skill",
 "Connectors",
 "Shift",
 "Producer",
 "Scripts and shot lists from the brief",
-"Marketing plugin, a video-script skill",
+"A video-script skill",
 "Google Drive",
 "Sunday: the content plan",
 "Marketer",
 "Posts and captions in the brand voice",
-"Marketing plugin",
+"A post-checklist skill",
 "Google Drive, Gmail drafts",
 "Monday: the post plan",
 "Designer",
 "Posts and posters as artifacts",
-"Marketing plugin (/brand-review)",
+"A brand-check skill",
 "Google Drive",
 "Wednesday 09:00: the week's designs",
 "Accountant",
 "Donations, receipts, a three-line note",
-"Finance plugin, thank-you skill",
+"The donor thank-you skill",
 "Google Drive, Gmail to read",
 "Thursday 08:00"
 ],
 "chrome": []
 },
 {
-"n": 60,
+"n": 57,
 "id": "aepp",
 "kind": "player",
-"title": "Demo 4.2 · playback",
+"title": "Demo 4.1 · playback",
 "topic": "l5",
 "kit": [
-"Demo 4.2",
+"Demo 4.1",
 "The AI accountant, hired",
 "Claude",
 "Nothing is sent or paid until a person approves it.",
 "Project",
-"Misbah AI Accountant: its job description, the donations file and the receipts table from Task 4.1.",
+"Misbah AI Accountant: its job description, the donations file and the receipts table from Task 1.2.",
 "Skills",
-"The Finance plugin for reconciliation; the donor thank-you skill for letters.",
+"The donor thank-you skill for letters.",
 "Connectors",
 "Google Drive for the receipts folder; Gmail to read only.",
 "Schedule",
@@ -1963,7 +1843,7 @@
 "both files",
 "General Manager",
 "Job: Project instructions. Binder: its files.",
-"Procedures: skills and the plugin. Keys: connectors.",
+"Procedures: skills. Keys: connectors.",
 "Shift: Thursday 08:00. Manager: you.",
 "misbah-donations-nov-2026.xlsx"
 ],
@@ -2008,35 +1888,35 @@
 ]
 },
 {
-"n": 61,
+"n": 58,
 "id": "aetask",
 "kind": "task",
-"title": "Your turn 4.2",
+"title": "Your turn 4.1",
 "topic": "l5",
 "kit": [
-"Task 4.2",
+"Task 4.1",
 "on your own",
-"Claude · Projects, skills, plugins",
+"Claude · Projects, skills, schedules",
 "The job description must end with the approval rule.",
 "Add the role's weekly job as a scheduled task (Scheduled › New task, or ask in the chat), set to wait for your approval.",
 "misbah-campaign-brief.docx",
 "misbah-brand-guide.docx",
 "misbah-donations-nov-2026.xlsx",
 "Choose a role. Create a Project named for it, for example Misbah AI Accountant.",
-"Paste its job description (Demo 4.2 on your prompt sheet) and add its files.",
-"Add the role's plugin from the Plugins page. Run its first job from your prompt sheet.",
-"Check one fact. Write the employee card: role, tools, schedule, approvals.",
-"Producer · brief · Marketing plugin",
+"Paste its job description (Demo 4.1 on your prompt sheet) and add its files.",
+"Run its first job from your prompt sheet.",
+"Check one fact. Write the employee card: role, files, skills, shift, approvals.",
+"Producer · the campaign brief",
 "Write a 60-second video script and shot list for the first delivery day.",
-"Marketer · brief, brand guide · Marketing plugin",
+"Marketer · the brief and the brand guide",
 "Plan five posts for the delivery week, one checked number in each.",
-"Designer · brand guide · Marketing plugin",
+"Designer · the brand guide",
 "Design one Instagram post for the first delivery day, as an artifact.",
-"Accountant · donations, Task 4.1 table · Finance plugin",
+"Accountant · donations and the Task 1.2 table",
 "Total donations by campaign, flag any duplicate, and write a three-line note.",
 "Claude slow, or a feature missing on your account? Continue from the backup.",
 "Your turn: hire one AI employee.",
-"Integration · AI employee"
+"Layer 4 · Schedules and AI employee"
 ],
 "chrome": [
 "Your turn",
@@ -2057,22 +1937,22 @@
 "If the tool is slow, continue from the backup on the screen.",
 "Where we are",
 "Chat",
+"Cowork",
 "Artifacts",
 "Connectors",
 "Projects",
 "Skills",
-"Cowork",
 "AI employee"
 ]
 },
 {
-"n": 62,
+"n": 59,
 "id": "aeshow",
 "kind": "timer",
 "title": "One minute each: meet your AI employee.",
 "topic": "l5",
 "kit": [
-"Show and tell · 12:43",
+"Show and tell · 12:45",
 "One minute each: meet your AI employee.",
 "Show its job description, its first output, and the one fact you checked."
 ],
@@ -2085,7 +1965,7 @@
 ]
 },
 {
-"n": 63,
+"n": 60,
 "id": "c6survey",
 "kind": "timer",
 "title": "Five minutes: tell us how it went.",
@@ -2104,7 +1984,7 @@
 ]
 },
 {
-"n": 64,
+"n": 61,
 "id": "w1",
 "kind": "wrap",
 "title": "Wrap-up",
@@ -2114,7 +1994,7 @@
 "Your first week: one artifact, one Project, and your email in read mode in an approved account. Then one layer at a time.",
 "You built",
 "Six things",
-"An artifact, a brief, a Project, a skill, a Cowork table and an AI employee.",
+"A Cowork table, an artifact, a brief, a Project, a skill and an AI employee.",
 "Between you, you caught",
 "5 planted problems",
 "2 errors in the post, 1 duplicate donation, 2 receipt flags.",
@@ -2129,7 +2009,7 @@
 ]
 },
 {
-"n": 65,
+"n": 62,
 "id": "explore",
 "kind": "list",
 "title": "Keep exploring on your own.",
@@ -2140,14 +2020,14 @@
 "One new layer a week is enough.",
 "Claude Help Center: support.claude.com explains every feature, step by step.",
 "Claude Academy: academy.claude.com has free short courses, such as Introduction to Claude Cowork.",
-"The Plugins page: search ready-made skills, connectors and plugins before you build.",
+"The Plugins page: search ready-made skills and connectors before you build.",
 "Your cheat sheet and take-home guide: on the workshop site, with every prompt from today.",
 "The next layer: Claude Code, where Claude builds tools and small apps with you."
 ],
 "chrome": []
 },
 {
-"n": 66,
+"n": 63,
 "id": "close1",
 "kind": "close",
 "title": "Close",

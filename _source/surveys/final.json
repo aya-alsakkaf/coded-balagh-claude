@@ -295,8 +295,8 @@
    "id": "q_can4",
    "type": "scale",
    "label": {
-    "en": "I can teach Claude once with memory, instructions, a Project and a Skill, and find ready-made skills and plugins.",
-    "ar": "أستطيع تعليم Claude مرة واحدة عبر الذاكرة والتعليمات والمشروع (Project) والمهارة (Skill)، وأن أجد مهارات وإضافات جاهزة."
+    "en": "I can teach Claude once with memory, instructions, a Project and a Skill, and find ready-made skills.",
+    "ar": "أستطيع تعليم Claude مرة واحدة عبر الذاكرة والتعليمات والمشروع (Project) والمهارة (Skill)، وأن أجد مهارات جاهزة."
    },
    "required": true,
    "sectionId": "s_learn",

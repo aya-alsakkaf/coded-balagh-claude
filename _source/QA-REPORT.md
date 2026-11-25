@@ -166,3 +166,7 @@ Levels 5 to 8 by a sixth fresh agent; every product fact checked against support
 - Nits accepted · Demo 4.1 player shows the receipts .zip name (the task unzips it first) · the prompt sheet badge "Watch, then try" on the two watch-only demo cards (engine label; their steps say "Watch only") · "all 1 days" (engine, PLUGIN-FEEDBACK #2)
 
 After the fixes: validator 0 (Task 3.2 still fits 1440 × 810).
+
+## Change after round 6: restructure (Aya, 25 Nov 2026)
+
+Opener removed, Cowork moved after chat, plugins left out (CLAUDE.md decision 20). Levels 1 to 4 after the change: validator 0, pages 0, decks 0 (63 slides, every slide fits 1440 × 810), contact sheets checked by eye. Levels 5 to 8 not re-run by a fresh agent for this change.
